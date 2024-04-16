@@ -30,5 +30,4 @@ An university student looking forward to being an AI engineer
 
 ### Working Languages
 
-<img alt="Most Used Languages" src="https://github-readme-stats.vercel.app/api/top-langs/?username=ChanLumerico&theme=dark&layout=compact&langs_count=5" width=45%>
-
+<img alt="Most Used Languages" src="https://github-readme-stats.vercel.app/api/top-langs/?username=ChanLumerico&theme=dark&layout=compact&langs_count=5" width=300>
