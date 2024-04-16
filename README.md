@@ -24,7 +24,7 @@ An university student looking forward to being an AI engineer
 
 | Name | Description |
 | --- | --- |
-| ![](https://img.shields.io/badge/Luma-792aea?style=for-the-badge&&logoColor=white) | A Comprehensive Python Module for Machine Learning and Data Science |
+| ![](https://img.shields.io/badge/Luma-792aea?style=for-the-badge&logo=github&logoColor=white) | A Comprehensive Python Module for Machine Learning and Data Science |
 
 ## Others
 
