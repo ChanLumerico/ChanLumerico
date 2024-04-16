@@ -13,18 +13,18 @@ An university student looking forward to being an AI engineer
 | ![](https://img.shields.io/badge/Swift-FA7343?style=for-the-badge&logo=swift&logoColor=white) | Basic |
 | ![](https://img.shields.io/badge/Java-ED8B00?style=for-the-badge&logo=openjdk&logoColor=white) | Basic |
 
+### Projects
+
+| Name | Description |
+| --- | --- |
+| ![](https://img.shields.io/badge/Luma-792aea?style=for-the-badge&logo=github&logoColor=white) | A Comprehensive Python Module for Machine Learning and Data Science |
+
 ### Problem Solving
 
 | Platform | Specifics |
 | --- | --- |
 | Solved.ac | ![](https://img.shields.io/badge/Solved.ac-Gold%201-4EA94B?style=for-the-badge&logoColor=white) |
 | Baekjoon Online Judge | ![](https://img.shields.io/badge/Solved-343-0769AD?style=for-the-badge&logoColor=white) |
-
-### Projects
-
-| Name | Description |
-| --- | --- |
-| ![](https://img.shields.io/badge/Luma-792aea?style=for-the-badge&logo=github&logoColor=white) | A Comprehensive Python Module for Machine Learning and Data Science |
 
 ## Others
 
