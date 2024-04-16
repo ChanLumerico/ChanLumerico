@@ -27,3 +27,8 @@ An university student looking forward to being an AI engineer
 | OS | CPU | GPU | Memory | IDE |
 | --- | --- | --- | --- | --- |
 | ![](https://img.shields.io/badge/mac%20os-000000?style=for-the-badge&logo=apple&logoColor=white) | ![](https://img.shields.io/badge/M1%20Pro-8%20Cores-black?style=for-the-badge&logo=apple&logoColor=white) | ![](https://img.shields.io/badge/M1%20Pro-14%20Cores-black?style=for-the-badge&logo=apple&logoColor=white) | ![](https://img.shields.io/badge/Unified-16%20GB-black?style=for-the-badge&logo=apple&logoColor=white) | ![](https://img.shields.io/badge/vscode-0078D4?style=for-the-badge&logo=visual%20studio%20code&logoColor=white) |
+
+### Working Languages
+
+<img alt="Most Used Languages" src="https://github-readme-stats.vercel.app/api/top-langs/?username=ChanLumerico&theme=dark&layout=compact&langs_count=5" width=45%>
+
