@@ -13,7 +13,7 @@ An university student looking forward to being an AI engineer
 | ![](https://img.shields.io/badge/Swift-FA7343?style=for-the-badge&logo=swift&logoColor=white) | Basic |
 | ![](https://img.shields.io/badge/Java-ED8B00?style=for-the-badge&logo=openjdk&logoColor=white) | Basic |
 
-### Projects
+### Repositories
 
 | Name | Description |
 | --- | --- |
