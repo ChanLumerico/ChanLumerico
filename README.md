@@ -8,7 +8,7 @@ An university student looking forward to being an AI engineer
 
 | Language | Competence |
 | --- | --- |
-| ![](https://img.shields.io/badge/Python-14354C?style=for-the-badge&logo=python&logoColor=white) | Advanced — OOP experience with large codebase over 10K lines |
+| ![](https://img.shields.io/badge/Python-14354C?style=for-the-badge&logo=python&logoColor=white) | Advanced — OOP experience with large codebase over 20K lines |
 | ![](https://img.shields.io/badge/C%2B%2B-00599C?style=for-the-badge&logo=c%2B%2B&logoColor=white) | Intermediate |
 | ![](https://img.shields.io/badge/Swift-FA7343?style=for-the-badge&logo=swift&logoColor=white) | Basic |
 | ![](https://img.shields.io/badge/Java-ED8B00?style=for-the-badge&logo=openjdk&logoColor=white) | Basic |
