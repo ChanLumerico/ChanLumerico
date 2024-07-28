@@ -22,10 +22,7 @@ An university student looking forward to being an AI engineer
 
 ### Problem Solving
 
-| Platform | Specifics |
-| --- | --- |
-| Solved.ac | ![](https://img.shields.io/badge/Solved.ac-Gold%201-4EA94B?style=for-the-badge&logoColor=white) |
-| Baekjoon Online Judge | ![](https://img.shields.io/badge/Solved-343-0769AD?style=for-the-badge&logoColor=white) |
+![Solved.ac Profile](http://mazassumnida.wtf/api/v2/generate_badge?boj=lumerico284)
 
 ## Others
 
