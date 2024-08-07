@@ -17,7 +17,7 @@ An university student looking forward to being an AI engineer
 | Name | Description |
 | --- | --- |
 | ![](https://img.shields.io/badge/Luma-792aea?style=for-the-badge&logo=github&logoColor=white) | A Comprehensive Python Module for Machine Learning and Data Science |
-| ![](https://img.shields.io/badge/Cat%20Emotion-FFB534?style=for-the-badge&logo=github&logoColor=black) | Emotion Classification of Cat's Facial Expressions through CNN based on EfficientNet-B5 |
+| ![](https://img.shields.io/badge/AutoProp-76d7c4?style=for-the-badge&logo=github&logoColor=black) | Auto propagation system for complex neural networks of Luma Python library |
 
 ### Problem Solving
 
