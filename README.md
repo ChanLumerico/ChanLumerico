@@ -9,7 +9,7 @@ An university student looking forward to being an AI engineer
 | Language | Competence |
 | --- | --- |
 | ![](https://skillicons.dev/icons?i=py) | Advanced — OOP experience with large codebase over 20K lines |
-| ![](https://skillicons.dev/icons?i=c) | Intermediate |
+| ![](https://skillicons.dev/icons?i=c,cpp) | Intermediate |
 | ![](https://skillicons.dev/icons?i=swift,java) | Basic |
 
 ### Repositories
@@ -29,7 +29,7 @@ An university student looking forward to being an AI engineer
 
 | OS | CPU | GPU | Memory | IDE |
 | --- | --- | --- | --- | --- |
-| ![](https://img.shields.io/badge/mac%20os-000000?style=for-the-badge&logo=apple&logoColor=white) | ![](https://img.shields.io/badge/M1%20Pro-8%20Cores-black?style=for-the-badge&logo=apple&logoColor=white) | ![](https://img.shields.io/badge/M1%20Pro-14%20Cores-black?style=for-the-badge&logo=apple&logoColor=white) | ![](https://img.shields.io/badge/Unified-16%20GB-black?style=for-the-badge&logo=apple&logoColor=white) | ![](https://img.shields.io/badge/vscode-0078D4?style=for-the-badge&logo=visual%20studio%20code&logoColor=white) |
+| ![](https://img.shields.io/badge/mac%20os-000000?style=for-the-badge&logo=apple&logoColor=white) | ![](https://img.shields.io/badge/M1%20Pro-8%20Cores-black?style=for-the-badge&logo=apple&logoColor=white) | ![](https://img.shields.io/badge/M1%20Pro-14%20Cores-black?style=for-the-badge&logo=apple&logoColor=white) | ![](https://img.shields.io/badge/Unified-16%20GB-black?style=for-the-badge&logo=apple&logoColor=white) | ![](https://skillicons.dev/icons?i=vscode) |
 
 ### Working Languages
 
