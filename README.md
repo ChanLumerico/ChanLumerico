@@ -37,4 +37,4 @@ An university student looking forward to being an AI engineer
 
 ### GitHub Streak
 
-![GitHub Streak](https://streak-stats.demolab.com?user=ChanLumerico&theme=dark)](https://git.io/streak-stats)
+[![GitHub Streak](https://streak-stats.demolab.com?user=ChanLumerico&theme=dark)](https://git.io/streak-stats)
