@@ -16,7 +16,7 @@ An university student looking forward to being an AI engineer
 
 | Name | Description |
 | --- | --- |
-| ![](https://img.shields.io/badge/Lucid-689aff?style=for-the-badge&logo=github&logoColor=white) | A Built-From-Scratch Deep Learning Framework At Core Level |
+| ![](https://img.shields.io/badge/Lucid-4f89ff?style=for-the-badge&logo=github&logoColor=white) | A Built-From-Scratch Deep Learning Framework At Core Level |
 | ![](https://img.shields.io/badge/Luma-792aea?style=for-the-badge&logo=github&logoColor=white) | A Comprehensive Python Module for Machine Learning and Data Science |
 | ![](https://img.shields.io/badge/AutoProp-76d7c4?style=for-the-badge&logo=github&logoColor=black) | Auto propagation system for complex neural networks of Luma Python library |
 
