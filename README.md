@@ -12,12 +12,9 @@ An university student looking forward to being an AI engineer
 | ![](https://skillicons.dev/icons?i=c,cpp) | Intermediate |
 | ![](https://skillicons.dev/icons?i=swift,java) | Basic |
 
-## Repositories
+## Featured Repositories
 
 [![lucid](https://github-readme-stats.vercel.app/api/pin/?username=ChanLumerico&repo=lucid&theme=aura)](https://github.com/ChanLumerico/lucid)
-
-[![luma](https://github-readme-stats.vercel.app/api/pin/?username=ChanLumerico&repo=luma&theme=github_dark)](https://github.com/ChanLumerico/luma)
-[![autoprop](https://github-readme-stats.vercel.app/api/pin/?username=ChanLumerico&repo=autoprop&theme=github_dark)](https://github.com/ChanLumerico/autoprop)
 
 ## Statistics
 
