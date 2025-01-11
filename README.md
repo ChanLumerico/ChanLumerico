@@ -12,15 +12,20 @@ An university student looking forward to being an AI engineer
 | ![](https://skillicons.dev/icons?i=c,cpp) | Intermediate |
 | ![](https://skillicons.dev/icons?i=swift,java) | Basic |
 
-### Repositories
+## Repositories
 
-| Name | Description |
-| --- | --- |
-| ![](https://img.shields.io/badge/Lucid-4f89ff?style=for-the-badge&logo=github&logoColor=white) | A Built-From-Scratch Deep Learning Framework At Core Level |
-| ![](https://img.shields.io/badge/Luma-792aea?style=for-the-badge&logo=github&logoColor=white) | A Comprehensive Python Module for Machine Learning and Data Science |
-| ![](https://img.shields.io/badge/AutoProp-76d7c4?style=for-the-badge&logo=github&logoColor=black) | Auto propagation system for complex neural networks of Luma Python library |
+[![lucid](https://github-readme-stats.vercel.app/api/pin/?username=ChanLumerico&repo=lucid&theme=aura)](https://github.com/ChanLumerico/lucid)
 
-### Problem Solving
+[![luma](https://github-readme-stats.vercel.app/api/pin/?username=ChanLumerico&repo=luma&theme=github_dark)](https://github.com/ChanLumerico/luma)
+[![autoprop](https://github-readme-stats.vercel.app/api/pin/?username=ChanLumerico&repo=autoprop&theme=github_dark)](https://github.com/ChanLumerico/autoprop)
+
+## Statistics
+
+### GitHub 
+
+![GitHub stats](https://github-readme-stats.vercel.app/api?username=ChanLumerico&show_icons=true&theme=ambient_gradient)
+
+### Solved.ac
 
 ![Solved.ac Profile](http://mazassumnida.wtf/api/v2/generate_badge?boj=lumerico284)
 
@@ -28,13 +33,13 @@ An university student looking forward to being an AI engineer
 
 ### Working Environment
 
-| OS | CPU | GPU | Memory | IDE |
-| --- | --- | --- | --- | --- |
-| ![](https://img.shields.io/badge/mac%20os-000000?style=for-the-badge&logo=apple&logoColor=white) | ![](https://img.shields.io/badge/M1%20Pro-8%20Cores-black?style=for-the-badge&logo=apple&logoColor=white) | ![](https://img.shields.io/badge/M1%20Pro-14%20Cores-black?style=for-the-badge&logo=apple&logoColor=white) | ![](https://img.shields.io/badge/Unified-16%20GB-black?style=for-the-badge&logo=apple&logoColor=white) | ![](https://skillicons.dev/icons?i=vscode) |
+| OS | Chip | Memory | IDE |
+| --- | --- | --- | --- |
+| ![](https://img.shields.io/badge/macos-15.2-black?style=for-the-badge&logo=apple&logoColor=white) | ![](https://img.shields.io/badge/m4%20pro-000000?style=for-the-badge&logo=apple&logoColor=white) | ![](https://img.shields.io/badge/32gb-000000?style=for-the-badge&logo=apple&logoColor=white) | ![](https://skillicons.dev/icons?i=vscode) |
 
 ### Working Languages
 
-<img alt="Most Used Languages" src="https://github-readme-stats.vercel.app/api/top-langs/?username=ChanLumerico&theme=dark&layout=compact&langs_count=5" width=300>
+![Working Languages](https://github-readme-stats.vercel.app/api/top-langs/?username=ChanLumerico&theme=dark&layout=compact&langs_count=5&hide=html,jupyter%20notebook)
 
 ### GitHub Streak
 
