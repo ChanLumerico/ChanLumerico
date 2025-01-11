@@ -14,7 +14,7 @@ An university student looking forward to being an AI engineer
 
 ## Featured Repositories
 
-[![lucid](https://github-readme-stats.vercel.app/api/pin/?username=ChanLumerico&repo=lucid&theme=aura)](https://github.com/ChanLumerico/lucid)
+[![lucid](https://github-readme-stats.vercel.app/api/pin/?username=ChanLumerico&repo=lucid&theme=github_dark)](https://github.com/ChanLumerico/lucid)
 
 ## Statistics
 
