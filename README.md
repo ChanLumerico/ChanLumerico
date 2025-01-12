@@ -8,7 +8,7 @@ An university student looking forward to being an AI engineer
 
 | Language | Competence |
 | --- | --- |
-| ![](https://skillicons.dev/icons?i=py,sequelize) | Advanced — OOP experience with large codebase over 30K lines |
+| ![](https://skillicons.dev/icons?i=py) | Advanced |
 | ![](https://skillicons.dev/icons?i=c,cpp) | Intermediate |
 | ![](https://skillicons.dev/icons?i=swift,java) | Basic |
 
