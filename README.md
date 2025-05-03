@@ -6,7 +6,7 @@ An university student looking forward to being an AI engineer
 
 ### Programming
 
-| Language | Competence |
+| Language/Framework | Competence |
 | --- | --- |
 | [![Python](https://img.shields.io/badge/Python-3776AB?logo=python&logoColor=fff)](#) [![NumPy](https://img.shields.io/badge/NumPy-4DABCF?logo=numpy&logoColor=fff)](#) [![PyTorch](https://img.shields.io/badge/PyTorch-ee4c2c?logo=pytorch&logoColor=white)](#) | Advanced |
 | [![C](https://img.shields.io/badge/C-00599C?logo=c&logoColor=white)](#) [![C++](https://img.shields.io/badge/C++-%2300599C.svg?logo=c%2B%2B&logoColor=white)](#)  | Basic |
