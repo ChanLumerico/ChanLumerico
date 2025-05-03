@@ -8,9 +8,8 @@ An university student looking forward to being an AI engineer
 
 | Language | Competence |
 | --- | --- |
-| ![](https://skillicons.dev/icons?i=py) | Advanced |
-| ![](https://skillicons.dev/icons?i=c,cpp) | Intermediate |
-| ![](https://skillicons.dev/icons?i=swift,java) | Basic |
+| [![Python](https://img.shields.io/badge/Python-3776AB?logo=python&logoColor=fff)](#) [![NumPy](https://img.shields.io/badge/NumPy-4DABCF?logo=numpy&logoColor=fff)](#) [![PyTorch](https://img.shields.io/badge/PyTorch-ee4c2c?logo=pytorch&logoColor=white)](#) | Advanced |
+| [![C](https://img.shields.io/badge/C-00599C?logo=c&logoColor=white)](#) [![C++](https://img.shields.io/badge/C++-%2300599C.svg?logo=c%2B%2B&logoColor=white)](#)  | Basic |
 
 ## Featured Repositories
 
