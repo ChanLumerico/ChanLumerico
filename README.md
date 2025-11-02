@@ -15,6 +15,7 @@ An university student looking forward to being an AI engineer
 
 [![lucid](https://github-readme-stats.vercel.app/api/pin/?username=ChanLumerico&repo=lucid&theme=github_dark)](https://github.com/ChanLumerico/lucid)
 [![lucid-examples](https://github-readme-stats.vercel.app/api/pin/?username=ChanLumerico&repo=lucid-examples&theme=github_dark)](https://github.com/ChanLumerico/lucid-examples)
+[![sgb-chat](https://github-readme-stats.vercel.app/api/pin/?username=ChanLumerico&repo=lucid-examples&theme=github_dark)](https://github.com/ChanLumerico/sgb-chat)
 
 ## Statistics
 
