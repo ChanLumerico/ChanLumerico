@@ -1,4 +1,4 @@
-# Chan Lee
+# 🧑🏻‍💻 Chan Lee
 
 An university student looking forward to being an AI engineer
 
@@ -33,7 +33,7 @@ An university student looking forward to being an AI engineer
 
 | OS | Chip | Memory | IDE |
 | --- | --- | --- | --- |
-| ![](https://img.shields.io/badge/macos-15.2-black?style=for-the-badge&logo=apple&logoColor=white) | ![](https://img.shields.io/badge/m4%20pro-000000?style=for-the-badge&logo=apple&logoColor=white) | ![](https://img.shields.io/badge/32gb-000000?style=for-the-badge&logo=apple&logoColor=white) | ![](https://skillicons.dev/icons?i=vscode) |
+| ![](https://img.shields.io/badge/macos-Tahoe-black?style=for-the-badge&logo=apple&logoColor=white) | ![](https://img.shields.io/badge/m4%20max-000000?style=for-the-badge&logo=apple&logoColor=white) | ![](https://img.shields.io/badge/36gb-000000?style=for-the-badge&logo=apple&logoColor=white) | ![](https://skillicons.dev/icons?i=vscode) |
 
 ### Working Languages
 
