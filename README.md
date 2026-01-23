@@ -48,6 +48,10 @@
     <img
       src="https://img.shields.io/badge/greensox284@gmail.com-D14836?style=for-the-badge&logo=gmail&logoColor=white"/>&nbsp
   </a>
+  <a href="https://www.instagram.com/lxx__chan">
+    <img
+      src="https://img.shields.io/badge/lxx__chan-E4405F?style=for-the-badge&logo=instagram&logoColor=white"/>&nbsp
+  </a>
 </div>
 
 <br>
