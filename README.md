@@ -71,10 +71,9 @@
   <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=ChanLumerico&layout=compact&theme=dark&hide=js,html,jupyter%20notebook" style="height:120px; width:auto;" />
 </div>
 
+<br>
+
+<h3 align="center">⏰ WakaTime Stats ⏰</h3>
+
 <!--START_SECTION:waka-->
-
-```txt
-No activity tracked
-```
-
 <!--END_SECTION:waka-->
