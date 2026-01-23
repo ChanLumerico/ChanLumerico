@@ -1,6 +1,6 @@
 <!--타이틀 부분-->
 <div align="center">
-  <img src="https://velog.velcdn.com/images/lumerico284/post/815f8b36-b161-44f7-a16a-61cac875d0c5/image.png" width="40%">
+  <img src="https://velog.velcdn.com/images/lumerico284/post/815f8b36-b161-44f7-a16a-61cac875d0c5/image.png" width="30%">
 </div>
 
 <!--내용 부분-->
@@ -53,7 +53,7 @@
 <br>
 
 <h3 align="center">📊 Other Stats 📊</h3>
-<div style="display:flex; justify-content:center; align-items:center; gap:8px;">
+<div style="display:flex; justify-content:center; align-items:center; gap:8px;" align="center">
   <a href="https://solved.ac/en/profile/lumerico284">
     <img src="http://mazassumnida.wtf/api/v2/generate_badge?boj=lumerico284" style="height:100px; width:auto;" />&nbsp
   </a>
@@ -62,7 +62,7 @@
 
 <br>
 
-<div style="display:flex; justify-content:center; align-items:center; gap:8px;">
+<div style="display:flex; justify-content:center; align-items:center; gap:8px;" align="center">
   <img src="https://github-readme-stats.vercel.app/api?username=ChanLumerico&theme=dark" style="height:100px; width:auto;" />
   <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=ChanLumerico&layout=compact&theme=dark&hide=js,html,jupyter%20notebook" style="height:100px; width:auto;" />
 </div>
