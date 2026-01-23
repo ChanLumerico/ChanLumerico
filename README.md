@@ -67,7 +67,7 @@
 <h3 align="center">📫 Contact 📫</h3>
 <div align="center">
   <a href="https://velog.io/@lumerico284/">
-    <img src="https://img.shields.io/badge/Velog-1EBC8F?style=for-the-badge&logo=velog&logoColor=white" />&nbsp
+    <img src="https://img.shields.io/badge/lumerico284-1EBC8F?style=for-the-badge&logo=velog&logoColor=white" />&nbsp
   </a>
   <a href="mailto:oka1313@gmail.com">
     <img
@@ -80,6 +80,15 @@
 </div>
 
 <br>
+
+<h3 align="center">✍🏻 Latest Velog Post ✍🏻</h3>
+<div align="center">
+  <a href="https://github.com/eungyeole/velog-readme-stats">
+    <img src="https://velog-readme-stats.vercel.app/api?name=lumerico284" />
+  </a>
+</div>
+
+---
 
 <h3 align="center">📊 Other Stats 📊</h3>
 <div style="display:flex; justify-content:center; align-items:center; gap:8px;" align="center">
