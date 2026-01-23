@@ -1,7 +1,11 @@
 <!--타이틀 부분-->
 <div align="center">
   <img src="https://velog.velcdn.com/images/lumerico284/post/815f8b36-b161-44f7-a16a-61cac875d0c5/image.png" width="30%">
-  <br>
+</div>
+
+<br>
+
+<div align="center">
   <a href="https://git.io/typing-svg">
     <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&size=16&pause=1000&color=FFFFFF&center=true&vCenter=true&width=435&height=30&lines=Welcome+to+ChanLumerico's+GitHub!" alt="Typing SVG" />
   </a>
