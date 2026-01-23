@@ -1,7 +1,13 @@
 <!--타이틀 부분-->
 <div align="center">
   <img src="https://velog.velcdn.com/images/lumerico284/post/815f8b36-b161-44f7-a16a-61cac875d0c5/image.png" width="30%">
+  <br>
+  <a href="https://git.io/typing-svg">
+    <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&size=16&pause=1000&color=FFFFFF&center=true&vCenter=true&width=435&height=30&lines=Welcome+to+ChanLumerico's+GitHub!" alt="Typing SVG" />
+  </a>
 </div>
+
+---
 
 <!--내용 부분-->
 <h3 align="center">✨ Tech Stack ✨</h3>
@@ -35,6 +41,21 @@
   <img src="https://img.shields.io/badge/VSCode-2C2C32.svg?style=for-the-badge&logo=visual-studio-code&logoColor=22ABF3" />&nbsp
   <img src="https://img.shields.io/badge/jupyter-2C2C32.svg?style=for-the-badge&logo=jupyter&logoColor=F37726" />&nbsp
   <img src="https://img.shields.io/badge/Colab-2C2C32.svg?style=for-the-badge&logo=googlecolab&logoColor=F9AB00" />&nbsp
+</div>
+
+<br>
+
+<h3 align="center">🌐 Environments 🌐</h3>
+<div align="center">
+  <img src="https://img.shields.io/badge/Mac%20Studio-181717.svg?style=for-the-badge&logo=apple&logoColor=white" />&nbsp
+  <img src="https://img.shields.io/badge/M4%20Max-3B164F.svg?style=for-the-badge&logo=apple&logoColor=white" />&nbsp
+  <img src="https://img.shields.io/badge/36GB%20RAM-2C2C32.svg?style=for-the-badge&logo=apple&logoColor=white" />&nbsp
+</div>
+
+<div align="center">
+  <img src="https://img.shields.io/badge/MacBook%20Pro-181717.svg?style=for-the-badge&logo=apple&logoColor=white" />&nbsp
+  <img src="https://img.shields.io/badge/M1%20Pro-16364F.svg?style=for-the-badge&logo=apple&logoColor=white" />&nbsp
+  <img src="https://img.shields.io/badge/16GB%20RAM-2C2C32.svg?style=for-the-badge&logo=apple&logoColor=white" />&nbsp
 </div>
 
 <br>
@@ -76,9 +97,4 @@
 <h3 align="center">⏰ WakaTime Stats ⏰</h3>
 
 <!--START_SECTION:waka-->
-
-```txt
-No activity tracked
-```
-
 <!--END_SECTION:waka-->
