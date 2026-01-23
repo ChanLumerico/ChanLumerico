@@ -70,3 +70,6 @@
   <img src="https://github-readme-stats.vercel.app/api?username=ChanLumerico&theme=dark" style="height:120px; width:auto;" />
   <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=ChanLumerico&layout=compact&theme=dark&hide=js,html,jupyter%20notebook" style="height:120px; width:auto;" />
 </div>
+
+<!--START_SECTION:waka-->
+<!--END_SECTION:waka-->
