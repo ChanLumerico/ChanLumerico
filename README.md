@@ -53,13 +53,13 @@
 <div align="center">
   <img src="https://img.shields.io/badge/Mac%20Studio-181717.svg?style=for-the-badge&logo=apple&logoColor=white" />&nbsp
   <img src="https://img.shields.io/badge/M4%20Max-3B164F.svg?style=for-the-badge&logo=apple&logoColor=white" />&nbsp
-  <img src="https://img.shields.io/badge/36GB%20RAM-2C2C32.svg?style=for-the-badge&logo=apple&logoColor=white" />&nbsp
+  <img src="https://img.shields.io/badge/36GB%20RAM-2C2C32.svg?style=for-the-badge" />&nbsp
 </div>
 
 <div align="center">
   <img src="https://img.shields.io/badge/MacBook%20Pro-181717.svg?style=for-the-badge&logo=apple&logoColor=white" />&nbsp
   <img src="https://img.shields.io/badge/M1%20Pro-16364F.svg?style=for-the-badge&logo=apple&logoColor=white" />&nbsp
-  <img src="https://img.shields.io/badge/16GB%20RAM-2C2C32.svg?style=for-the-badge&logo=apple&logoColor=white" />&nbsp
+  <img src="https://img.shields.io/badge/16GB%20RAM-2C2C32.svg?style=for-the-badge" />&nbsp
 </div>
 
 <br>
