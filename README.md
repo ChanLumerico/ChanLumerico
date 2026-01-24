@@ -110,6 +110,7 @@
 <h3 align="center">⏰ WakaTime Stats ⏰</h3>
 
 <div align="center">
+
 <!--START_SECTION:waka-->
 ![Code Time](http://img.shields.io/badge/Code%20Time-8%20hrs%205%20mins-blue?style=flat)
 
@@ -144,4 +145,5 @@ Mac                      2 hrs 27 mins       ███████████�
 
  Last Updated on 24/01/2026 12:27:39 UTC
 <!--END_SECTION:waka-->
+
 </div>
