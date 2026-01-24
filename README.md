@@ -114,15 +114,13 @@
 <!--START_SECTION:waka-->
 ![Code Time](http://img.shields.io/badge/Code%20Time-8%20hrs%2031%20mins-blue?style=flat)
 
-![Profile Views](http://img.shields.io/badge/Profile%20Views-126-blue?style=flat)
-
 **I'm a Night 🦉** 
 
 ```text
 🌞 Morning                87 commits          █░░░░░░░░░░░░░░░░░░░░░░░░   04.95 % 
-🌆 Daytime                444 commits         ██████░░░░░░░░░░░░░░░░░░░   25.28 % 
-🌃 Evening                1032 commits        ███████████████░░░░░░░░░░   58.77 % 
-🌙 Night                  193 commits         ███░░░░░░░░░░░░░░░░░░░░░░   10.99 % 
+🌆 Daytime                444 commits         ██████░░░░░░░░░░░░░░░░░░░   25.27 % 
+🌃 Evening                1033 commits        ███████████████░░░░░░░░░░   58.79 % 
+🌙 Night                  193 commits         ███░░░░░░░░░░░░░░░░░░░░░░   10.98 % 
 ```
 
 
@@ -147,12 +145,8 @@ lucid                    2 hrs 27 mins       ███████████�
 Mac                      2 hrs 27 mins       █████████████████████████   100.00 % 
 ```
 
-**Timeline**
 
-![Lines of Code chart](https://raw.githubusercontent.com/ChanLumerico/ChanLumerico/main/assets/bar_graph.png)
-
-
- Last Updated on 24/01/2026 12:43:57 UTC
+ Last Updated on 24/01/2026 12:48:48 UTC
 <!--END_SECTION:waka-->
 
 </div>
