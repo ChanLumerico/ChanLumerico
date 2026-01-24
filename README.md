@@ -112,15 +112,17 @@
 <div align="center">
 
 <!--START_SECTION:waka-->
-![Code Time](http://img.shields.io/badge/Code%20Time-8%20hrs%205%20mins-blue?style=flat)
+![Code Time](http://img.shields.io/badge/Code%20Time-8%20hrs%2031%20mins-blue?style=flat)
+
+![Profile Views](http://img.shields.io/badge/Profile%20Views-126-blue?style=flat)
 
 **I'm a Night 🦉** 
 
 ```text
-🌞 Morning                88 commits          █░░░░░░░░░░░░░░░░░░░░░░░░   05.01 % 
-🌆 Daytime                444 commits         ██████░░░░░░░░░░░░░░░░░░░   25.30 % 
-🌃 Evening                1030 commits        ███████████████░░░░░░░░░░   58.69 % 
-🌙 Night                  193 commits         ███░░░░░░░░░░░░░░░░░░░░░░   11.00 % 
+🌞 Morning                87 commits          █░░░░░░░░░░░░░░░░░░░░░░░░   04.95 % 
+🌆 Daytime                444 commits         ██████░░░░░░░░░░░░░░░░░░░   25.28 % 
+🌃 Evening                1032 commits        ███████████████░░░░░░░░░░   58.77 % 
+🌙 Night                  193 commits         ███░░░░░░░░░░░░░░░░░░░░░░   10.99 % 
 ```
 
 
@@ -138,12 +140,19 @@ JSON                     0 secs              ░░░░░░░░░░░�
 🔥 Editors: 
 VS Code                  2 hrs 27 mins       █████████████████████████   100.00 % 
 
+🐱‍💻 Projects: 
+lucid                    2 hrs 27 mins       █████████████████████████   100.00 % 
+
 💻 Operating System: 
 Mac                      2 hrs 27 mins       █████████████████████████   100.00 % 
 ```
 
+**Timeline**
 
- Last Updated on 24/01/2026 12:27:39 UTC
+![Lines of Code chart](https://raw.githubusercontent.com/ChanLumerico/ChanLumerico/main/assets/bar_graph.png)
+
+
+ Last Updated on 24/01/2026 12:43:57 UTC
 <!--END_SECTION:waka-->
 
 </div>
