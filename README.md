@@ -84,10 +84,23 @@
 
 <br>
 
+<h3 align="center">📂 Projects 📂</h3>
+<h4 align="center">Main Project</h4>
+<div align="center">
+    <img src="https://github-readme-stats-anuraghazra1.vercel.app/api/pin/?username=ChanLumerico&repo=lucid&theme=dracula" width="50%">
+</div>
+<h4 align="center">Side Projects</h4>
+<div align="center">
+    <img src="https://github-readme-stats-anuraghazra1.vercel.app/api/pin/?username=ChanLumerico&repo=ncsn&theme=dark" width="40%"/>&nbsp
+    <img src="https://github-readme-stats-anuraghazra1.vercel.app/api/pin/?username=ChanLumerico&repo=sgb-chat&theme=dark" width="40%">
+</div>
+
+<br>
+
 <h3 align="center">✍🏻 Latest Velog Post ✍🏻</h3>
 <div align="center">
   <a href="https://github.com/eungyeole/velog-readme-stats">
-    <img src="https://velog-readme-stats.vercel.app/api?name=lumerico284" />
+    <img src="https://velog-readme-stats.vercel.app/api?name=lumerico284" width="60%">
   </a>
 </div>
 
