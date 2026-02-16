@@ -87,12 +87,12 @@
 <h3 align="center">📂 Projects 📂</h3>
 <h4 align="center">Main Project</h4>
 <div align="center">
-    <img src="https://github-readme-stats-anuraghazra1.vercel.app/api/pin/?username=ChanLumerico&repo=lucid&theme=dracula" width="40%">
+    <img src="https://github-readme-stats-anuraghazra1.vercel.app/api/pin/?username=ChanLumerico&repo=lucid&theme=dracula" width="45%">
 </div>
 <h4 align="center">Side Projects</h4>
 <div align="center">
-    <img src="https://github-readme-stats-anuraghazra1.vercel.app/api/pin/?username=ChanLumerico&repo=ncsn&theme=dark" width="30%"/>&nbsp
-    <img src="https://github-readme-stats-anuraghazra1.vercel.app/api/pin/?username=ChanLumerico&repo=sgb-chat&theme=dark" width="30%">
+    <img src="https://github-readme-stats-anuraghazra1.vercel.app/api/pin/?username=ChanLumerico&repo=ncsn&theme=dark" width="35%"/>&nbsp
+    <img src="https://github-readme-stats-anuraghazra1.vercel.app/api/pin/?username=ChanLumerico&repo=sgb-chat&theme=dark" width="35%">
 </div>
 
 <br>
