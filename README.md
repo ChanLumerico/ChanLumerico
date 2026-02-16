@@ -20,6 +20,7 @@
 
 <div align="center">
   <img src="https://img.shields.io/badge/python-3670A0?style=for-the-badge&logo=python&logoColor=white" />&nbsp
+  <img src="https://img.shields.io/badge/c++-E1587E.svg?style=for-the-badge&logo=c%2B%2B&logoColor=white"/>&nbsp
   <img src="https://img.shields.io/badge/numpy-4d77cf.svg?style=for-the-badge&logo=numpy&logoColor=white" />&nbsp
   <img src="https://img.shields.io/badge/pytorch-ff4154.svg?style=for-the-badge&logo=pytorch&logoColor=white" />&nbsp
   <img src="https://img.shields.io/badge/pandas-150458.svg?style=for-the-badge&logo=pandas&logoColor=white" />&nbsp
