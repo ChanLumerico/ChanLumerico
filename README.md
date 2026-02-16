@@ -100,7 +100,7 @@
 <h3 align="center">✍🏻 Latest Velog Post ✍🏻</h3>
 <div align="center">
   <a href="https://github.com/eungyeole/velog-readme-stats">
-    <img src="https://velog-readme-stats.vercel.app/api?name=lumerico284" width="60%">
+    <img src="https://velog-readme-stats.vercel.app/api?name=lumerico284" width="40%">
   </a>
 </div>
 
