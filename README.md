@@ -88,24 +88,15 @@
   </a>
 </div>
 
----
-
 <h3 align="center">📊 Other Stats 📊</h3>
 <div style="display:flex; justify-content:center; align-items:center; gap:8px;" align="center">
   <a href="https://solved.ac/en/profile/lumerico284">
     <img src="http://mazassumnida.wtf/api/v2/generate_badge?boj=lumerico284" style="height:120px; width:auto;" />&nbsp
   </a>
-  <img src="http://mazandi.herokuapp.com/api?handle=lumerico284&theme=dark" style="height:120px; width:auto;" />&nbsp
+  <img src="https://github-readme-streak-stats.herokuapp.com/?user=ChanLumerico&theme=dark" style="height:120px; width:auto;" />&nbsp
 </div>
 
-<br>
-
-<div style="display:flex; justify-content:center; align-items:center; gap:8px;" align="center">
-  <img src="https://github-readme-stats.vercel.app/api?username=ChanLumerico&theme=dark" style="height:120px; width:auto;" />
-  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=ChanLumerico&layout=compact&theme=dark&hide=js,html,jupyter%20notebook" style="height:120px; width:auto;" />
-</div>
-
-<br>
+---
 
 <h3 align="center">⏰ WakaTime Stats ⏰</h3>
 
