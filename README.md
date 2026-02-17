@@ -10,7 +10,7 @@
     <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&size=16&pause=1000&color=FFFFFF&center=true&vCenter=true&width=435&height=30&lines=Welcome+to+ChanLumerico's+GitHub!" alt="Typing SVG" />
   </a>
   <br>
-  <img src="https://raw.githubusercontent.com/ChanLumerico/ChanLumerico/refs/heads/output/github-contribution-grid-snake-dark.svg" width="80%">
+  <img src="https://raw.githubusercontent.com/ChanLumerico/ChanLumerico/refs/heads/output/github-contribution-grid-snake-dark.svg">
 </div>
 
 ---
