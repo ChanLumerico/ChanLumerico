@@ -1,4 +1,4 @@
-<!--타이틀 부분-->
+<img width="1747" height="1379" alt="image" src="https://github.com/user-attachments/assets/14c49274-f9e6-427c-a970-5354b9ce051f" /><!--타이틀 부분-->
 <div align="center">
   <img src="https://velog.velcdn.com/images/lumerico284/post/815f8b36-b161-44f7-a16a-61cac875d0c5/image.png" width="30%">
 </div>
@@ -87,6 +87,7 @@
 <h3 align="center">📂 Side Projects 📂</h3>
 <div align="center">
     <img src="https://github-readme-stats-anuraghazra1.vercel.app/api/pin/?username=ChanLumerico&repo=lucid&theme=dracula" width="45%">
+    <img src="https://github-readme-stats-anuraghazra1.vercel.app/api/pin/?username=ChanLumerico&repo=torchlit&theme=dracula" width="45%">
 </div>
 
 <br>
