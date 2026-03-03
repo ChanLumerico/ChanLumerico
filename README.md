@@ -87,7 +87,6 @@
 <h3 align="center">📂 Side Projects 📂</h3>
 <div align="center">
     <img src="https://github-readme-stats-anuraghazra1.vercel.app/api/pin/?username=ChanLumerico&repo=lucid&theme=dracula" width="45%">
-    <img src="https://github-readme-stats-anuraghazra1.vercel.app/api/pin/?username=ChanLumerico&repo=torchlit&theme=dracula" width="45%">
 </div>
 
 <br>
