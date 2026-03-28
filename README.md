@@ -97,7 +97,7 @@
 
   <tr>
     <td>
-      <a href="https://github.com/ChanLumerico/lucid"><b>⭐️ lucid</b></a>
+      ⭐️ <a href="https://github.com/ChanLumerico/lucid"><b>lucid</b></a>
     </td>
     <td>
       Educational deep learning framework built from scratch with Python, featuring autodiff and modular design.
