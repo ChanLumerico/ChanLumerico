@@ -92,6 +92,7 @@
     <th>Project</th>
     <th>Description</th>
     <th>Tech / Focus</th>
+    <th>Framework</th>
   </tr>
 
   <tr>
@@ -99,10 +100,13 @@
       <a href="https://github.com/ChanLumerico/lucid"><b>lucid</b></a>
     </td>
     <td>
-      Educational deep learning framework built from scratch with NumPy & MLX, featuring autodiff and modular design.
+      Educational deep learning framework built from scratch with Python, featuring autodiff and modular design.
     </td>
     <td>
       Deep Learning · Autodiff · Framework Design
+    </td>
+    <td>
+      NumPy, MLX
     </td>
   </tr>
 
@@ -116,6 +120,9 @@
     <td>
       Computer Vision · Segmentation · U-Net
     </td>
+    <td>
+      Lucid
+    </td>
   </tr>
 
   <tr>
@@ -127,6 +134,9 @@
     </td>
     <td>
       Diffusion · Generative Models · Score Matching
+    </td>
+    <td>
+      PyTorch
     </td>
   </tr>
 
