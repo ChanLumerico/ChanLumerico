@@ -84,19 +84,56 @@
 
 <br>
 
-<h3 align="center">📂 Side Projects 📂</h3>
+<h3 align="center">📂 Projects 📂</h3>
 <div align="center">
-    <img src="https://github-readme-stats-anuraghazra1.vercel.app/api/pin/?username=ChanLumerico&repo=lucid&theme=dracula" width="45%">
+
+<table>
+  <tr>
+    <th>Project</th>
+    <th>Description</th>
+    <th>Tech / Focus</th>
+  </tr>
+
+  <tr>
+    <td>
+      <a href="https://github.com/ChanLumerico/lucid"><b>lucid</b></a>
+    </td>
+    <td>
+      Educational deep learning framework built from scratch with NumPy & MLX, featuring autodiff and modular design.
+    </td>
+    <td>
+      Deep Learning · Autodiff · Framework Design
+    </td>
+  </tr>
+
+  <tr>
+    <td>
+      <a href="https://github.com/ChanLumerico/attention_unet_lucid"><b>attention_unet_lucid</b></a>
+    </td>
+    <td>
+      Implementation of Attention U-Net for image segmentation using the Lucid framework.
+    </td>
+    <td>
+      Computer Vision · Segmentation · U-Net
+    </td>
+  </tr>
+
+  <tr>
+    <td>
+      <a href="https://github.com/ChanLumerico/ncsn"><b>ncsn</b></a>
+    </td>
+    <td>
+      Noise Conditional Score Network implementation for score-based generative modeling.
+    </td>
+    <td>
+      Diffusion · Generative Models · Score Matching
+    </td>
+  </tr>
+
+</table>
 </div>
 
 <br>
-
-<h3 align="center">✍🏻 Latest Velog Post ✍🏻</h3>
-<div align="center">
-  <a href="https://github.com/eungyeole/velog-readme-stats">
-    <img src="https://velog-readme-stats.vercel.app/api?name=lumerico284" width="45%">
-  </a>
-</div>
 
 <h3 align="center">📊 Other Stats 📊</h3>
 <div style="display:flex; justify-content:center; align-items:center; gap:8px;" align="center">
