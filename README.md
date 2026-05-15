@@ -160,59 +160,8 @@
 <div align="center">
 
 <!--START_SECTION:waka-->
-**I'm a Night 🦉** 
 
-```text
-🌞 Morning                7 commits           █░░░░░░░░░░░░░░░░░░░░░░░░   03.59 % 
-🌆 Daytime                47 commits          ██████░░░░░░░░░░░░░░░░░░░   24.10 % 
-🌃 Evening                97 commits          ████████████░░░░░░░░░░░░░   49.74 % 
-🌙 Night                  44 commits          ██████░░░░░░░░░░░░░░░░░░░   22.56 % 
-```
-📅 **I'm Most Productive on Saturday** 
-
-```text
-Monday                   7 commits           █░░░░░░░░░░░░░░░░░░░░░░░░   03.59 % 
-Tuesday                  44 commits          ██████░░░░░░░░░░░░░░░░░░░   22.56 % 
-Wednesday                28 commits          ████░░░░░░░░░░░░░░░░░░░░░   14.36 % 
-Thursday                 7 commits           █░░░░░░░░░░░░░░░░░░░░░░░░   03.59 % 
-Friday                   41 commits          █████░░░░░░░░░░░░░░░░░░░░   21.03 % 
-Saturday                 45 commits          ██████░░░░░░░░░░░░░░░░░░░   23.08 % 
-Sunday                   23 commits          ███░░░░░░░░░░░░░░░░░░░░░░   11.79 % 
-```
-
-
-📊 **This Week I Spent My Time On** 
-
-```text
-🕑︎ Time Zone: Asia/Seoul
-
-💬 Programming Languages: 
-Python                   26 hrs 44 mins      █████████████░░░░░░░░░░░░   53.94 % 
-Markdown                 7 hrs 46 mins       ████░░░░░░░░░░░░░░░░░░░░░   15.69 % 
-Other                    5 hrs 9 mins        ███░░░░░░░░░░░░░░░░░░░░░░   10.40 % 
-C++                      3 hrs 45 mins       ██░░░░░░░░░░░░░░░░░░░░░░░   07.57 % 
-TypeScript               2 hrs 35 mins       █░░░░░░░░░░░░░░░░░░░░░░░░   05.21 % 
-
-🔥 Editors: 
-VS Code                  34 hrs 9 mins       █████████████████░░░░░░░░   68.87 % 
-Unknown Editor           14 hrs 12 mins      ███████░░░░░░░░░░░░░░░░░░   28.64 % 
-Notes                    41 mins             ░░░░░░░░░░░░░░░░░░░░░░░░░   01.38 % 
-Notion                   31 mins             ░░░░░░░░░░░░░░░░░░░░░░░░░   01.07 % 
-Terminal                 1 min               ░░░░░░░░░░░░░░░░░░░░░░░░░   00.04 % 
-
-🐱‍💻 Projects: 
-lucid                    45 hrs 3 mins       ███████████████████████░░   90.84 % 
-med-note                 3 hrs 4 mins        ██░░░░░░░░░░░░░░░░░░░░░░░   06.19 % 
-mednote                  53 mins             ░░░░░░░░░░░░░░░░░░░░░░░░░   01.80 % 
-Unknown Project          34 mins             ░░░░░░░░░░░░░░░░░░░░░░░░░   01.16 % 
-tmp                      0 secs              ░░░░░░░░░░░░░░░░░░░░░░░░░   00.01 % 
-
-💻 Operating System: 
-Mac                      49 hrs 35 mins      █████████████████████████   100.00 % 
-```
-
-
- Last Updated on 14/05/2026 13:03:33 UTC
+ Last Updated on 15/05/2026 13:02:19 UTC
 <!--END_SECTION:waka-->
 
 </div>
