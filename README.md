@@ -160,8 +160,59 @@
 <div align="center">
 
 <!--START_SECTION:waka-->
+**I'm a Night 🦉** 
 
- Last Updated on 15/05/2026 13:02:19 UTC
+```text
+🌞 Morning                7 commits           █░░░░░░░░░░░░░░░░░░░░░░░░   03.55 % 
+🌆 Daytime                47 commits          ██████░░░░░░░░░░░░░░░░░░░   23.86 % 
+🌃 Evening                98 commits          ████████████░░░░░░░░░░░░░   49.75 % 
+🌙 Night                  45 commits          ██████░░░░░░░░░░░░░░░░░░░   22.84 % 
+```
+📅 **I'm Most Productive on Saturday** 
+
+```text
+Monday                   7 commits           █░░░░░░░░░░░░░░░░░░░░░░░░   03.55 % 
+Tuesday                  44 commits          ██████░░░░░░░░░░░░░░░░░░░   22.34 % 
+Wednesday                28 commits          ████░░░░░░░░░░░░░░░░░░░░░   14.21 % 
+Thursday                 7 commits           █░░░░░░░░░░░░░░░░░░░░░░░░   03.55 % 
+Friday                   42 commits          █████░░░░░░░░░░░░░░░░░░░░   21.32 % 
+Saturday                 46 commits          ██████░░░░░░░░░░░░░░░░░░░   23.35 % 
+Sunday                   23 commits          ███░░░░░░░░░░░░░░░░░░░░░░   11.68 % 
+```
+
+
+📊 **This Week I Spent My Time On** 
+
+```text
+🕑︎ Time Zone: Asia/Seoul
+
+💬 Programming Languages: 
+Python                   25 hrs 11 mins      █████████████░░░░░░░░░░░░   52.47 % 
+Markdown                 7 hrs 3 mins        ████░░░░░░░░░░░░░░░░░░░░░   14.70 % 
+Other                    6 hrs 30 mins       ███░░░░░░░░░░░░░░░░░░░░░░   13.54 % 
+TypeScript               4 hrs 21 mins       ██░░░░░░░░░░░░░░░░░░░░░░░   09.06 % 
+CSS                      1 hr 19 mins        █░░░░░░░░░░░░░░░░░░░░░░░░   02.76 % 
+
+🔥 Editors: 
+VS Code                  39 hrs 57 mins      █████████████████████░░░░   83.21 % 
+Unknown Editor           5 hrs 33 mins       ███░░░░░░░░░░░░░░░░░░░░░░   11.58 % 
+Notion                   1 hr 17 mins        █░░░░░░░░░░░░░░░░░░░░░░░░   02.70 % 
+Notes                    1 hr 10 mins        █░░░░░░░░░░░░░░░░░░░░░░░░   02.46 % 
+Terminal                 1 min               ░░░░░░░░░░░░░░░░░░░░░░░░░   00.05 % 
+
+🐱‍💻 Projects: 
+lucid                    38 hrs 34 mins      ████████████████████░░░░░   80.32 % 
+med-note                 3 hrs 43 mins       ██░░░░░░░░░░░░░░░░░░░░░░░   07.76 % 
+UAI-2026-Spring-Hackathon3 hrs 13 mins       ██░░░░░░░░░░░░░░░░░░░░░░░   06.72 % 
+mednote                  55 mins             ░░░░░░░░░░░░░░░░░░░░░░░░░   01.94 % 
+nlp_term_project         46 mins             ░░░░░░░░░░░░░░░░░░░░░░░░░   01.61 % 
+
+💻 Operating System: 
+Mac                      48 hrs 1 min        █████████████████████████   100.00 % 
+```
+
+
+ Last Updated on 16/05/2026 12:43:56 UTC
 <!--END_SECTION:waka-->
 
 </div>
