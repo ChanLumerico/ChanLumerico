@@ -160,58 +160,8 @@
 <div align="center">
 
 <!--START_SECTION:waka-->
-**I'm a Night 🦉** 
 
-```text
-🌞 Morning                7 commits           █░░░░░░░░░░░░░░░░░░░░░░░░   03.61 % 
-🌆 Daytime                47 commits          ██████░░░░░░░░░░░░░░░░░░░   24.23 % 
-🌃 Evening                92 commits          ████████████░░░░░░░░░░░░░   47.42 % 
-🌙 Night                  48 commits          ██████░░░░░░░░░░░░░░░░░░░   24.74 % 
-```
-📅 **I'm Most Productive on Tuesday** 
-
-```text
-Monday                   13 commits          ██░░░░░░░░░░░░░░░░░░░░░░░   06.70 % 
-Tuesday                  47 commits          ██████░░░░░░░░░░░░░░░░░░░   24.23 % 
-Wednesday                28 commits          ████░░░░░░░░░░░░░░░░░░░░░   14.43 % 
-Thursday                 7 commits           █░░░░░░░░░░░░░░░░░░░░░░░░   03.61 % 
-Friday                   31 commits          ████░░░░░░░░░░░░░░░░░░░░░   15.98 % 
-Saturday                 45 commits          ██████░░░░░░░░░░░░░░░░░░░   23.20 % 
-Sunday                   23 commits          ███░░░░░░░░░░░░░░░░░░░░░░   11.86 % 
-```
-
-
-📊 **This Week I Spent My Time On** 
-
-```text
-🕑︎ Time Zone: Asia/Seoul
-
-💬 Programming Languages: 
-Python                   18 hrs 10 mins      ████████░░░░░░░░░░░░░░░░░   30.24 % 
-Other                    9 hrs 9 mins        ████░░░░░░░░░░░░░░░░░░░░░   15.22 % 
-Objective-C++            8 hrs 13 mins       ███░░░░░░░░░░░░░░░░░░░░░░   13.68 % 
-Markdown                 8 hrs 1 min         ███░░░░░░░░░░░░░░░░░░░░░░   13.35 % 
-C++                      7 hrs 12 mins       ███░░░░░░░░░░░░░░░░░░░░░░   11.99 % 
-
-🔥 Editors: 
-VS Code                  39 hrs 9 mins       ████████████████░░░░░░░░░   65.27 % 
-Notion                   12 hrs 6 mins       █████░░░░░░░░░░░░░░░░░░░░   20.18 % 
-Claude Code              8 hrs 27 mins       ████░░░░░░░░░░░░░░░░░░░░░   14.10 % 
-Terminal                 16 mins             ░░░░░░░░░░░░░░░░░░░░░░░░░   00.45 % 
-
-🐱‍💻 Projects: 
-lucid                    55 hrs 5 mins       ███████████████████████░░   91.84 % 
-nlp_term_project         2 hrs 44 mins       █░░░░░░░░░░░░░░░░░░░░░░░░   04.58 % 
-colbert_hn               57 mins             ░░░░░░░░░░░░░░░░░░░░░░░░░   01.59 % 
-assignment_4             53 mins             ░░░░░░░░░░░░░░░░░░░░░░░░░   01.48 % 
-assignment05             17 mins             ░░░░░░░░░░░░░░░░░░░░░░░░░   00.49 % 
-
-💻 Operating System: 
-Mac                      59 hrs 59 mins      █████████████████████████   100.00 % 
-```
-
-
- Last Updated on 28/05/2026 13:43:23 UTC
+ Last Updated on 29/05/2026 13:33:27 UTC
 <!--END_SECTION:waka-->
 
 </div>
