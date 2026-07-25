@@ -187,31 +187,32 @@ Sunday                   63 commits          ████░░░░░░░�
 🕑︎ Time Zone: Asia/Seoul
 
 💬 Programming Languages: 
-Other                    17 hrs 44 mins      ██████████████████████░░░   86.74 % 
-Python                   1 hr 40 mins        ██░░░░░░░░░░░░░░░░░░░░░░░   08.22 % 
-C++                      46 mins             █░░░░░░░░░░░░░░░░░░░░░░░░   03.77 % 
-Markdown                 14 mins             ░░░░░░░░░░░░░░░░░░░░░░░░░   01.18 % 
+Other                    18 hrs 27 mins      ██████████████████████░░░   87.19 % 
+Python                   1 hr 40 mins        ██░░░░░░░░░░░░░░░░░░░░░░░   07.94 % 
+C++                      46 mins             █░░░░░░░░░░░░░░░░░░░░░░░░   03.64 % 
+Markdown                 14 mins             ░░░░░░░░░░░░░░░░░░░░░░░░░   01.14 % 
 Objective-C++            1 min               ░░░░░░░░░░░░░░░░░░░░░░░░░   00.09 % 
 
 🔥 Editors: 
-Notion                   17 hrs 31 mins      █████████████████████░░░░   85.64 % 
-Claude Code              2 hrs 41 mins       ███░░░░░░░░░░░░░░░░░░░░░░   13.15 % 
-Zoom                     13 mins             ░░░░░░░░░░░░░░░░░░░░░░░░░   01.12 % 
+Notion                   18 hrs 14 mins      ██████████████████████░░░   86.12 % 
+Claude Code              2 hrs 41 mins       ███░░░░░░░░░░░░░░░░░░░░░░   12.71 % 
+Zoom                     13 mins             ░░░░░░░░░░░░░░░░░░░░░░░░░   01.08 % 
 VS Code                  0 secs              ░░░░░░░░░░░░░░░░░░░░░░░░░   00.08 % 
+Notes                    0 secs              ░░░░░░░░░░░░░░░░░░░░░░░░░   00.01 % 
 
 🐱‍💻 Projects: 
-lucid                    18 hrs 1 min        ██████████████████████░░░   88.10 % 
-paper review             1 hr 51 mins        ██░░░░░░░░░░░░░░░░░░░░░░░   09.05 % 
-chanlee                  33 mins             █░░░░░░░░░░░░░░░░░░░░░░░░   02.69 % 
-scratchpad               1 min               ░░░░░░░░░░░░░░░░░░░░░░░░░   00.13 % 
-Unknown Project          0 secs              ░░░░░░░░░░░░░░░░░░░░░░░░░   00.03 % 
+lucid                    18 hrs 44 mins      ██████████████████████░░░   88.51 % 
+paper review             1 hr 51 mins        ██░░░░░░░░░░░░░░░░░░░░░░░   08.74 % 
+chanlee                  33 mins             █░░░░░░░░░░░░░░░░░░░░░░░░   02.60 % 
+scratchpad               1 min               ░░░░░░░░░░░░░░░░░░░░░░░░░   00.12 % 
+Unknown Project          0 secs              ░░░░░░░░░░░░░░░░░░░░░░░░░   00.02 % 
 
 💻 Operating System: 
-Mac                      20 hrs 27 mins      █████████████████████████   100.00 % 
+Mac                      21 hrs 10 mins      █████████████████████████   100.00 % 
 ```
 
 
- Last Updated on 24/07/2026 14:17:46 UTC
+ Last Updated on 25/07/2026 14:06:01 UTC
 <!--END_SECTION:waka-->
 
 </div>
