@@ -109,22 +109,7 @@
       NumPy, MLX
     </td>
   </tr>
-
-  <tr>
-    <td>
-      <a href="https://github.com/ChanLumerico/attention_unet_lucid"><b>attention_unet_lucid</b></a>
-    </td>
-    <td>
-      Implementation of Attention U-Net for image segmentation using the Lucid framework.
-    </td>
-    <td>
-      Computer Vision · Segmentation · U-Net
-    </td>
-    <td>
-      Lucid
-    </td>
-  </tr>
-
+  
   <tr>
     <td>
       <a href="https://github.com/ChanLumerico/ncsn"><b>ncsn</b></a>
