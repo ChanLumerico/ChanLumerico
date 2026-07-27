@@ -148,21 +148,21 @@
 **I'm a Night 🦉** 
 
 ```text
-🌞 Morning                87 commits          █░░░░░░░░░░░░░░░░░░░░░░░░   05.05 % 
-🌆 Daytime                427 commits         ██████░░░░░░░░░░░░░░░░░░░   24.77 % 
-🌃 Evening                784 commits         ███████████░░░░░░░░░░░░░░   45.48 % 
-🌙 Night                  426 commits         ██████░░░░░░░░░░░░░░░░░░░   24.71 % 
+🌞 Morning                6 commits           ░░░░░░░░░░░░░░░░░░░░░░░░░   01.73 % 
+🌆 Daytime                89 commits          ██████░░░░░░░░░░░░░░░░░░░   25.72 % 
+🌃 Evening                130 commits         █████████░░░░░░░░░░░░░░░░   37.57 % 
+🌙 Night                  121 commits         █████████░░░░░░░░░░░░░░░░   34.97 % 
 ```
 📅 **I'm Most Productive on Friday** 
 
 ```text
-Monday                   182 commits         ███░░░░░░░░░░░░░░░░░░░░░░   10.56 % 
-Tuesday                  194 commits         ███░░░░░░░░░░░░░░░░░░░░░░   11.25 % 
-Wednesday                239 commits         ███░░░░░░░░░░░░░░░░░░░░░░   13.86 % 
-Thursday                 158 commits         ██░░░░░░░░░░░░░░░░░░░░░░░   09.16 % 
-Friday                   325 commits         █████░░░░░░░░░░░░░░░░░░░░   18.85 % 
-Saturday                 302 commits         ████░░░░░░░░░░░░░░░░░░░░░   17.52 % 
-Sunday                   324 commits         █████░░░░░░░░░░░░░░░░░░░░   18.79 % 
+Monday                   7 commits           █░░░░░░░░░░░░░░░░░░░░░░░░   02.02 % 
+Tuesday                  40 commits          ███░░░░░░░░░░░░░░░░░░░░░░   11.56 % 
+Wednesday                38 commits          ███░░░░░░░░░░░░░░░░░░░░░░   10.98 % 
+Thursday                 12 commits          █░░░░░░░░░░░░░░░░░░░░░░░░   03.47 % 
+Friday                   98 commits          ███████░░░░░░░░░░░░░░░░░░   28.32 % 
+Saturday                 86 commits          ██████░░░░░░░░░░░░░░░░░░░   24.86 % 
+Sunday                   65 commits          █████░░░░░░░░░░░░░░░░░░░░   18.79 % 
 ```
 
 
@@ -172,32 +172,32 @@ Sunday                   324 commits         █████░░░░░░�
 🕑︎ Time Zone: Asia/Seoul
 
 💬 Programming Languages: 
-Other                    21 hrs 38 mins      █████████████████████░░░░   85.32 % 
-Python                   1 hr 58 mins        ██░░░░░░░░░░░░░░░░░░░░░░░   07.76 % 
-C++                      57 mins             █░░░░░░░░░░░░░░░░░░░░░░░░   03.77 % 
-Objective-C++            28 mins             ░░░░░░░░░░░░░░░░░░░░░░░░░   01.88 % 
-Markdown                 19 mins             ░░░░░░░░░░░░░░░░░░░░░░░░░   01.27 % 
+Other                    20 hrs 39 mins      ███████████████░░░░░░░░░░   60.18 % 
+Python                   9 hrs 57 mins       ███████░░░░░░░░░░░░░░░░░░   29.01 % 
+C++                      1 hr 19 mins        █░░░░░░░░░░░░░░░░░░░░░░░░   03.88 % 
+Markdown                 1 hr 14 mins        █░░░░░░░░░░░░░░░░░░░░░░░░   03.62 % 
+Objective-C++            28 mins             ░░░░░░░░░░░░░░░░░░░░░░░░░   01.39 % 
 
 🔥 Editors: 
-Notion                   21 hrs 27 mins      █████████████████████░░░░   84.60 % 
-Claude Code              3 hrs 39 mins       ████░░░░░░░░░░░░░░░░░░░░░   14.42 % 
-Zoom                     13 mins             ░░░░░░░░░░░░░░░░░░░░░░░░░   00.90 % 
-VS Code                  0 secs              ░░░░░░░░░░░░░░░░░░░░░░░░░   00.07 % 
+Notion                   21 hrs 47 mins      ████████████████░░░░░░░░░   63.49 % 
+Claude Code              12 hrs 9 mins       █████████░░░░░░░░░░░░░░░░   35.43 % 
+Zoom                     13 mins             ░░░░░░░░░░░░░░░░░░░░░░░░░   00.67 % 
+VS Code                  8 mins              ░░░░░░░░░░░░░░░░░░░░░░░░░   00.41 % 
 Notes                    0 secs              ░░░░░░░░░░░░░░░░░░░░░░░░░   00.01 % 
 
 🐱‍💻 Projects: 
-lucid                    22 hrs 56 mins      ███████████████████████░░   90.40 % 
-paper review             1 hr 51 mins        ██░░░░░░░░░░░░░░░░░░░░░░░   07.30 % 
-chanlee                  33 mins             █░░░░░░░░░░░░░░░░░░░░░░░░   02.17 % 
-scratchpad               1 min               ░░░░░░░░░░░░░░░░░░░░░░░░░   00.10 % 
+lucid                    31 hrs 53 mins      ███████████████████████░░   92.91 % 
+paper review             1 hr 51 mins        █░░░░░░░░░░░░░░░░░░░░░░░░   05.39 % 
+chanlee                  33 mins             ░░░░░░░░░░░░░░░░░░░░░░░░░   01.60 % 
+scratchpad               1 min               ░░░░░░░░░░░░░░░░░░░░░░░░░   00.08 % 
 Unknown Project          0 secs              ░░░░░░░░░░░░░░░░░░░░░░░░░   00.02 % 
 
 💻 Operating System: 
-Mac                      25 hrs 22 mins      █████████████████████████   100.00 % 
+Mac                      34 hrs 19 mins      █████████████████████████   100.00 % 
 ```
 
 
- Last Updated on 26/07/2026 14:01:07 UTC
+ Last Updated on 27/07/2026 15:18:23 UTC
 <!--END_SECTION:waka-->
 
 </div>
