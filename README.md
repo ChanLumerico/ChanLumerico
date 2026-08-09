@@ -145,7 +145,7 @@
 <div align="center">
 
 <!--START_SECTION:waka-->
-![AI Code Time](http://img.shields.io/badge/AI%20Code%20Time-525%20hrs%205%20mins-blue?style=flat)
+![AI Code Time](http://img.shields.io/badge/AI%20Code%20Time-531%20hrs%2054%20mins-blue?style=flat)
 
 **I'm a Night 🦉** 
 
@@ -174,54 +174,54 @@ Sunday                   352 commits         █████░░░░░░�
 🕑︎ Time Zone: Asia/Seoul
 
 💬 Programming Languages: 
-Python                   27 hrs 40 mins      ████████████░░░░░░░░░░░░░   48.85 % 
-Other                    11 hrs 30 mins      █████░░░░░░░░░░░░░░░░░░░░   20.30 % 
-C++                      9 hrs 8 mins        ████░░░░░░░░░░░░░░░░░░░░░   16.14 % 
-Markdown                 5 hrs 2 mins        ██░░░░░░░░░░░░░░░░░░░░░░░   08.89 % 
-TypeScript               1 hr 49 mins        █░░░░░░░░░░░░░░░░░░░░░░░░   03.23 % 
+Python                   24 hrs 34 mins      ████████████░░░░░░░░░░░░░   46.93 % 
+Other                    10 hrs 59 mins      █████░░░░░░░░░░░░░░░░░░░░   20.99 % 
+C++                      8 hrs 8 mins        ████░░░░░░░░░░░░░░░░░░░░░   15.54 % 
+Markdown                 5 hrs 27 mins       ███░░░░░░░░░░░░░░░░░░░░░░   10.43 % 
+TypeScript               1 hr 37 mins        █░░░░░░░░░░░░░░░░░░░░░░░░   03.09 % 
 
 🔥 Editors: 
-Claude Code              44 hrs 2 mins       ███████████████████░░░░░░   77.73 % 
-Notion                   11 hrs 30 mins      █████░░░░░░░░░░░░░░░░░░░░   20.32 % 
-Notes                    52 mins             ░░░░░░░░░░░░░░░░░░░░░░░░░   01.55 % 
-VS Code                  13 mins             ░░░░░░░░░░░░░░░░░░░░░░░░░   00.41 % 
+Claude Code              40 hrs 34 mins      ███████████████████░░░░░░   77.50 % 
+Notion                   10 hrs 25 mins      █████░░░░░░░░░░░░░░░░░░░░   19.90 % 
+Notes                    52 mins             ░░░░░░░░░░░░░░░░░░░░░░░░░   01.68 % 
+VS Code                  28 mins             ░░░░░░░░░░░░░░░░░░░░░░░░░   00.92 % 
 
 🐱‍💻 Projects: 
-lucid                    46 hrs 4 mins       ████████████████████░░░░░   81.33 % 
-deep-learning-geneaology 4 hrs 51 mins       ██░░░░░░░░░░░░░░░░░░░░░░░   08.57 % 
-dreamer-v3-crafter       4 hrs 40 mins       ██░░░░░░░░░░░░░░░░░░░░░░░   08.25 % 
-paper review             1 hr 2 mins         ░░░░░░░░░░░░░░░░░░░░░░░░░   01.84 % 
+lucid                    42 hrs 42 mins      ████████████████████░░░░░   81.58 % 
+dreamer-v3-crafter       4 hrs 28 mins       ██░░░░░░░░░░░░░░░░░░░░░░░   08.55 % 
+deep-learning-geneaology 4 hrs 21 mins       ██░░░░░░░░░░░░░░░░░░░░░░░   08.32 % 
+paper review             48 mins             ░░░░░░░░░░░░░░░░░░░░░░░░░   01.55 % 
 baseline_size25m_ratio5120 secs              ░░░░░░░░░░░░░░░░░░░░░░░░░   00.00 % 
 
 💻 Operating System: 
-Mac                      56 hrs 39 mins      █████████████████████████   100.00 % 
+Mac                      52 hrs 20 mins      █████████████████████████   100.00 % 
 ```
 
 🤖 **AI Coding This Week** 
 
 ```text
-⏱ AI Coding Time: 48 hrs 59 mins (86.46%)
+⏱ AI Coding Time: 45 hrs 6 mins (86.18%)
 
-✍️ 33,199 lines written by AI, 381 lines written by hand (98.87% AI-written)
+✍️ 28,902 lines written by AI, 366 lines written by hand (98.75% AI-written)
 
-🔤 2,110,950,741 Input Tokens, 3,684,953 Output Tokens
+🔤 1,827,188,534 Input Tokens, 3,862,757 Output Tokens
 
-💵 $10808.41 Estimated AI Cost This Week
+💵 $9343.23 Estimated AI Cost This Week
 
-🧠 23 AI Sessions, 351 AI Prompts
+🧠 21 AI Sessions, 373 AI Prompts
 
-Opus                     33,735 lines        █████████████████████████   100.00 % 
+Opus                     29,008 lines        █████████████████████████   100.00 % 
 Claude-Code              0 lines             ░░░░░░░░░░░░░░░░░░░░░░░░░   00.00 % 
 
 🔎 AI Coding Insights:
-🤖 AI-Driven — 98.87% of written lines came from AI
-📄 Detailed Prompter — average 629 characters per prompt
-🔁 Iterative Prompter — average 15 prompts per session
-🚀 High AI Trust — 1.39% of changed lines were hand-edited
+🤖 AI-Driven — 98.75% of written lines came from AI
+📄 Detailed Prompter — average 560 characters per prompt
+🔁 Iterative Prompter — average 18 prompts per session
+🚀 High AI Trust — 1.25% of changed lines were hand-edited
 ```
 
 
- Last Updated on 08/08/2026 13:16:26 UTC
+ Last Updated on 09/08/2026 13:21:23 UTC
 <!--END_SECTION:waka-->
 
 </div>
