@@ -1,0 +1,669 @@
+/* One stylesheet for the RST block components, so each block's numbers sit
+   next to each other and stay easy to diff against the prototype's
+   `rstBlock`. Every value is a token or a verbatim literal from that method. */
+
+/* --- section ---------------------------------------------------------- */
+.section {
+  scroll-margin-top: var(--anchor-offset);
+}
+
+.sectionTitle {
+  font-family: var(--font-display);
+  font-size: var(--fs-h2);
+  line-height: var(--lh-h2);
+  font-weight: 600;
+  letter-spacing: var(--ls-h2);
+  margin: 0 0 24px;
+  text-wrap: pretty;
+}
+
+.layoutGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 16px;
+}
+
+.layoutStack {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+/* `list` rows carry their own rules, so the container adds no gap. */
+.layoutList {
+  display: flex;
+  flex-direction: column;
+}
+
+/* --- card -------------------------------------------------------------- */
+.card {
+  background: var(--fog);
+  border-radius: var(--r-card);
+  padding: 30px 30px 32px;
+}
+
+.cardNum {
+  font-size: var(--fs-12);
+  letter-spacing: var(--ls-12);
+  color: var(--ac2);
+  margin-bottom: 14px;
+}
+
+.cardMeta {
+  font-size: var(--fs-12);
+  letter-spacing: var(--ls-12);
+  color: var(--ink-3);
+  margin-bottom: 12px;
+}
+
+.cardTitle {
+  font-family: var(--font-display);
+  font-size: 22px;
+  line-height: 27px;
+  font-weight: 600;
+  letter-spacing: -0.2px;
+  margin: 0 0 12px;
+  text-wrap: pretty;
+}
+
+.cardBody {
+  font-size: var(--fs-17);
+  line-height: var(--lh-17);
+  letter-spacing: var(--ls-17);
+  color: var(--ink-2);
+  margin: 0;
+  max-width: 66ch;
+  text-wrap: pretty;
+}
+
+.bullets {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 18px;
+}
+
+.bulletRow {
+  display: flex;
+  gap: 12px;
+  align-items: flex-start;
+}
+
+.bulletDot {
+  flex: 0 0 auto;
+  width: 5px;
+  height: 5px;
+  border-radius: var(--r-pill);
+  background: var(--ac);
+  margin-top: 9px;
+}
+
+.bulletText {
+  font-size: var(--fs-15);
+  line-height: 23px;
+  letter-spacing: var(--ls-15);
+  color: var(--ink-2);
+}
+
+.cardActions {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  align-items: center;
+  margin-top: 22px;
+}
+
+.tag {
+  display: inline-flex;
+  align-items: center;
+  height: var(--h-control);
+  padding: var(--pad-control);
+  border-radius: var(--r-pill);
+  background: var(--surface);
+  font-size: var(--fs-14);
+  letter-spacing: var(--ls-14);
+  color: var(--ink);
+}
+
+/* --- paragraph / divider ----------------------------------------------- */
+.para {
+  font-size: var(--fs-17);
+  line-height: var(--lh-17);
+  letter-spacing: var(--ls-17);
+  color: var(--ink-2);
+  margin: 0;
+  max-width: 66ch;
+  text-wrap: pretty;
+}
+
+.divider {
+  height: 1px;
+  background: var(--hairline-3);
+  margin: 6px 0;
+}
+
+/* --- lede / quote ------------------------------------------------------ */
+.lede {
+  font-size: var(--fs-lede);
+  line-height: var(--lh-lede);
+  letter-spacing: var(--ls-lede);
+  color: var(--ink);
+  margin: 0;
+  max-width: 44ch;
+  text-wrap: pretty;
+}
+
+.quote {
+  border-left: 3px solid var(--ac);
+  padding: 2px 0 2px 20px;
+  margin: 4px 0;
+}
+
+.quoteText {
+  font-size: var(--fs-19);
+  line-height: var(--lh-19);
+  letter-spacing: var(--ls-17);
+  color: var(--ink);
+  margin: 0;
+  max-width: 60ch;
+  text-wrap: pretty;
+}
+
+.quoteCite {
+  font-size: var(--fs-12);
+  letter-spacing: var(--ls-12);
+  color: var(--ink-3);
+  margin-top: 10px;
+}
+
+/* --- stats ------------------------------------------------------------- */
+.stats {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 20px;
+  padding: 26px 0;
+  border-top: 1px solid var(--hairline-2);
+  border-bottom: 1px solid var(--hairline-2);
+}
+
+.statValue {
+  font-family: var(--font-display);
+  font-size: 30px;
+  line-height: 34px;
+  font-weight: 600;
+  letter-spacing: -0.4px;
+  color: var(--ink);
+}
+
+.statLabel {
+  font-size: var(--fs-13);
+  line-height: var(--lh-13);
+  letter-spacing: var(--ls-13);
+  color: var(--ink-3);
+  margin-top: 6px;
+}
+
+/* --- figures (field, diagram, embed, figure) --------------------------- */
+.figure {
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.figureTight {
+  gap: 12px;
+}
+
+.frame {
+  width: 100%;
+  background: var(--fog);
+  border-radius: var(--r-card);
+  padding: 30px;
+}
+
+.frameDiagram {
+  padding: 34px 30px;
+}
+
+.panelRowField {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 30px;
+}
+
+.panelRowDiagram {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 30px;
+}
+
+.panel {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  min-width: 0;
+}
+
+.panelDiagram {
+  gap: 12px;
+}
+
+.panelLabel {
+  font-size: var(--fs-12);
+  letter-spacing: var(--ls-12);
+  color: var(--ac2);
+}
+
+.panelSub {
+  font-size: var(--fs-13);
+  line-height: var(--lh-13);
+  letter-spacing: var(--ls-13);
+  color: var(--ink-2);
+  text-wrap: pretty;
+}
+
+.svg {
+  display: block;
+  height: auto;
+  width: 100%;
+  color: var(--ac);
+}
+
+.svgOverflow {
+  overflow: visible;
+}
+
+.caption {
+  font-size: var(--fs-13);
+  line-height: var(--lh-13);
+  letter-spacing: var(--ls-13);
+  color: var(--ink-3);
+}
+
+.captionNarrow {
+  max-width: 60ch;
+}
+
+.citeLine {
+  display: block;
+  margin-top: 6px;
+  color: var(--ink-4);
+}
+
+/* --- embed ------------------------------------------------------------- */
+.embedFrame {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  background: var(--video-frame);
+  border-radius: var(--r-card);
+  overflow: hidden;
+}
+
+.poster {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.play {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 0;
+  background: rgba(0, 0, 0, 0.18);
+  cursor: pointer;
+  padding: 0;
+  text-decoration: none;
+}
+
+.play:hover {
+  text-decoration: none;
+}
+
+.playDot {
+  width: 66px;
+  height: 66px;
+  border-radius: var(--r-pill);
+  background: rgba(255, 255, 255, 0.94);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: var(--shadow-play);
+}
+
+.embedBadge {
+  position: absolute;
+  left: 16px;
+  bottom: 14px;
+  display: inline-flex;
+  align-items: center;
+  height: var(--h-pill);
+  padding: var(--pad-pill);
+  border-radius: var(--r-pill);
+  background: var(--badge);
+  backdrop-filter: var(--blur-badge);
+  -webkit-backdrop-filter: var(--blur-badge);
+  color: var(--surface);
+  font-size: var(--fs-12);
+  letter-spacing: var(--ls-12);
+  pointer-events: none;
+}
+
+/* --- figure slot ------------------------------------------------------- */
+.figureFrame {
+  width: 100%;
+  background: var(--fog);
+  border-radius: var(--r-card);
+  overflow: hidden;
+  position: relative;
+}
+
+.figureImg {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  display: block;
+}
+
+.figurePlaceholder {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: var(--fs-13);
+  letter-spacing: var(--ls-13);
+  color: var(--ink-4);
+}
+
+/* --- refs -------------------------------------------------------------- */
+.refs {
+  display: flex;
+  flex-direction: column;
+}
+
+.refRow {
+  display: flex;
+  gap: 18px;
+  align-items: baseline;
+  padding: 16px 0;
+  border-top: 1px solid var(--hairline);
+  color: var(--ink);
+  text-decoration: none;
+}
+
+.refRow:hover {
+  text-decoration: none;
+}
+
+.refRowLast {
+  border-bottom: 1px solid var(--hairline);
+}
+
+.refYear {
+  flex: 0 0 74px;
+  font-size: var(--fs-12);
+  letter-spacing: var(--ls-12);
+  color: var(--ink-3);
+  font-variant-numeric: tabular-nums;
+}
+
+.refTitle {
+  flex: 1;
+  min-width: 0;
+  font-size: var(--fs-15);
+  line-height: var(--lh-15);
+  letter-spacing: var(--ls-15);
+  text-wrap: pretty;
+}
+
+.refArrow {
+  font-size: var(--fs-14);
+  color: var(--ac2);
+}
+
+/* --- pills ------------------------------------------------------------- */
+.pills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.pill {
+  display: inline-flex;
+  align-items: center;
+  height: var(--h-pill);
+  padding: var(--pad-pill);
+  border-radius: var(--r-pill);
+  background: var(--fog);
+  font-size: var(--fs-12);
+  letter-spacing: var(--ls-12);
+  color: var(--ink);
+}
+
+/* --- entry ------------------------------------------------------------- */
+.entry {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: 6px;
+  padding: 24px 0;
+  border-bottom: 1px solid var(--hairline);
+}
+
+.entryLast {
+  border-bottom: none;
+}
+
+.entryDate {
+  font-size: var(--fs-12);
+  letter-spacing: var(--ls-12);
+  color: var(--ink-3);
+}
+
+.entryRole {
+  font-family: var(--font-display);
+  font-size: 20px;
+  line-height: 25px;
+  font-weight: 600;
+}
+
+.entryOrg {
+  font-size: var(--fs-17);
+  line-height: var(--lh-17);
+  letter-spacing: var(--ls-17);
+  color: var(--ink-2);
+}
+
+/* --- post row (both the authored `.. post::` and the live velog feed) --- */
+.postRow {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  flex-wrap: wrap;
+  padding: 22px 0;
+  border-top: 1px solid var(--hairline);
+  color: var(--ink);
+  text-decoration: none;
+}
+
+.postRow:hover {
+  text-decoration: none;
+}
+
+.postRowLast {
+  border-bottom: 1px solid var(--hairline);
+}
+
+.postDate {
+  flex: 0 0 96px;
+  font-size: var(--fs-12);
+  letter-spacing: var(--ls-12);
+  color: var(--ink-3);
+}
+
+.postMid {
+  flex: 1 1 260px;
+  min-width: 0;
+}
+
+.postTitle {
+  display: block;
+  font-family: var(--font-display);
+  font-size: var(--fs-19);
+  line-height: 25px;
+  font-weight: 600;
+  margin-bottom: 5px;
+}
+
+.postSeriesTag {
+  display: inline-block;
+  margin-right: 8px;
+  padding: 1px 8px;
+  border-radius: var(--r-pill);
+  background: var(--fog);
+  font-size: var(--fs-11);
+  font-weight: 400;
+  letter-spacing: var(--ls-11);
+  color: var(--ink-3);
+  vertical-align: middle;
+}
+
+.postSummary {
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  font-size: var(--fs-14);
+  line-height: 20px;
+  letter-spacing: var(--ls-14);
+  color: var(--ink-3);
+}
+
+.postArrow {
+  font-size: var(--fs-17);
+  color: var(--ac2);
+}
+
+/* --- empty / error states --------------------------------------------- */
+.feedEmpty {
+  padding: 22px 0;
+  border-top: 1px solid var(--hairline);
+  border-bottom: 1px solid var(--hairline);
+  font-size: var(--fs-14);
+  line-height: var(--lh-14);
+  letter-spacing: var(--ls-14);
+  color: var(--ink-3);
+}
+
+.feedEmptyActions {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  align-items: center;
+  margin-top: 14px;
+}
+
+/* --- velog series gallery ---------------------------------------------- */
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 16px;
+}
+
+.seriesCard {
+  display: flex;
+  flex-direction: column;
+  background: var(--fog);
+  border-radius: var(--r-card);
+  padding: 26px 26px 24px;
+  color: var(--ink);
+  text-decoration: none;
+  transition:
+    transform var(--dur-hover) var(--ease),
+    background var(--dur-hover) ease;
+  min-height: 190px;
+  border: none;
+  font-family: inherit;
+  text-align: left;
+}
+
+a.seriesCard:hover,
+button.seriesCard:hover {
+  transform: translateY(-3px);
+  background: var(--fog-hover);
+  text-decoration: none;
+}
+
+button.seriesCard {
+  cursor: pointer;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .seriesCard {
+    transition: none;
+  }
+
+  a.seriesCard:hover,
+  button.seriesCard:hover {
+    transform: none;
+  }
+}
+
+.seriesEyebrow {
+  font-size: var(--fs-12);
+  letter-spacing: var(--ls-12);
+  color: var(--ac2);
+  margin-bottom: 14px;
+}
+
+.seriesName {
+  font-family: var(--font-display);
+  font-size: 24px;
+  line-height: 29px;
+  font-weight: 600;
+  letter-spacing: var(--ls-h2);
+  margin-bottom: 10px;
+  text-wrap: pretty;
+}
+
+.seriesLatest {
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  font-size: var(--fs-14);
+  line-height: 20px;
+  letter-spacing: var(--ls-14);
+  color: var(--ink-3);
+}
+
+.seriesFoot {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin-top: auto;
+  padding-top: 22px;
+}
+
+.seriesCount {
+  font-size: var(--fs-12);
+  letter-spacing: var(--ls-12);
+  color: var(--ink-3);
+}
+
+.seriesArrow {
+  font-size: var(--fs-15);
+  color: var(--ac2);
+}
