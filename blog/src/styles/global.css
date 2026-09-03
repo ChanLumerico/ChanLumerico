@@ -1,0 +1,183 @@
+@import './tokens.css';
+
+/* Ported from the prototype's <helmet><style> block. */
+
+html {
+  scroll-behavior: smooth;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  background: var(--surface);
+}
+
+[id] {
+  scroll-margin-top: var(--anchor-offset);
+}
+
+body {
+  font-family: var(--font-text);
+  color: var(--ink);
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+a {
+  color: var(--ac2);
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+a:focus-visible,
+button:focus-visible,
+textarea:focus-visible,
+[contenteditable='true']:focus-visible,
+[tabindex]:focus-visible {
+  outline: 2px solid var(--ac);
+  outline-offset: 2px;
+  border-radius: var(--r-focus);
+}
+
+::selection {
+  background: var(--selection);
+}
+
+@media print {
+  .adminui {
+    display: none !important;
+  }
+}
+
+/* --- soft-edge scroll panels ------------------------------------------ */
+.scrollfade {
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+.scrollfade::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+  display: none;
+}
+
+/* --- reveal ------------------------------------------------------------ */
+.reveal {
+  opacity: 0;
+  transform: translateY(12px);
+  transition:
+    opacity var(--dur-reveal) var(--ease) var(--reveal-delay, 0ms),
+    transform var(--dur-reveal) var(--ease) var(--reveal-delay, 0ms);
+}
+
+/* `transform:none`, not translateY(0) — a live transform would make the block
+   a containing block for position:fixed descendants. */
+.reveal[data-revealed='1'] {
+  opacity: 1;
+  transform: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  .reveal {
+    transition: none;
+    opacity: 1;
+    transform: none;
+  }
+}
+
+/* --- shared primitives ------------------------------------------------- */
+.eyebrow {
+  font-size: var(--fs-12);
+  letter-spacing: var(--ls-12);
+  color: var(--ink-3);
+}
+
+.btnFilled {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  height: var(--h-control);
+  padding: var(--pad-control);
+  border: none;
+  border-radius: var(--r-pill);
+  background: var(--ac);
+  color: var(--surface);
+  font-family: inherit;
+  font-size: var(--fs-14);
+  letter-spacing: var(--ls-14);
+  cursor: pointer;
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+.btnFilled:hover {
+  background: var(--ac-hover);
+  text-decoration: none;
+}
+
+.btnOutline {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  height: var(--h-control);
+  padding: var(--pad-control);
+  border: 1px solid var(--ac2);
+  border-radius: var(--r-pill);
+  background: transparent;
+  color: var(--ac2);
+  font-family: inherit;
+  font-size: var(--fs-14);
+  letter-spacing: var(--ls-14);
+  cursor: pointer;
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+.btnOutline:hover {
+  background: var(--ac-tint);
+  text-decoration: none;
+}
+
+.btnQuiet {
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+  height: var(--h-control);
+  padding: var(--pad-control);
+  border: none;
+  border-radius: var(--r-pill);
+  background: var(--fog);
+  color: var(--ink);
+  font-family: inherit;
+  font-size: var(--fs-14);
+  letter-spacing: var(--ls-14);
+  cursor: pointer;
+  text-decoration: none;
+}
+
+/* Touch targets never fall below 44px, and hover lifts are inert on touch. */
+@media (hover: none) {
+  .btnFilled,
+  .btnOutline,
+  .btnQuiet {
+    min-height: 44px;
+  }
+
+  .hoverLift:hover {
+    transform: none !important;
+  }
+}

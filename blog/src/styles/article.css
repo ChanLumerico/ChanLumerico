@@ -1,0 +1,129 @@
+/* Typography for fetched post HTML — the markup arrives at runtime, so it
+   cannot be styled inline like the rest of the page. Ported verbatim from the
+   prototype's `[data-article]` rules. */
+
+.article {
+  font-size: 17px;
+  line-height: 1.72;
+  letter-spacing: -0.2px;
+  color: var(--ink);
+  min-width: 0;
+  overflow-wrap: anywhere;
+  word-break: break-word;
+}
+
+.article .katex {
+  max-width: 100%;
+  overflow-x: auto;
+  overflow-y: hidden;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.article h1,
+.article h2,
+.article h3,
+.article h4 {
+  font-family: var(--font-display);
+  font-weight: 600;
+  letter-spacing: -0.3px;
+  line-height: 1.2;
+  margin: 2.2em 0 0.7em;
+}
+
+.article h1 {
+  font-size: 28px;
+}
+
+.article h2 {
+  font-size: 24px;
+}
+
+.article h3 {
+  font-size: 20px;
+}
+
+.article h4 {
+  font-size: 17px;
+}
+
+.article p {
+  margin: 0 0 1.15em;
+}
+
+.article ul,
+.article ol {
+  margin: 0 0 1.15em;
+  padding-left: 1.35em;
+}
+
+.article li {
+  margin: 0.3em 0;
+}
+
+/* Velog posts embed tall figures; cap them so one image can't fill a screen. */
+.article img {
+  max-width: 100%;
+  height: auto;
+  border-radius: var(--r-img);
+  display: block;
+  margin: 1.6em 0;
+  max-height: min(70vh, 620px);
+  object-fit: contain;
+}
+
+.article pre {
+  background: var(--fog);
+  border-radius: var(--r-pre);
+  padding: 18px 20px;
+  overflow: auto;
+  margin: 1.6em 0;
+}
+
+.article code {
+  font-family: var(--font-mono);
+  font-size: 14px;
+}
+
+.article p > code,
+.article li > code {
+  background: var(--fog);
+  padding: 2px 6px;
+  border-radius: var(--r-chip);
+}
+
+.article blockquote {
+  margin: 1.6em 0;
+  padding: 2px 0 2px 18px;
+  border-left: 3px solid var(--rule-quote);
+  color: var(--ink-2);
+}
+
+.article hr {
+  border: none;
+  border-top: 1px solid var(--hairline-2);
+  margin: 2.4em 0;
+}
+
+.article table {
+  display: block;
+  overflow-x: auto;
+  white-space: nowrap;
+  width: 100%;
+  border-collapse: collapse;
+  margin: 1.6em 0;
+  font-size: 15px;
+}
+
+.article th,
+.article td {
+  border-bottom: 1px solid var(--hairline-2);
+  padding: 10px 12px;
+  text-align: left;
+}
+
+.article .katex-display {
+  overflow-x: auto;
+  overflow-y: hidden;
+  padding: 2px 0;
+}
