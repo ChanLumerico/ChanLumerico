@@ -1,0 +1,2684 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<script src="./image-slot.js"></script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css">
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/auto-render.min.js"></script>
+<style>
+  :root { --ac:#0071e3; --ac2:#0066cc; }
+  html { scroll-behavior:smooth; }
+  html, body { margin:0; padding:0; background:#ffffff; }
+  [id] { scroll-margin-top:88px; }
+  body { font-family:"SF Pro Text","SF Pro Display",-apple-system,BlinkMacSystemFont,"Helvetica Neue",sans-serif; color:#1d1d1f; -webkit-font-smoothing:antialiased; overflow-x:hidden; }
+  [data-scrollfade] { scrollbar-width:none; -ms-overflow-style:none; }
+  /* Typography for fetched post HTML — the markup arrives at runtime, so it
+     cannot be styled inline like the rest of the page. */
+  [data-article] { font-size:17px; line-height:1.72; letter-spacing:-0.2px; color:#1d1d1f;
+    min-width:0; overflow-wrap:anywhere; word-break:break-word; }
+  [data-article] .katex { max-width:100%; overflow-x:auto; overflow-y:hidden; display:inline-block; vertical-align:middle; }
+  [data-article] h1, [data-article] h2, [data-article] h3, [data-article] h4 {
+    font-family:'SF Pro Display',-apple-system,sans-serif; font-weight:600; letter-spacing:-0.3px;
+    line-height:1.2; margin:2.2em 0 0.7em; }
+  [data-article] h1 { font-size:28px; }
+  [data-article] h2 { font-size:24px; }
+  [data-article] h3 { font-size:20px; }
+  [data-article] h4 { font-size:17px; }
+  [data-article] p { margin:0 0 1.15em; }
+  [data-article] ul, [data-article] ol { margin:0 0 1.15em; padding-left:1.35em; }
+  [data-article] li { margin:0.3em 0; }
+  [data-article] img { max-width:100%; height:auto; border-radius:12px; display:block; margin:1.6em 0; }
+  /* Velog posts embed tall figures; cap them so one image can't fill a screen. */
+  [data-article] img { max-height:min(70vh,620px); object-fit:contain; }
+  [data-article] pre { background:#f5f5f7; border-radius:14px; padding:18px 20px; overflow:auto; margin:1.6em 0; }
+  [data-article] table { display:block; overflow-x:auto; white-space:nowrap; }
+  [data-article] code { font-family:'SF Mono',ui-monospace,SFMono-Regular,Menlo,monospace; font-size:14px; }
+  [data-article] p > code, [data-article] li > code { background:#f5f5f7; padding:2px 6px; border-radius:6px; }
+  [data-article] blockquote { margin:1.6em 0; padding:2px 0 2px 18px; border-left:3px solid rgba(0,0,0,0.14); color:#515154; }
+  [data-article] hr { border:none; border-top:1px solid rgba(0,0,0,0.1); margin:2.4em 0; }
+  [data-article] table { width:100%; border-collapse:collapse; margin:1.6em 0; font-size:15px; }
+  [data-article] th, [data-article] td { border-bottom:1px solid rgba(0,0,0,0.1); padding:10px 12px; text-align:left; }
+  [data-article] .katex-display { overflow-x:auto; overflow-y:hidden; padding:2px 0; }
+  @media (hover:none) {
+    [data-series] a { transform:none !important; }
+  }
+  @media (max-width:1240px) {
+    [data-rst-modal] { right:20px !important; }
+    [data-rst-legend] { display:none !important; }
+  }
+  [data-scrollfade]::-webkit-scrollbar { width:0; height:0; display:none; }
+  @media (max-width:820px) {
+    #top { padding-top:30px !important; gap:34px !important; }
+    [data-region="aside"] { max-width:none !important; flex-basis:100% !important; }
+    [data-portrait] { max-width:260px !important; }
+    [data-region="main"] { gap:44px !important; }
+    [data-nav] { flex-wrap:nowrap !important; overflow-x:auto; -webkit-overflow-scrolling:touch; scrollbar-width:none; }
+    [data-nav]::-webkit-scrollbar { display:none; }
+  }
+  @media (max-width:520px) {
+    #top { padding-left:18px !important; padding-right:18px !important; padding-bottom:64px !important; }
+    [data-topbar] { padding-left:18px !important; padding-right:18px !important; }
+    [data-portrait] { max-width:200px !important; }
+    [data-items] > * { padding-left:22px !important; padding-right:22px !important; }
+    [data-items="about"] > *, [data-items="experience"] > *, [data-items="writing"] > * { padding-left:0 !important; padding-right:0 !important; }
+  }
+  a { color:var(--ac2,#0066cc); text-decoration:none; }
+  a:hover { text-decoration:underline; }
+  a:focus-visible, button:focus-visible, [contenteditable="true"]:focus-visible { outline:2px solid var(--ac,#0071e3); outline-offset:2px; border-radius:4px; }
+  @media print { [data-adminui] { display:none !important; } }
+  ::selection { background:rgba(0,113,227,0.18); }
+</style>
+</helmet>
+<div style="width:100%;background:#ffffff">
+
+  <div style="position:sticky;top:0;z-index:50;background:rgba(255,255,255,0.72);backdrop-filter:saturate(180%) blur(20px);-webkit-backdrop-filter:saturate(180%) blur(20px);border-bottom:1px solid rgba(0,0,0,0.08)">
+    <div data-topbar="1" style="max-width:1080px;margin:0 auto;min-height:48px;display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap;padding:8px 22px">
+      <a href="#/" style="font-family:'SF Pro Display',-apple-system,sans-serif;font-size:15px;font-weight:600;letter-spacing:-0.1px;color:#1d1d1f">Chan Lee</a>
+      <div data-nav="1" style="display:flex;align-items:center;gap:clamp(14px,2.4vw,26px);flex-wrap:wrap">
+        <a href="#/research" data-page="research" style="font-size:12px;color:#1d1d1f;opacity:0.62">Research</a>
+        <a href="#/writing" data-page="writing" style="font-size:12px;color:#1d1d1f;opacity:0.62">Writings</a>
+      </div>
+    </div>
+  </div>
+
+  <div id="top" style="max-width:1080px;margin:0 auto;padding:44px 22px 88px;display:flex;flex-wrap:wrap;gap:clamp(32px,4vw,56px);align-items:flex-start">
+
+    <aside data-region="aside" style="flex:1 1 260px;max-width:320px;display:flex;flex-direction:column;gap:28px">
+      <div data-block="profile" data-reveal="1" style="opacity:0;transform:translateY(12px);transition:opacity 800ms cubic-bezier(0.28,0.11,0.32,1),transform 800ms cubic-bezier(0.28,0.11,0.32,1)">
+        <div data-portrait="1" style="width:80%;max-width:256px;aspect-ratio:1/1;position:relative;margin:0 auto 26px">
+          <image-slot id="chan-portrait" shape="circle" fit="cover" placeholder="Drop a portrait"></image-slot>
+        </div>
+        <h1 style="font-family:'SF Pro Display',-apple-system,sans-serif;font-size:36px;line-height:40px;font-weight:600;letter-spacing:-0.4px;margin:0 0 12px">Chan Lee</h1>
+        <p style="font-size:17px;line-height:25px;letter-spacing:-0.374px;color:#1d1d1f;margin:0 0 8px">Research Intern, Vision &amp; AI Lab<br>Korea University</p>
+        <p style="font-size:14px;line-height:20px;letter-spacing:-0.224px;color:#6e6e73;margin:0 0 24px">Junior in Computer Science and Engineering · Seoul, South Korea</p>
+        <div style="display:flex;flex-wrap:wrap;gap:10px">
+          <a href="mailto:greensox284@korea.ac.kr" style="display:inline-flex;align-items:center;height:36px;padding:0 15px;border-radius:980px;background:var(--ac,#0071e3);color:#ffffff;font-size:14px" style-hover="background:#0077ed">Email</a>
+          <a href="https://github.com/ChanLumerico" target="_blank" rel="noopener" aria-label="GitHub profile" title="GitHub" style="display:inline-flex;align-items:center;justify-content:center;width:36px;height:36px;border-radius:980px;background:#181717;color:#ffffff" style-hover="background:#2b2929">
+            <svg width="18" height="18" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0 0 16 8c0-4.42-3.58-8-8-8Z"></path></svg>
+          </a>
+          <a href="https://instagram.com/lxx__chan" target="_blank" rel="noopener" aria-label="Instagram profile" title="Instagram" style="display:inline-flex;align-items:center;justify-content:center;width:36px;height:36px;border-radius:980px;background:radial-gradient(circle at 28% 105%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%);color:#ffffff" style-hover="filter:brightness(1.08)">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="2" width="20" height="20" rx="5"></rect><circle cx="12" cy="12" r="4.2"></circle><circle cx="17.6" cy="6.4" r="1.1" fill="currentColor" stroke="none"></circle></svg>
+          </a>
+        </div>
+      </div>
+
+      <div data-block="focus" data-reveal="1" style="opacity:0;transform:translateY(12px);transition:opacity 800ms cubic-bezier(0.28,0.11,0.32,1) 140ms,transform 800ms cubic-bezier(0.28,0.11,0.32,1) 140ms;background:#f5f5f7;border-radius:18px;padding:24px 26px;display:flex;flex-direction:column;gap:14px">
+        <div style="font-size:12px;letter-spacing:-0.12px;color:#6e6e73">Focus</div>
+        <div style="display:flex;flex-wrap:wrap;gap:8px">
+          <span style="display:inline-flex;align-items:center;height:26px;padding:0 12px;border-radius:980px;background:#ffffff;font-size:12px;letter-spacing:-0.12px;color:#1d1d1f">Interactive world models</span>
+          <span style="display:inline-flex;align-items:center;height:26px;padding:0 12px;border-radius:980px;background:#ffffff;font-size:12px;letter-spacing:-0.12px;color:#1d1d1f">Diffusion &amp; flow</span>
+          <span style="display:inline-flex;align-items:center;height:26px;padding:0 12px;border-radius:980px;background:#ffffff;font-size:12px;letter-spacing:-0.12px;color:#1d1d1f">Computer vision</span>
+          <span style="display:inline-flex;align-items:center;height:26px;padding:0 12px;border-radius:980px;background:#ffffff;font-size:12px;letter-spacing:-0.12px;color:#1d1d1f">Autodiff systems</span>
+        </div>
+      </div>
+
+      <div data-block="skills" data-reveal="1" style="opacity:0;transform:translateY(12px);transition:opacity 800ms cubic-bezier(0.28,0.11,0.32,1) 200ms,transform 800ms cubic-bezier(0.28,0.11,0.32,1) 200ms;display:flex;flex-direction:column;gap:18px">
+        <div style="font-size:12px;letter-spacing:-0.12px;color:#6e6e73">Skills</div>
+        <div>
+          <div style="font-size:12px;letter-spacing:-0.12px;color:#6e6e73;margin-bottom:5px">Languages</div>
+          <div style="font-size:14px;line-height:21px;letter-spacing:-0.224px">Python (primary), C/C++</div>
+        </div>
+        <div>
+          <div style="font-size:12px;letter-spacing:-0.12px;color:#6e6e73;margin-bottom:5px">ML / DL</div>
+          <div style="font-size:14px;line-height:21px;letter-spacing:-0.224px">PyTorch, NumPy, MLX, Matplotlib</div>
+        </div>
+        <div>
+          <div style="font-size:12px;letter-spacing:-0.12px;color:#6e6e73;margin-bottom:5px">Coursework</div>
+          <div data-scrollfade="1" style="max-height:154px;overflow-y:auto;overscroll-behavior:contain;display:flex;flex-direction:column;gap:5px;padding-right:2px">
+            <div style="font-size:14px;line-height:21px;letter-spacing:-0.224px">Machine Learning</div>
+            <div style="font-size:14px;line-height:21px;letter-spacing:-0.224px">Reinforcement Learning</div>
+            <div style="font-size:14px;line-height:21px;letter-spacing:-0.224px">Artificial Intelligence</div>
+            <div style="font-size:14px;line-height:21px;letter-spacing:-0.224px">Natural Language Processing</div>
+            <div style="font-size:14px;line-height:21px;letter-spacing:-0.224px">Data Science</div>
+            <div style="font-size:14px;line-height:21px;letter-spacing:-0.224px">Probability &amp; Random Processes</div>
+            <div style="font-size:14px;line-height:21px;letter-spacing:-0.224px">Data Structure</div>
+            <div style="font-size:14px;line-height:21px;letter-spacing:-0.224px">Algorithms</div>
+            <div style="font-size:14px;line-height:21px;letter-spacing:-0.224px">Operating Systems</div>
+            <div style="font-size:14px;line-height:21px;letter-spacing:-0.224px">Computer Architecture</div>
+            <div style="font-size:14px;line-height:21px;letter-spacing:-0.224px">Computer Network</div>
+            <div style="font-size:14px;line-height:21px;letter-spacing:-0.224px">Theory of Computation</div>
+            <div style="font-size:14px;line-height:21px;letter-spacing:-0.224px">Discrete Mathematics</div>
+            <div style="font-size:14px;line-height:21px;letter-spacing:-0.224px">Mathematics for Computer Science I &amp; II</div>
+            <div style="font-size:14px;line-height:21px;letter-spacing:-0.224px">Computer Programming I &amp; II</div>
+          </div>
+        </div>
+      </div>
+    </aside>
+
+    <main data-region="main" style="flex:3 1 480px;min-width:0;display:flex;flex-direction:column;gap:56px">
+
+      <section id="about" data-section="about" data-screen-label="About" data-reveal="1" style="opacity:0;transform:translateY(12px);transition:opacity 800ms cubic-bezier(0.28,0.11,0.32,1)">
+        <h2 style="font-family:'SF Pro Display',-apple-system,sans-serif;font-size:clamp(26px,3vw,32px);line-height:1.15;font-weight:600;letter-spacing:-0.3px;margin:0 0 20px">About</h2>
+        <div data-items="about" style="display:flex;flex-direction:column;gap:16px">
+          <p style="font-size:19px;line-height:29px;letter-spacing:-0.374px;margin:0;max-width:62ch;text-wrap:pretty">I study how a model builds an internal world, and what it takes to let someone act inside it. My work sits between generative vision and interactive world models.</p>
+        </div>
+      </section>
+
+      <section id="research" data-section="research" data-screen-label="Research" data-reveal="1" style="opacity:0;transform:translateY(12px);transition:opacity 800ms cubic-bezier(0.28,0.11,0.32,1)">
+        <h2 style="font-family:'SF Pro Display',-apple-system,sans-serif;font-size:clamp(26px,3vw,32px);line-height:1.15;font-weight:600;letter-spacing:-0.3px;margin:0 0 24px">Research interests</h2>
+        <div data-items="research" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:16px">
+          <div style="background:#f5f5f7;border-radius:18px;padding:26px 24px 28px">
+            <div style="font-size:12px;letter-spacing:-0.12px;color:var(--ac2,#0066cc);margin-bottom:16px">01</div>
+            <h3 style="font-family:'SF Pro Display',-apple-system,sans-serif;font-size:20px;line-height:25px;font-weight:600;margin:0 0 10px">Interactive world models</h3>
+            <p style="font-size:14px;line-height:21px;letter-spacing:-0.224px;color:#515154;margin:0;text-wrap:pretty">Learned simulators that stay coherent under a user's actions, and what keeps long-horizon rollouts stable.</p>
+          </div>
+          <div style="background:#f5f5f7;border-radius:18px;padding:26px 24px 28px">
+            <div style="font-size:12px;letter-spacing:-0.12px;color:var(--ac2,#0066cc);margin-bottom:16px">02</div>
+            <h3 style="font-family:'SF Pro Display',-apple-system,sans-serif;font-size:20px;line-height:25px;font-weight:600;margin:0 0 10px">Diffusion &amp; flow models</h3>
+            <p style="font-size:14px;line-height:21px;letter-spacing:-0.224px;color:#515154;margin:0;text-wrap:pretty">Score matching, annealed Langevin dynamics, and the probabilistic scaffolding under modern generative vision.</p>
+          </div>
+        </div>
+      </section>
+
+      <section id="experience" data-section="experience" data-screen-label="Experience" data-reveal="1" style="opacity:0;transform:translateY(12px);transition:opacity 800ms cubic-bezier(0.28,0.11,0.32,1)">
+        <h2 style="font-family:'SF Pro Display',-apple-system,sans-serif;font-size:clamp(26px,3vw,32px);line-height:1.15;font-weight:600;letter-spacing:-0.3px;margin:0 0 8px">Experience</h2>
+        <div data-items="experience" style="display:flex;flex-direction:column">
+          <div style="display:grid;grid-template-columns:minmax(0,1fr);gap:6px;padding:24px 0;border-bottom:1px solid rgba(0,0,0,0.08)">
+            <div style="font-size:12px;letter-spacing:-0.12px;color:#6e6e73">2025 — Present</div>
+            <div style="font-family:'SF Pro Display',-apple-system,sans-serif;font-size:20px;line-height:25px;font-weight:600">Research Intern</div>
+            <div style="font-size:17px;line-height:25px;letter-spacing:-0.374px;color:#515154">Vision &amp; AI Lab, Korea University</div>
+          </div>
+          <div style="display:grid;grid-template-columns:minmax(0,1fr);gap:6px;padding:24px 0;border-bottom:1px solid rgba(0,0,0,0.08)">
+            <div style="font-size:12px;letter-spacing:-0.12px;color:#6e6e73">8th Cohort</div>
+            <div style="font-family:'SF Pro Display',-apple-system,sans-serif;font-size:20px;line-height:25px;font-weight:600">President, AIKU</div>
+            <div style="font-size:17px;line-height:25px;letter-spacing:-0.374px;color:#515154">Korea University Deep Learning Student Academic Society</div>
+          </div>
+          <div style="display:grid;grid-template-columns:minmax(0,1fr);gap:6px;padding:24px 0">
+            <div style="font-size:12px;letter-spacing:-0.12px;color:#6e6e73">Mar 2022 — Feb 2028 (B.S. expected)</div>
+            <div style="font-family:'SF Pro Display',-apple-system,sans-serif;font-size:20px;line-height:25px;font-weight:600">Computer Science and Engineering, Junior</div>
+            <div style="font-size:17px;line-height:25px;letter-spacing:-0.374px;color:#515154">Korea University, College of Informatics</div>
+          </div>
+        </div>
+      </section>
+
+      <section id="projects" data-section="projects" data-screen-label="Projects" data-reveal="1" style="opacity:0;transform:translateY(12px);transition:opacity 800ms cubic-bezier(0.28,0.11,0.32,1)">
+        <h2 style="font-family:'SF Pro Display',-apple-system,sans-serif;font-size:clamp(26px,3vw,32px);line-height:1.15;font-weight:600;letter-spacing:-0.3px;margin:0 0 24px">Projects</h2>
+        <div data-items="projects" style="display:flex;flex-direction:column;gap:16px">
+          <div data-item="proj-lucid" style="background:#f5f5f7;border-radius:18px;padding:30px 30px 32px">
+            <div style="font-size:12px;letter-spacing:-0.12px;color:#6e6e73;margin-bottom:12px">Python · NumPy · Reverse-mode autodiff</div>
+            <h3 style="font-family:'SF Pro Display',-apple-system,sans-serif;font-size:24px;line-height:29px;font-weight:600;letter-spacing:-0.2px;margin:0 0 12px;text-wrap:pretty">Lucid — deep learning framework from scratch</h3>
+            <p style="font-size:17px;line-height:25px;letter-spacing:-0.374px;color:#515154;margin:0 0 22px;max-width:66ch;text-wrap:pretty">A mini-PyTorch deep learning framework built entirely from scratch: dynamic computational graph, reverse-mode automatic differentiation, and neural-network layers validated end to end. Released on PyPI as <code style="font-family:'SF Mono',ui-monospace,monospace;font-size:15px">lucid-dl</code>.</p>
+            <div style="display:flex;gap:10px;flex-wrap:wrap;align-items:center">
+              <a href="https://github.com/ChanLumerico/lucid" style="display:inline-flex;align-items:center;height:36px;padding:0 15px;border-radius:980px;background:var(--ac,#0071e3);color:#ffffff;font-size:14px" style-hover="background:#0077ed">Source code</a>
+              <a href="https://pypi.org/project/lucid-dl/" style="display:inline-flex;align-items:center;height:36px;padding:0 15px;border-radius:980px;border:1px solid var(--ac2,#0066cc);color:var(--ac2,#0066cc);font-size:14px" style-hover="background:rgba(0,102,204,0.06)">PyPI</a>
+            </div>
+          </div>
+          <div data-item="proj-lora" style="background:#f5f5f7;border-radius:18px;padding:30px 30px 32px">
+            <div style="font-size:12px;letter-spacing:-0.12px;color:#6e6e73;margin-bottom:12px">NLP term project · COSE461</div>
+            <h3 style="font-family:'SF Pro Display',-apple-system,sans-serif;font-size:24px;line-height:29px;font-weight:600;letter-spacing:-0.2px;margin:0 0 12px;text-wrap:pretty">Hybrid hard-negative mitigation for dense retrieval</h3>
+            <p style="font-size:17px;line-height:25px;letter-spacing:-0.374px;color:#515154;margin:0 0 22px;max-width:66ch;text-wrap:pretty">Owned the lightweight model intervention: <em style="font-style:italic">anchored LoRA</em>, a 0.3%-parameter adapter across all layers with a per-token representation anchor that protects already-correct query embeddings on a frozen ColBERT-v2 backbone.</p>
+            <div style="display:flex;gap:10px;flex-wrap:wrap;align-items:center">
+              <span style="display:inline-flex;align-items:center;height:36px;padding:0 15px;border-radius:980px;background:#ffffff;font-size:14px;letter-spacing:-0.224px;color:#1d1d1f">+0.030 NDCG@10 on SciFact, 3/3 seeds</span>
+              <span style="display:inline-flex;align-items:center;height:36px;padding:0 15px;border-radius:980px;background:#ffffff;font-size:14px;letter-spacing:-0.224px;color:#1d1d1f">88% of LoRA's hard-query gain, 75% less easy-query loss</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="writing" data-section="writing" data-screen-label="Writing" data-reveal="1" style="opacity:0;transform:translateY(12px);transition:opacity 800ms cubic-bezier(0.28,0.11,0.32,1)">
+        <div style="display:flex;align-items:flex-end;justify-content:space-between;gap:20px;flex-wrap:wrap;margin-bottom:24px">
+          <div>
+            <h2 style="font-family:'SF Pro Display',-apple-system,sans-serif;font-size:clamp(26px,3vw,32px);line-height:1.15;font-weight:600;letter-spacing:-0.3px;margin:0 0 10px">Writings</h2>
+            <p style="font-size:17px;line-height:25px;letter-spacing:-0.374px;color:#6e6e73;margin:0;max-width:52ch;text-wrap:pretty">Notes from self-directed study — derivations I wanted to get right, and papers I reimplemented to be sure I understood them.</p>
+          </div>
+          <a href="https://velog.io/@lumerico284/" style="display:inline-flex;align-items:center;height:36px;padding:0 15px;border-radius:980px;border:1px solid var(--ac2,#0066cc);color:var(--ac2,#0066cc);font-size:14px;white-space:nowrap" style-hover="background:rgba(0,102,204,0.06)">Velog archive</a>
+        </div>
+        <div data-posts="1" data-limit="4" style="display:flex;flex-direction:column">
+          <div style="display:flex;align-items:center;gap:20px;padding:22px 0;border-top:1px solid rgba(0,0,0,0.08)">
+            <span style="flex:0 0 96px;height:12px;border-radius:6px;background:#f5f5f7"></span>
+            <span style="flex:1 1 260px;height:14px;border-radius:7px;background:#f5f5f7"></span>
+          </div>
+          <div style="display:flex;align-items:center;gap:20px;padding:22px 0;border-top:1px solid rgba(0,0,0,0.08)">
+            <span style="flex:0 0 96px;height:12px;border-radius:6px;background:#f5f5f7"></span>
+            <span style="flex:1 1 220px;height:14px;border-radius:7px;background:#f5f5f7"></span>
+          </div>
+          <div style="display:flex;align-items:center;gap:20px;padding:22px 0;border-top:1px solid rgba(0,0,0,0.08);border-bottom:1px solid rgba(0,0,0,0.08)">
+            <span style="flex:0 0 96px;height:12px;border-radius:6px;background:#f5f5f7"></span>
+            <span style="flex:1 1 240px;height:14px;border-radius:7px;background:#f5f5f7"></span>
+          </div>
+        </div>
+      </section>
+
+      <section id="awards" data-section="awards" data-screen-label="Awards" data-reveal="1" style="opacity:0;transform:translateY(12px);transition:opacity 800ms cubic-bezier(0.28,0.11,0.32,1)">
+        <h2 style="font-family:'SF Pro Display',-apple-system,sans-serif;font-size:clamp(26px,3vw,32px);line-height:1.15;font-weight:600;letter-spacing:-0.3px;margin:0 0 24px">Awards &amp; activities</h2>
+        <div data-items="awards" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:16px">
+          <div style="background:#f5f5f7;border-radius:18px;padding:28px 26px 30px">
+            <div style="font-size:12px;letter-spacing:-0.12px;color:var(--ac2,#0066cc);margin-bottom:14px">3rd Place</div>
+            <h3 style="font-family:'SF Pro Display',-apple-system,sans-serif;font-size:20px;line-height:25px;font-weight:600;margin:0 0 10px;text-wrap:pretty">Korea Univ. X Yonsei Univ. X Upstage Hackathon</h3>
+            <p style="font-size:14px;line-height:21px;letter-spacing:-0.224px;color:#515154;margin:0;text-wrap:pretty">Preventing sensitive-information (PII) exposure in LLM RAG systems.</p>
+          </div>
+          <div style="background:#f5f5f7;border-radius:18px;padding:28px 26px 30px">
+            <div style="font-size:12px;letter-spacing:-0.12px;color:var(--ac2,#0066cc);margin-bottom:14px">Community</div>
+            <h3 style="font-family:'SF Pro Display',-apple-system,sans-serif;font-size:20px;line-height:25px;font-weight:600;margin:0 0 10px;text-wrap:pretty">President, AIKU — 8th cohort</h3>
+            <p style="font-size:14px;line-height:21px;letter-spacing:-0.224px;color:#515154;margin:0;text-wrap:pretty">Korea University's deep learning student academic society.</p>
+          </div>
+        </div>
+      </section>
+
+      <section data-section="footer" data-reveal="1" style="opacity:0;transform:translateY(12px);transition:opacity 800ms cubic-bezier(0.28,0.11,0.32,1);border-top:1px solid rgba(0,0,0,0.08);padding-top:28px;display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap">
+        <span style="font-size:12px;letter-spacing:-0.12px;color:#6e6e73">© 2026 Chan Lee</span>
+        <span style="font-size:12px;letter-spacing:-0.12px;color:#6e6e73">Built with Vite + React · Deployed on GitHub Pages</span>
+      </section>
+
+    </main>
+  </div>
+
+  <button type="button" data-adminui="1" onClick="{{ toggleAdmin }}" title="Page settings" aria-label="Page settings" style="position:fixed;right:20px;bottom:20px;z-index:130;width:44px;height:44px;border-radius:980px;border:1px solid rgba(0,0,0,0.1);background:rgba(255,255,255,0.86);backdrop-filter:saturate(180%) blur(20px);-webkit-backdrop-filter:saturate(180%) blur(20px);box-shadow:0 6px 20px rgba(0,0,0,0.12);cursor:pointer;display:flex;align-items:center;justify-content:center;color:#1d1d1f" style-hover="background:#ffffff">
+    <svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"></circle><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 1 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 1 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 1 1-2.83-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 1 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 1 1 2.83-2.83l.06.06A1.65 1.65 0 0 0 9 4.6a1.65 1.65 0 0 0 1-1.51V3a2 2 0 1 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 1 1 2.83 2.83l-.06.06A1.65 1.65 0 0 0 19.4 9c.14.35.4.65.73.85.3.18.65.27 1 .26H21a2 2 0 1 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z"></path></svg>
+  </button>
+
+  <sc-if value="{{ sourceOpen }}" hint-placeholder-val="{{ false }}">
+    <div data-adminui="1" style="position:fixed;inset:0;z-index:200;background:rgba(0,0,0,0.32);backdrop-filter:saturate(140%) blur(14px);-webkit-backdrop-filter:saturate(140%) blur(14px)"></div>
+    <div data-adminui="1" data-rst-modal="1" style="position:fixed;left:20px;right:360px;top:0;bottom:0;margin:auto;z-index:201;box-sizing:border-box;max-width:880px;height:min(620px,82vh);background:#ffffff;border-radius:18px;box-shadow:0 24px 70px rgba(0,0,0,0.3);display:flex;flex-direction:column;overflow:hidden">
+      <div style="display:flex;align-items:center;gap:10px;flex-wrap:wrap;padding:14px 18px;border-bottom:1px solid rgba(0,0,0,0.08)">
+        <span style="font-family:'SF Pro Display',-apple-system,sans-serif;font-size:15px;font-weight:600;letter-spacing:-0.2px">Page source</span>
+        <sc-for list="{{ pageTabs }}" as="tab" hint-placeholder-count="5">
+          <button type="button" onClick="{{ tab.pick }}" style="height:28px;padding:0 13px;border-radius:980px;border:none;background:{{ tab.bg }};color:{{ tab.fg }};font-size:13px;letter-spacing:-0.13px;cursor:pointer">{{ tab.label }}</button>
+        </sc-for>
+        <span style="flex:1"></span>
+        <button type="button" onClick="{{ revertSource }}" style="height:30px;padding:0 13px;border-radius:980px;border:1px solid rgba(0,0,0,0.12);background:transparent;color:#6e6e73;font-size:13px;cursor:pointer">Revert to built-in</button>
+        <button type="button" onClick="{{ closeSource }}" style="height:30px;padding:0 15px;border-radius:980px;border:1px solid rgba(0,0,0,0.12);background:transparent;color:#1d1d1f;font-size:13px;cursor:pointer">Cancel</button>
+        <button type="button" onClick="{{ applySource }}" style="height:30px;padding:0 17px;border-radius:980px;border:none;background:var(--ac,#0071e3);color:#ffffff;font-size:13px;cursor:pointer">Apply</button>
+      </div>
+      <textarea ref="{{ srcRef }}" spellcheck="false" autocomplete="off" autocapitalize="off" placeholder="Section title&#10;=============&#10;&#10;Write the page here." style="flex:1;min-height:0;width:100%;box-sizing:border-box;border:none;outline:none;resize:none;padding:20px 22px;font-family:'SF Mono',ui-monospace,SFMono-Regular,Menlo,monospace;font-size:13px;line-height:1.65;color:#1d1d1f;background:#ffffff;tab-size:3"></textarea>
+      <div style="padding:10px 18px;border-top:1px solid rgba(0,0,0,0.08);font-size:12px;letter-spacing:-0.12px;color:#6e6e73">Apply replaces the main column with this source. The sidebar stays as it is.</div>
+    </div>
+
+    <div data-adminui="1" data-rst-legend="1" style="position:fixed;right:20px;bottom:20px;z-index:202;box-sizing:border-box;width:min(320px,calc(100vw - 40px));max-height:min(56vh,460px);overflow:auto;background:#ffffff;border-radius:18px;border:1px solid rgba(0,0,0,0.08);box-shadow:0 14px 44px rgba(0,0,0,0.2);padding:18px 20px;display:flex;flex-direction:column;gap:16px">
+      <div>
+        <div style="font-family:'SF Pro Display',-apple-system,sans-serif;font-size:15px;font-weight:600;letter-spacing:-0.2px">Syntax</div>
+        <div style="font-size:12px;letter-spacing:-0.12px;color:#6e6e73;margin-top:2px">RST-flavoured, three-space indents</div>
+      </div>
+      <sc-for list="{{ legend }}" as="row" hint-placeholder-count="7">
+        <div style="display:flex;flex-direction:column;gap:6px">
+          <div style="font-size:12px;letter-spacing:-0.12px;color:var(--ac2,#0066cc)">{{ row.label }}</div>
+          <pre style="margin:0;padding:10px 12px;border-radius:10px;background:#f5f5f7;font-family:'SF Mono',ui-monospace,SFMono-Regular,Menlo,monospace;font-size:11px;line-height:1.55;color:#1d1d1f;white-space:pre-wrap;word-break:break-word">{{ row.code }}</pre>
+        </div>
+      </sc-for>
+    </div>
+  </sc-if>
+
+  <sc-if value="{{ adminOpen }}" hint-placeholder-val="{{ false }}">
+    <div data-adminui="1" style="position:fixed;right:20px;bottom:76px;z-index:130;box-sizing:border-box;width:min(330px,calc(100vw - 40px));max-height:min(74vh,620px);overflow:auto;background:#ffffff;border-radius:18px;border:1px solid rgba(0,0,0,0.08);box-shadow:0 14px 44px rgba(0,0,0,0.2);padding:22px 22px 20px;display:flex;flex-direction:column;gap:22px">
+
+      <div style="display:flex;align-items:center;justify-content:space-between;gap:12px">
+        <div>
+          <div style="font-family:'SF Pro Display',-apple-system,sans-serif;font-size:17px;font-weight:600;letter-spacing:-0.2px">Page settings</div>
+          <div style="font-size:12px;letter-spacing:-0.12px;color:#6e6e73;margin-top:2px">Saved in this browser</div>
+        </div>
+        <button type="button" onClick="{{ toggleAdmin }}" aria-label="Close" style="width:26px;height:26px;border-radius:980px;border:none;background:#f5f5f7;color:#1d1d1f;font-size:14px;line-height:1;cursor:pointer">×</button>
+      </div>
+
+      <div style="display:flex;flex-direction:column;gap:10px">
+        <div style="font-size:12px;letter-spacing:-0.12px;color:#6e6e73">Sections — reorder and hide</div>
+        <sc-for list="{{ sections }}" as="item" hint-placeholder-count="6">
+          <div style="display:flex;align-items:center;gap:8px;padding:8px 10px;background:#f5f5f7;border-radius:10px">
+            <span style="flex:1;min-width:0;font-size:14px;letter-spacing:-0.224px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;color:{{ item.color }}">{{ item.label }}</span>
+            <button type="button" onClick="{{ item.up }}" aria-label="Move up" style="width:24px;height:24px;border-radius:6px;border:none;background:#ffffff;cursor:pointer;font-size:12px;color:#1d1d1f">↑</button>
+            <button type="button" onClick="{{ item.down }}" aria-label="Move down" style="width:24px;height:24px;border-radius:6px;border:none;background:#ffffff;cursor:pointer;font-size:12px;color:#1d1d1f">↓</button>
+            <button type="button" onClick="{{ item.toggle }}" style="height:24px;padding:0 9px;border-radius:6px;border:none;background:#ffffff;cursor:pointer;font-size:11px;letter-spacing:-0.11px;color:#1d1d1f">{{ item.eye }}</button>
+          </div>
+        </sc-for>
+      </div>
+
+      <div style="display:flex;flex-direction:column;gap:10px">
+        <div style="font-size:12px;letter-spacing:-0.12px;color:#6e6e73">Sidebar</div>
+        <div style="display:flex;gap:8px">
+          <button type="button" onClick="{{ sideLeft }}" style="flex:1;height:30px;border-radius:980px;border:1px solid rgba(0,0,0,0.12);background:{{ leftBg }};color:{{ leftFg }};font-size:13px;cursor:pointer">Left</button>
+          <button type="button" onClick="{{ sideRight }}" style="flex:1;height:30px;border-radius:980px;border:1px solid rgba(0,0,0,0.12);background:{{ rightBg }};color:{{ rightFg }};font-size:13px;cursor:pointer">Right</button>
+        </div>
+        <sc-for list="{{ blocks }}" as="item" hint-placeholder-count="4">
+          <div style="display:flex;align-items:center;gap:8px;padding:8px 10px;background:#f5f5f7;border-radius:10px">
+            <span style="flex:1;min-width:0;font-size:14px;letter-spacing:-0.224px;color:{{ item.color }}">{{ item.label }}</span>
+            <button type="button" onClick="{{ item.up }}" aria-label="Move up" style="width:24px;height:24px;border-radius:6px;border:none;background:#ffffff;cursor:pointer;font-size:12px;color:#1d1d1f">↑</button>
+            <button type="button" onClick="{{ item.down }}" aria-label="Move down" style="width:24px;height:24px;border-radius:6px;border:none;background:#ffffff;cursor:pointer;font-size:12px;color:#1d1d1f">↓</button>
+            <button type="button" onClick="{{ item.toggle }}" style="height:24px;padding:0 9px;border-radius:6px;border:none;background:#ffffff;cursor:pointer;font-size:11px;letter-spacing:-0.11px;color:#1d1d1f">{{ item.eye }}</button>
+          </div>
+        </sc-for>
+      </div>
+
+      <div style="display:flex;flex-direction:column;gap:10px">
+        <div style="font-size:12px;letter-spacing:-0.12px;color:#6e6e73">Content</div>
+        <button type="button" onClick="{{ toggleEdit }}" style="display:flex;align-items:center;gap:9px;height:36px;padding:0 15px;border-radius:980px;border:none;background:{{ editBg }};color:{{ editFg }};font-size:14px;letter-spacing:-0.224px;cursor:pointer">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20h9"></path><path d="M16.5 3.5a2.12 2.12 0 0 1 3 3L7 19l-4 1 1-4Z"></path></svg>
+          {{ editLabelForRoute }}
+        </button>
+        <div style="font-size:12px;line-height:17px;letter-spacing:-0.12px;color:#6e6e73">{{ editHint }}</div>
+      </div>
+
+      <div style="display:flex;flex-direction:column;gap:10px">
+        <div style="font-size:12px;letter-spacing:-0.12px;color:#6e6e73">Page source</div>
+        <button type="button" onClick="{{ openSource }}" style="display:flex;align-items:center;gap:9px;height:36px;padding:0 15px;border-radius:980px;border:none;background:#f5f5f7;color:#1d1d1f;font-size:14px;letter-spacing:-0.224px;cursor:pointer">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="m16 18 6-6-6-6"></path><path d="m8 6-6 6 6 6"></path></svg>
+          Edit page source (RST)
+        </button>
+      </div>
+
+      <div style="display:flex;flex-direction:column;gap:10px">
+        <div style="font-size:12px;letter-spacing:-0.12px;color:#6e6e73">Accent</div>
+        <div style="display:flex;gap:11px;flex-wrap:wrap">
+          <sc-for list="{{ swatches }}" as="sw" hint-placeholder-count="7">
+            <button type="button" onClick="{{ sw.pick }}" aria-label="{{ sw.name }}" title="{{ sw.name }}" style="width:26px;height:26px;padding:0;border-radius:980px;border:none;background:{{ sw.color }};box-shadow:{{ sw.ring }};cursor:pointer"></button>
+          </sc-for>
+        </div>
+      </div>
+
+      <div style="display:flex;gap:8px;border-top:1px solid rgba(0,0,0,0.08);padding-top:16px">
+        <button type="button" onClick="{{ copyJson }}" style="flex:1;height:32px;border-radius:980px;border:1px solid var(--ac2,#0066cc);background:transparent;color:var(--ac2,#0066cc);font-size:13px;cursor:pointer">{{ copyLabel }}</button>
+        <button type="button" onClick="{{ resetAll }}" style="flex:0 0 auto;height:32px;padding:0 14px;border-radius:980px;border:1px solid rgba(0,0,0,0.12);background:transparent;color:#6e6e73;font-size:13px;cursor:pointer">Reset</button>
+      </div>
+    </div>
+  </sc-if>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script>
+const STORE = 'chanlee-cv-config-v6';
+// Text read/write that ignores the injected edit toolbar, so its glyphs never
+// leak into saved copy and applying a saved value never removes the toolbar.
+const readText = el => {
+  const clone = el.cloneNode(true);
+  clone.querySelectorAll('[data-tools]').forEach(n => n.remove());
+  return clone.innerText.replace(/\s+$/, '');
+};
+// Hiding must not clobber an authored inline display (flex/grid): remember it
+// on first touch and restore that exact value when showing again.
+const setShown = (el, shown) => {
+  if (el.dataset.dsp === undefined) el.dataset.dsp = el.style.display || '';
+  el.style.display = shown ? el.dataset.dsp : 'none';
+};
+const writeText = (el, val) => {
+  const tools = el.querySelector(':scope > [data-tools]');
+  el.textContent = val;
+  if (tools) el.appendChild(tools);
+};
+const DEFAULTS = {
+  order: ['about', 'research', 'experience', 'projects', 'writing', 'awards'],
+  blockOrder: ['profile', 'focus', 'skills'],
+  hidden: {}, side: 'left', accent: 'blue', text: {}, items: {}, extras: {}, pages: {}, activePage: 'main'
+};
+const BLOCK_MENU = [
+  { type: 'text', label: 'Text' },
+  { type: 'heading', label: 'Heading' },
+  { type: 'card', label: 'Card' },
+  { type: 'link', label: 'Link' },
+  { type: 'divider', label: 'Divider' }
+];
+const VELOG_HANDLE = 'lumerico284';
+// Only these velog series are surfaced; anything else stays on velog.
+const SERIES_ALLOW = ['Diffusion-101', 'Reinforcement-Learning'];
+const FEED_CACHE = 'chanlee-velog-feed';
+// Bump whenever the shape or the wording of a cached summary changes; entries
+// written by an older format are discarded instead of being painted.
+const FEED_FORMAT = 5;
+
+const RST_DEFAULT = [
+  'About',
+  '=====',
+  ':id: about',
+  ':layout: stack',
+  '',
+  'I study how a model builds an internal world, and what it takes to let someone act inside it. My work sits between generative vision and interactive world models.',
+  '',
+  'Research interests',
+  '==================',
+  ':id: research',
+  ':layout: grid',
+  '',
+  '.. card:: Interactive world models',
+  '   :num: 01',
+  '',
+  "   Learned simulators that stay coherent under a user's actions, and what keeps long-horizon rollouts stable.",
+  '',
+  '.. card:: Diffusion & flow models',
+  '   :num: 02',
+  '',
+  '   Score matching, annealed Langevin dynamics, and the probabilistic scaffolding under modern generative vision.',
+  '',
+  'Experience',
+  '==========',
+  ':id: experience',
+  ':layout: list',
+  '',
+  '.. entry:: Research Intern',
+  '   :date: 2025 — Present',
+  '   :org: Vision & AI Lab, Korea University',
+  '',
+  '.. entry:: President, AIKU',
+  '   :date: 8th Cohort',
+  '   :org: Korea University Deep Learning Student Academic Society',
+  '',
+  '.. entry:: Computer Science and Engineering, Junior',
+  '   :date: Mar 2022 — Feb 2028 (B.S. expected)',
+  '   :org: Korea University, College of Informatics',
+  '',
+  'Projects',
+  '========',
+  ':id: projects',
+  ':layout: stack',
+  '',
+  '.. card:: Lucid — deep learning framework from scratch',
+  '   :meta: Python · NumPy · Reverse-mode autodiff',
+  '   :link: Source code <https://github.com/ChanLumerico/lucid>',
+  '   :link: PyPI <https://pypi.org/project/lucid-dl/>',
+  '',
+  '   A mini-PyTorch deep learning framework built entirely from scratch: dynamic computational graph, reverse-mode automatic differentiation, and neural-network layers validated end to end. Released on PyPI as lucid-dl.',
+  '',
+  '.. card:: Hybrid hard-negative mitigation for dense retrieval',
+  '   :meta: NLP term project · COSE461',
+  '   :tag: +0.030 NDCG@10 on SciFact, 3/3 seeds',
+  "   :tag: 88% of LoRA's hard-query gain, 75% less easy-query loss",
+  '',
+  '   Owned the lightweight model intervention: anchored LoRA, a 0.3%-parameter adapter across all layers with a per-token representation anchor that protects already-correct query embeddings on a frozen ColBERT-v2 backbone.',
+  '',
+  'Writing',
+  '=======',
+  ':id: writing',
+  ':layout: list',
+  '',
+  '.. velog:: 4',
+  '',
+  'Awards & activities',
+  '===================',
+  ':id: awards',
+  ':layout: grid',
+  '',
+  '.. card:: Korea Univ. X Yonsei Univ. X Upstage Hackathon',
+  '   :num: 3rd Place',
+  '',
+  '   Preventing sensitive-information (PII) exposure in LLM RAG systems.',
+  '',
+  '.. card:: President, AIKU — 8th cohort',
+  '   :num: Community',
+  '',
+  "   Korea University's deep learning student academic society."
+].join('\n');
+
+const PAGE_KEYS = ['main', 'research', 'writing'];
+const PAGE_LABELS = { main: 'Home', research: 'Research', writing: 'Writings' };
+
+const RST_PAGES = {
+  research: [
+    'Research interests',
+    '==================',
+    ':id: research',
+    ':layout: stack',
+    '',
+    '.. lede:: Two questions I keep returning to: how a model builds a world, and how it learns to move through one.',
+    '',
+    'Both sit on the generative side of vision, and they answer to each other. One asks what a model must hold in memory to stay consistent while a person acts on it. The other asks how noise becomes structure, and what the cleanest description of that transformation is. The second is the machinery; the first is what I want to build with it.',
+    '',
+    'The order matters for how I study. I do not start from an architecture and look for a task. I start from a quantity — a density, a score, a velocity field — ask what makes estimating it hard, and only then look at what the architecture is doing about it. Reimplementing is how I check that the answer I arrived at is the real one.',
+    '',
+    '----',
+    '',
+    'Interactive world models',
+    '========================',
+    ':id: world-models',
+    ':layout: stack',
+    '',
+    '.. lede:: A learned simulator you can act inside.',
+    '',
+    'A world model predicts what happens next. An interactive one has to keep that prediction coherent while a person intervenes — turning the camera, picking something up, changing their mind halfway through. The difficulty is not producing one convincing frame. It is that the thousandth frame still has to agree with the first about what exists, and that the agreement has to survive an action nobody trained on.',
+    '',
+    'Classically this was framed as model-based reinforcement learning: learn the environment, plan inside it, act. The recent line of work reframes it as generation — the simulator is a conditional video model, and the action is just another conditioning signal. That reframing brought the visual fidelity of diffusion models to environments, and inherited their weakness: a generative model is trained to be plausible frame by frame, not consistent over minutes.',
+    '',
+    '.. stats::',
+    '   :item: State | what the model holds, unseen, between frames',
+    '   :item: Action | the intervention it must stay consistent with',
+    '   :item: Horizon | how long that consistency survives',
+    '',
+    '.. embed:: https://www.youtube.com/watch?v=PDKhUknuQDg',
+    '   :caption: Genie 3, Google DeepMind (2025). A world generated from a text prompt and navigated in real time — the clearest public demonstration of what an interactive world model has to hold onto while a person moves through it.',
+    '',
+    'What makes it hard',
+    '==================',
+    ':id: wm-hard',
+    ':layout: grid',
+    '',
+    '.. card:: Drift',
+    '   :num: 01',
+    '   Each prediction is conditioned on the previous one, so a small error is inherited and amplified. Rollouts rarely fail loudly; they slowly stop describing the same place. Teacher forcing during training hides this, because the model never has to consume its own mistakes.',
+    '',
+    '.. card:: Memory',
+    '   :num: 02',
+    '   An object that leaves the frame has to exist when the camera comes back. That needs a persistent state, not a longer context window — a next-frame predictor with no notion of what is off-screen will happily invent a different room.',
+    '',
+    '.. card:: Controllability',
+    '   :num: 03',
+    '   An action must change the world the way the user meant and change nothing else. Entanglement between action and appearance is what makes a simulator feel unresponsive: the frame moves, but not because you moved.',
+    '',
+    'Lines of work I follow',
+    '======================',
+    ':id: wm-refs',
+    ':layout: stack',
+    '',
+    '.. refs::',
+    '   :item: Recurrent latent world models with imagination-based training (the Dreamer line) | 2018—2023',
+    '   :item: Action-conditioned video generation as a playable simulator (GameNGen, Genie) | 2024—2025',
+    '   :item: Long-horizon consistency and memory in video diffusion | ongoing',
+    '',
+    '----',
+    '',
+    'Diffusion & flow models',
+    '=======================',
+    ':id: diffusion',
+    ':layout: stack',
+    '',
+    '.. lede:: One equation for how probability moves.',
+    '',
+    'Diffusion runs clean data into noise along a known path, then learns to walk that path backwards. Flow matching describes the same journey as a velocity field and learns to follow it. The two look like separate families and are not: both are statements about how a density evolves in time, and the continuity equation — the Fokker-Planck equation for the stochastic case — is where they meet.',
+    '',
+    'Getting to that view took the field about five years, and retracing it is most of what I have studied. The variational account came first, then the score-based one, then the observation that both are discretisations of the same SDE, and finally the flow picture, which drops the noise and keeps the transport.',
+    '',
+    '.. diagram:: Same endpoints, different trajectories. Sampling cost follows how curved the path is — which is why straightening it, rather than adding steps, is where the recent work went.',
+    '   :cite: Diagram drawn after Liu, Gong & Liu, "Flow Straight and Fast: Learning to Generate and Transfer Data with Rectified Flow" (2022) <https://arxiv.org/abs/2209.03003>',
+    '',
+    '.. field:: Left: the score of a two-mode density (shaded), evaluated on a grid — it points uphill and dies at each mode. Right: the straightened transport between the noise and data marginals, which is the same everywhere.',
+    '',
+    'Three views, one object',
+    '=======================',
+    ':id: three-views',
+    ':layout: grid',
+    '',
+    '.. card:: Variational',
+    '   :num: 01',
+    '   A hierarchy of latent variables and a bound to optimise. DDPM read as a very deep VAE whose encoder is fixed rather than learned, which is why its loss collapses into a simple denoising objective.',
+    '',
+    '.. card:: Score-based',
+    '   :num: 02',
+    '   Learn the gradient of the log density and follow it. Annealed Langevin dynamics across many noise scales, because a single scale leaves the low-density regions — exactly where samples start — unestimated.',
+    '',
+    '.. card:: Flow-based',
+    '   :num: 03',
+    '   Learn a velocity field that transports one distribution onto another. Straighter paths mean fewer solver steps, and sampling becomes an ODE you can integrate as coarsely as you dare.',
+    '',
+    'Why the unification matters',
+    '===========================',
+    ':id: why',
+    ':layout: stack',
+    '',
+    '.. card:: The same model, four ways to ask it a question',
+    '   :meta: Parameterisation',
+    '   :bullet: Predicting noise, clean data, score, or velocity are one-to-one reparameterisations of each other.',
+    '   :bullet: The choice changes the loss weighting and the conditioning trick, not the underlying object.',
+    '   :bullet: Noise schedules convert into one another the same way, which is why so many papers turn out to be the same paper in different coordinates.',
+    '   :bullet: Sampler cost follows path curvature, so the practical question is which parameterisation makes the trajectory straight.',
+    '   Reading the field this way makes it navigable: fewer methods to memorise, one continuity equation to understand, and a clear place to look when something fails.',
+    '',
+    '.. refs::',
+    '   :item: Denoising diffusion probabilistic models | 2020',
+    '   :item: Score-based generative modeling through stochastic differential equations | 2021',
+    '   :item: Flow matching and rectified flow for generative modeling | 2022—2023',
+    '   :item: Lai et al., The Principles of Diffusion Models | 2025 | https://arxiv.org/abs/2510.21890',
+    '',
+    'Where the two meet',
+    '==================',
+    ':id: overlap',
+    ':layout: stack',
+    '',
+    'A world model needs a generator that is fast, controllable, and stable over long horizons. Flow-based samplers are the most promising answer to the first two: few steps, and a velocity field that action conditioning can enter cleanly. The theory of how density evolves is the only honest way I know to reason about the third, because drift is a statement about distributions, not about pixels.',
+    '',
+    'That overlap is where I want to work — using what the diffusion literature settled about density transport to say something precise about why simulators lose the plot, and what to change so they do not.',
+    '',
+    '.. pills:: Interactive world models, Diffusion, Flow matching, Score matching, Long-horizon rollouts, Controllable generation, Model-based RL',
+    '',
+    'I write up each derivation as I work through it. Those notes live under Writings.'
+  ].join('\n'),
+
+  writing: [
+    'Writings',
+    '========',
+    ':id: writing',
+    ':layout: stack',
+    '',
+    'Written on velog and pulled in live. Open a series to see its posts, and any post to read it here.',
+    '',
+    '.. series::'
+  ].join('\n')
+};
+
+const RST_LEGEND = [
+  ['Section', 'Title\n=====\n:id: about\n:layout: grid | stack | list'],
+  ['Paragraph', 'Any plain line becomes body copy.'],
+  ['Card', '.. card:: Title\n   :num: 01\n   :meta: Python · NumPy\n   :link: Label <https://…>\n   :tag: a metric pill\n\n   Body, indented 3 spaces.'],
+  ['Timeline entry', '.. entry:: Role\n   :date: 2025 — Present\n   :org: Where it happened'],
+  ['Post', '.. post:: Post title\n   :date: Feb 2026\n   :href: /posts/slug\n\n   One-line summary.'],
+  ['Figure', '.. figure:: Caption text\n   :id: fig-name\n   :ratio: 16/9\n\nA drop target for an image.'],
+  ['Video', '.. embed:: https://www.youtube.com/watch?v=ID\n   :caption: What it shows'],
+  ['Vector field', '.. field:: Caption text\n\nScore field and velocity field,\ncomputed on a grid.'],
+  ['Diagram', '.. diagram:: Caption text\n   :cite: Source line — https://…\n\nDrawn in-page: curved SDE path\nvs straight flow transport.'],
+  ['References', '.. refs::\n   :item: Paper title | 2021\n   :item: With a link | 2025 | https://…'],
+  ['Velog series', '.. series::\n   :item: Diffusion-101\n   :item: RL-notes\n\nOne :item: per velog series slug\n(the last part of its velog URL).'],
+  ['Velog feed', '.. velog:: 10\n\nThe ten newest posts, live.'],
+  ['Lede', '.. lede:: One large opening statement.'],
+  ['Stats', '.. stats::\n   :item: 2025 | joined the lab\n   :item: 4 | papers rebuilt'],
+  ['Card bullets', '.. card:: Title\n   :bullet: First point\n   :bullet: Second point'],
+  ['Pills', '.. pills:: One, Two, Three'],
+  ['Divider', '----']
+];
+
+// --- RST-flavoured parser -------------------------------------------------
+const rstSlug = s => s.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '');
+
+function parseRst(src) {
+  const lines = String(src || '').replace(/\r/g, '').split('\n');
+  const out = [];
+  let cur = null;
+  let i = 0;
+  const push = b => { if (!cur) { cur = { title: '', id: 'section-' + out.length, layout: 'stack', blocks: [] }; out.push(cur); } cur.blocks.push(b); };
+  while (i < lines.length) {
+    const line = lines[i];
+    const next = lines[i + 1] || '';
+    if (line.trim() && /^={3,}\s*$/.test(next)) {
+      cur = { title: line.trim(), id: rstSlug(line.trim()), layout: 'stack', blocks: [] };
+      out.push(cur);
+      i += 2;
+      while (i < lines.length && /^:([a-z-]+):\s*(.*)$/i.test(lines[i])) {
+        const m = lines[i].match(/^:([a-z-]+):\s*(.*)$/i);
+        if (m[1].toLowerCase() === 'id') cur.id = rstSlug(m[2]);
+        if (m[1].toLowerCase() === 'layout') cur.layout = m[2].trim();
+        i++;
+      }
+      continue;
+    }
+    const dir = line.match(/^\.\.\s+([a-z]+)::\s*(.*)$/i);
+    if (dir) {
+      const block = { type: dir[1].toLowerCase(), title: dir[2].trim(), links: [], tags: [], bullets: [], items: [], body: '' };
+      i++;
+      const bodyLines = [];
+      while (i < lines.length) {
+        const l = lines[i];
+        if (l.trim() === '') { bodyLines.push(''); i++; continue; }
+        if (!/^\s{2,}/.test(l)) break;
+        const opt = l.match(/^\s+:([a-z-]+):\s*(.*)$/i);
+        if (opt) {
+          const k = opt[1].toLowerCase();
+          const v = opt[2].trim();
+          if (k === 'link') {
+            const lm = v.match(/^(.*?)\s*<(.+)>$/);
+            block.links.push(lm ? { label: lm[1], href: lm[2] } : { label: v, href: '#' });
+          } else if (k === 'tag') block.tags.push(v);
+          else if (k === 'bullet') block.bullets.push(v);
+          else if (k === 'item') block.items.push(v);
+          else block[k] = v;
+        } else bodyLines.push(l.trim());
+        i++;
+      }
+      block.body = bodyLines.join(' ').replace(/\s+/g, ' ').trim();
+      push(block);
+      continue;
+    }
+    if (/^-{3,}\s*$/.test(line)) { push({ type: 'divider' }); i++; continue; }
+    if (line.trim()) {
+      const para = [line.trim()];
+      i++;
+      while (i < lines.length && lines[i].trim() && !/^\.\.\s/.test(lines[i]) && !/^={3,}\s*$/.test(lines[i] || '') && !/^={3,}\s*$/.test(lines[i + 1] || '')) {
+        para.push(lines[i].trim());
+        i++;
+      }
+      push({ type: 'para', body: para.join(' ') });
+      continue;
+    }
+    i++;
+  }
+  return out;
+}
+
+const BLOCK_SEED = {
+  text: { title: '', body: 'New paragraph. Click to write.' },
+  heading: { title: 'New heading', body: '' },
+  card: { title: 'New card', body: 'A short description of what this is.' },
+  link: { title: 'New link', body: '#' },
+  divider: { title: '', body: '' }
+};
+// Apple's system accent set (the macOS Settings highlight colours), each paired
+// with a deeper step for links and outlines on a white ground.
+const ACCENTS = {
+  blue: ['#0071e3', '#0066cc'],
+  purple: ['#9F4BC4', '#8236A8'],
+  pink: ['#E0347C', '#C21E66'],
+  red: ['#D70015', '#B00013'],
+  orange: ['#C93400', '#A32A00'],
+  green: ['#248A3D', '#1D7333'],
+  graphite: ['#48484A', '#3A3A3C']
+};
+const LABELS = { about: 'About', research: 'Research interests', experience: 'Experience', projects: 'Projects', writing: 'Writings', awards: 'Awards & activities' };
+const BLOCK_LABELS = { profile: 'Profile', focus: 'Focus', skills: 'Skills' };
+
+class Component extends DCLogic {
+  state = { adminOpen: false, editMode: false, copied: false, sourceOpen: false, route: 'main', cfg: DEFAULTS };
+
+  routeFromHash() {
+    const raw = (location.hash || '').replace(/^#\/?/, '').trim();
+    if (raw.indexOf('post/') === 0 || raw.indexOf('series/') === 0) return raw;
+    const h = raw.toLowerCase();
+    return PAGE_KEYS.indexOf(h) > 0 ? h : 'main';
+  }
+
+  // Writing and everything nested under it (a series, a post) run full-width:
+  // the profile rail belongs to the CV, not to the reading views.
+  isSourceRoute(r) {
+    const route = r || this.state.route || 'main';
+    if (route.indexOf('post/') === 0 || route.indexOf('series/') === 0) return false;
+    return !!this.pageSource(route);
+  }
+
+  isWritingRoute(r) {
+    const route = r || this.state.route || 'main';
+    return route === 'writing' || route === 'research' || route.indexOf('series/') === 0 || route.indexOf('post/') === 0;
+  }
+
+  // A saved config can be stale (older section set), partial, or hand-edited —
+  // normalise it so a bad value can never hide a section or crash a render.
+  normalise(raw) {
+    const src = raw && typeof raw === 'object' ? raw : {};
+    const cfg = Object.assign({}, DEFAULTS, src);
+    cfg.hidden = Object.assign({}, src.hidden);
+    cfg.text = Object.assign({}, src.text);
+    cfg.items = {};
+    cfg.extras = {};
+    Object.keys(src.items || {}).forEach(k => {
+      const st = src.items[k] || {};
+      cfg.items[k] = { order: Array.isArray(st.order) ? st.order.slice() : [], hidden: Object.assign({}, st.hidden) };
+    });
+    Object.keys(src.extras || {}).forEach(k => {
+      const list = Array.isArray(src.extras[k]) ? src.extras[k] : [];
+      cfg.extras[k] = list.filter(b => b && typeof b.id === 'string' && BLOCK_SEED[b.type]);
+    });
+    const reconcile = (arr, valid) => {
+      const out = (Array.isArray(arr) ? arr : []).filter(k => valid.indexOf(k) >= 0);
+      valid.forEach(k => { if (out.indexOf(k) < 0) out.push(k); });
+      return out;
+    };
+    cfg.order = reconcile(cfg.order, DEFAULTS.order);
+    cfg.blockOrder = reconcile(cfg.blockOrder, DEFAULTS.blockOrder);
+    cfg.pages = {};
+    Object.keys(src.pages || {}).forEach(k => {
+      if (typeof src.pages[k] === 'string') cfg.pages[k] = src.pages[k];
+    });
+    cfg.activePage = cfg.pages[src.activePage] !== undefined ? src.activePage : 'main';
+    if (cfg.side !== 'left' && cfg.side !== 'right') cfg.side = 'left';
+    if (!ACCENTS[cfg.accent]) cfg.accent = 'blue';
+    return cfg;
+  }
+
+  load() {
+    try { return this.normalise(JSON.parse(localStorage.getItem(STORE) || '{}')); }
+    catch (e) { return this.normalise(null); }
+  }
+
+  update(fn) {
+    this.setState(s => {
+      const cfg = JSON.parse(JSON.stringify(s.cfg));
+      fn(cfg);
+      return { cfg, copied: false };
+    }, () => {
+      try { localStorage.setItem(STORE, JSON.stringify(this.state.cfg)); } catch (e) {}
+      this.applyCfg();
+    });
+  }
+
+  keyTexts() {
+    ['main', 'aside'].forEach(region => {
+      const root = document.querySelector('[data-region="' + region + '"]');
+      if (!root) return;
+      let i = 0;
+      root.querySelectorAll('h1,h2,h3,p,span,div,a,code,em').forEach(el => {
+        if (el.children.length === 0 && el.textContent.trim()) el.dataset.ekey = region + '-' + (i++);
+      });
+    });
+  }
+
+  applyCfg() {
+    const cfg = this.state.cfg;
+    const main = document.querySelector('[data-region="main"]');
+    const aside = document.querySelector('[data-region="aside"]');
+    const wrap = document.getElementById('top');
+    if (main) {
+      cfg.order.forEach(k => { const el = main.querySelector('[data-section="' + k + '"]'); if (el) main.appendChild(el); });
+      const foot = main.querySelector('[data-section="footer"]');
+      if (foot) main.appendChild(foot);
+      main.querySelectorAll('[data-section]').forEach(el => {
+        setShown(el, !cfg.hidden[el.dataset.section]);
+      });
+    }
+    if (aside) {
+      cfg.blockOrder.forEach(k => { const el = aside.querySelector('[data-block="' + k + '"]'); if (el) aside.appendChild(el); });
+      aside.querySelectorAll('[data-block]').forEach(el => {
+        setShown(el, !cfg.hidden['blk-' + el.dataset.block]);
+      });
+    }
+    if (wrap) wrap.style.flexDirection = cfg.side === 'right' ? 'row-reverse' : 'row';
+    const pair = ACCENTS[cfg.accent] || ACCENTS.blue;
+    document.documentElement.style.setProperty('--ac', pair[0]);
+    document.documentElement.style.setProperty('--ac2', pair[1]);
+    Object.keys(cfg.text || {}).forEach(k => {
+      const el = document.querySelector('[data-ekey="' + k + '"]');
+      if (el && readText(el) !== cfg.text[k]) writeText(el, cfg.text[k]);
+    });
+    const fromSource = this.renderRst();
+    if (!fromSource) this.renderBlocks();
+    this.loadPosts();
+    if (document.querySelector('[data-series]')) { this.ensureSeries(); this.paintSeries(); }
+    if (this._fade) this._fade();
+    if (this._sweep) this._sweep();
+  }
+
+  setEditing(on) {
+    document.querySelectorAll('[data-ekey],[data-xkey]').forEach(el => {
+      el.contentEditable = on ? 'true' : 'false';
+      el.style.outline = on ? '1px dashed rgba(0,113,227,0.45)' : '';
+      el.style.outlineOffset = on ? '3px' : '';
+      el.style.borderRadius = on ? '3px' : '';
+      // Emptied text would otherwise collapse to zero and become unclickable.
+      el.style.minHeight = on ? '1em' : '';
+      el.style.minWidth = on ? '16px' : '';
+    });
+  }
+
+  iconBtn(glyph, title, onClick) {
+    const b = document.createElement('button');
+    b.type = 'button';
+    b.title = title;
+    b.textContent = glyph;
+    b.style.cssText = 'width:22px;height:22px;border-radius:6px;border:1px solid rgba(0,0,0,0.1);background:rgba(255,255,255,0.94);color:#1d1d1f;font-size:11px;line-height:1;cursor:pointer;display:flex;align-items:center;justify-content:center;padding:0';
+    b.addEventListener('click', e => { e.preventDefault(); e.stopPropagation(); onClick(); });
+    return b;
+  }
+
+  makeExtra(b) {
+    const wrap = document.createElement('div');
+    wrap.dataset.extra = '1';
+    wrap.dataset.item = b.id;
+    if (b.type === 'divider') {
+      wrap.style.cssText = 'height:1px;background:rgba(0,0,0,0.12);margin:6px 0';
+      return wrap;
+    }
+    if (b.type === 'card') {
+      wrap.style.cssText = 'background:#f5f5f7;border-radius:18px;padding:30px 30px 32px';
+      const h = document.createElement('h3');
+      h.dataset.xkey = b.id + ':title';
+      h.style.cssText = "font-family:'SF Pro Display',-apple-system,sans-serif;font-size:24px;line-height:29px;font-weight:600;letter-spacing:-0.2px;margin:0 0 12px";
+      h.textContent = b.title;
+      const p = document.createElement('p');
+      p.dataset.xkey = b.id + ':body';
+      p.style.cssText = 'font-size:17px;line-height:25px;letter-spacing:-0.374px;color:#515154;margin:0;max-width:66ch';
+      p.textContent = b.body;
+      wrap.appendChild(h); wrap.appendChild(p);
+      return wrap;
+    }
+    if (b.type === 'heading') {
+      const h = document.createElement('h3');
+      h.dataset.extra = '1';
+      h.dataset.item = b.id;
+      h.dataset.xkey = b.id + ':title';
+      h.style.cssText = "font-family:'SF Pro Display',-apple-system,sans-serif;font-size:20px;line-height:25px;font-weight:600;margin:0";
+      h.textContent = b.title;
+      return h;
+    }
+    if (b.type === 'link') {
+      wrap.style.cssText = 'display:flex;gap:10px;flex-wrap:wrap';
+      const a = document.createElement('a');
+      a.href = b.body || '#';
+      a.dataset.xkey = b.id + ':title';
+      a.style.cssText = 'display:inline-flex;align-items:center;height:36px;padding:0 15px;border-radius:980px;background:var(--ac,#0071e3);color:#ffffff;font-size:14px;text-decoration:none';
+      a.textContent = b.title;
+      wrap.appendChild(a);
+      return wrap;
+    }
+    const p = document.createElement('p');
+    p.dataset.extra = '1';
+    p.dataset.item = b.id;
+    p.dataset.xkey = b.id + ':body';
+    p.style.cssText = 'font-size:17px;line-height:25px;letter-spacing:-0.374px;color:#515154;margin:0;max-width:66ch';
+    p.textContent = b.body;
+    return p;
+  }
+
+  makeAdder(sec) {
+    const wrap = document.createElement('div');
+    wrap.dataset.adder = '1';
+    wrap.style.cssText = 'display:flex;flex-wrap:wrap;gap:8px;align-items:center;padding:10px 0';
+    const label = document.createElement('span');
+    label.textContent = '+ Add';
+    label.style.cssText = 'font-size:12px;letter-spacing:-0.12px;color:#6e6e73';
+    wrap.appendChild(label);
+    BLOCK_MENU.forEach(m => {
+      const b = document.createElement('button');
+      b.type = 'button';
+      b.textContent = m.label;
+      b.style.cssText = 'height:26px;padding:0 11px;border-radius:980px;border:1px dashed rgba(0,0,0,0.22);background:transparent;color:#1d1d1f;font-size:12px;cursor:pointer';
+      b.addEventListener('click', e => { e.preventDefault(); this.addBlock(sec, m.type); });
+      wrap.appendChild(b);
+    });
+    return wrap;
+  }
+
+  renderBlocks() {
+    const cfg = this.state.cfg;
+    const editing = this.state.editMode;
+    document.querySelectorAll('[data-items]').forEach(cont => {
+      const sec = cont.dataset.items;
+      Array.from(cont.children).forEach((el, i) => {
+        if (!el.dataset.item && !el.dataset.extra && !el.dataset.adder) el.dataset.item = sec + '-' + i;
+      });
+      Array.from(cont.children).forEach(el => { if (el.dataset.extra) el.remove(); });
+      const adder = cont.querySelector(':scope > [data-adder]');
+      if (adder) adder.remove();
+      (cfg.extras[sec] || []).forEach(b => cont.appendChild(this.makeExtra(b)));
+      const st = cfg.items[sec] || {};
+      (st.order || []).forEach(k => {
+        const el = cont.querySelector(':scope > [data-item="' + k + '"]');
+        if (el) cont.appendChild(el);
+      });
+      const hidden = st.hidden || {};
+      Array.from(cont.children).forEach(el => {
+        if (!el.dataset.item) return;
+        const isHidden = !!hidden[el.dataset.item];
+        setShown(el, !(isHidden && !editing));
+        el.style.opacity = isHidden ? '0.34' : '';
+        const old = el.querySelector(':scope > [data-tools]');
+        if (old) old.remove();
+        if (!editing) { el.style.position = ''; el.style.marginTop = ''; return; }
+        el.style.position = 'relative';
+        // Padded cards have room for the toolbar inside; unpadded blocks get
+        // vertical space reserved above them so it never covers the copy.
+        const roomy = parseFloat(getComputedStyle(el).paddingTop) >= 24;
+        el.style.marginTop = roomy ? '' : '32px';
+        const tools = document.createElement('div');
+        tools.dataset.tools = '1';
+        tools.contentEditable = 'false';
+        tools.style.cssText = 'position:absolute;right:' + (roomy ? '6px' : '0') + ';top:' + (roomy ? '6px' : '-28px') + ';display:flex;gap:4px;z-index:20';
+        const key = el.dataset.item;
+        const isExtra = !!el.dataset.extra;
+        tools.appendChild(this.iconBtn('↑', 'Move up', () => this.moveItem(sec, key, -1)));
+        tools.appendChild(this.iconBtn('↓', 'Move down', () => this.moveItem(sec, key, 1)));
+        tools.appendChild(isHidden
+          ? this.iconBtn('↺', 'Restore', () => this.restoreItem(sec, key))
+          : this.iconBtn('✕', isExtra ? 'Delete block' : 'Hide block', () => this.deleteItem(sec, key, isExtra)));
+        el.appendChild(tools);
+      });
+      if (editing) cont.appendChild(this.makeAdder(sec));
+    });
+    if (editing) this.setEditing(true);
+  }
+
+  // --- RST rendering ------------------------------------------------------
+  el(tag, css, text) {
+    const n = document.createElement(tag);
+    if (css) n.style.cssText = css;
+    if (text !== undefined) n.textContent = text;
+    return n;
+  }
+
+  rstCard(b) {
+    const card = this.el('div', 'background:#f5f5f7;border-radius:18px;padding:30px 30px 32px');
+    if (b.num) card.appendChild(this.el('div', 'font-size:12px;letter-spacing:-0.12px;color:var(--ac2,#0066cc);margin-bottom:14px', b.num));
+    else if (b.meta) card.appendChild(this.el('div', 'font-size:12px;letter-spacing:-0.12px;color:#6e6e73;margin-bottom:12px', b.meta));
+    card.appendChild(this.el('h3', "font-family:'SF Pro Display',-apple-system,sans-serif;font-size:22px;line-height:27px;font-weight:600;letter-spacing:-0.2px;margin:0 0 12px;text-wrap:pretty", b.title));
+    if (b.body) card.appendChild(this.el('p', 'font-size:17px;line-height:25px;letter-spacing:-0.374px;color:#515154;margin:0;max-width:66ch;text-wrap:pretty', b.body));
+    if (b.bullets && b.bullets.length) {
+      const ul = this.el('div', 'display:flex;flex-direction:column;gap:10px;margin-top:18px');
+      b.bullets.forEach(t => {
+        const row = this.el('div', 'display:flex;gap:12px;align-items:flex-start');
+        row.appendChild(this.el('span', 'flex:0 0 auto;width:5px;height:5px;border-radius:980px;background:var(--ac,#0071e3);margin-top:9px'));
+        row.appendChild(this.el('span', 'font-size:15px;line-height:23px;letter-spacing:-0.3px;color:#515154', t));
+        ul.appendChild(row);
+      });
+      card.appendChild(ul);
+    }
+    if (b.links.length || b.tags.length) {
+      const row = this.el('div', 'display:flex;gap:10px;flex-wrap:wrap;align-items:center;margin-top:22px');
+      b.links.forEach(l => {
+        const a = this.el('a', 'display:inline-flex;align-items:center;height:36px;padding:0 15px;border-radius:980px;background:var(--ac,#0071e3);color:#ffffff;font-size:14px;text-decoration:none', l.label);
+        a.href = l.href;
+        row.appendChild(a);
+      });
+      b.tags.forEach(t => row.appendChild(this.el('span', 'display:inline-flex;align-items:center;height:36px;padding:0 15px;border-radius:980px;background:#ffffff;font-size:14px;letter-spacing:-0.224px;color:#1d1d1f', t)));
+      card.appendChild(row);
+    }
+    return card;
+  }
+
+  rstBlock(b, isLast) {
+    if (b.type === 'card') return this.rstCard(b);
+    if (b.type === 'para') return this.el('p', 'font-size:17px;line-height:25px;letter-spacing:-0.374px;color:#515154;margin:0;max-width:66ch;text-wrap:pretty', b.body);
+    if (b.type === 'divider') return this.el('div', 'height:1px;background:rgba(0,0,0,0.12);margin:6px 0');
+    if (b.type === 'lede') {
+      return this.el('p', 'font-size:clamp(19px,1.9vw,23px);line-height:1.42;letter-spacing:-0.4px;color:#1d1d1f;margin:0;max-width:44ch;text-wrap:pretty', b.title || b.body);
+    }
+    if (b.type === 'quote') {
+      const q = this.el('div', 'border-left:3px solid var(--ac,#0071e3);padding:2px 0 2px 20px;margin:4px 0');
+      q.appendChild(this.el('p', 'font-size:19px;line-height:29px;letter-spacing:-0.374px;color:#1d1d1f;margin:0;max-width:60ch;text-wrap:pretty', b.title || b.body));
+      if (b.cite) q.appendChild(this.el('div', 'font-size:12px;letter-spacing:-0.12px;color:#6e6e73;margin-top:10px', b.cite));
+      return q;
+    }
+    if (b.type === 'stats') {
+      const row = this.el('div', 'display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:20px;padding:26px 0;border-top:1px solid rgba(0,0,0,0.1);border-bottom:1px solid rgba(0,0,0,0.1)');
+      b.items.forEach(it => {
+        const parts = it.split('|');
+        const cell = this.el('div');
+        cell.appendChild(this.el('div', "font-family:'SF Pro Display',-apple-system,sans-serif;font-size:30px;line-height:34px;font-weight:600;letter-spacing:-0.4px;color:#1d1d1f", (parts[0] || '').trim()));
+        cell.appendChild(this.el('div', 'font-size:13px;line-height:19px;letter-spacing:-0.13px;color:#6e6e73;margin-top:6px', (parts[1] || '').trim()));
+        row.appendChild(cell);
+      });
+      return row;
+    }
+    if (b.type === 'field') {
+      // Both panels are evaluated from their actual definitions on a grid:
+      // the score of a two-mode Gaussian mixture, and the velocity field of a
+      // rectified flow (a straight-line interpolant toward the data mode).
+      const W = 320, H = 190, PAD = 16;
+      const modes = [{ x: 0.62, y: -0.42, w: 0.55 }, { x: -0.55, y: 0.44, w: 0.45 }];
+      // Tight modes make the score sharply non-uniform: long arrows far out,
+      // vanishing at each mode, and a visible divide between the two basins.
+      const s2 = 0.12;
+      const toPx = (x, y) => [PAD + ((x + 1.6) / 3.2) * (W - 2 * PAD), PAD + ((1 - y) / 2) * (H - 2 * PAD)];
+      const scoreAt = (x, y) => {
+        let wx = 0, wy = 0, tot = 0;
+        modes.forEach(m => {
+          const d2 = (x - m.x) * (x - m.x) + (y - m.y) * (y - m.y);
+          const p = m.w * Math.exp(-d2 / (2 * s2));
+          tot += p;
+          wx += p * (m.x - x) / s2;
+          wy += p * (m.y - y) / s2;
+        });
+        return tot > 1e-9 ? [wx / tot, wy / tot] : [0, 0];
+      };
+      // After rectification the paths are straight lines with matched
+      // endpoints, so the field is essentially a constant transport: same
+      // direction, same length, everywhere.
+      const velAt = (x, y) => [1, 0.06 * Math.sin(x * 1.1)];
+      const arrows = (fn, uniform) => {
+        let out = '';
+        let max = 0;
+        const pts = [];
+        for (let i = 0; i <= 12; i++) {
+          for (let j = 0; j <= 7; j++) {
+            const x = -1.5 + (3 * i) / 12;
+            const y = -0.9 + (1.8 * j) / 7;
+            const v = fn(x, y);
+            const mag = Math.hypot(v[0], v[1]);
+            if (mag > max) max = mag;
+            pts.push([x, y, v[0], v[1], mag]);
+          }
+        }
+        pts.forEach(p => {
+          const mag = p[4];
+          if (mag < 1e-4) return;
+          const norm = Math.min(1, mag / max);
+          // Score: length and weight track magnitude. Flow: near-identical
+          // arrows, which is the whole point of the comparison.
+          const len = uniform ? 12 : 15 * Math.pow(norm, 0.85) + 1.5;
+          const ux = (p[2] / mag) * len, uy = (p[3] / mag) * len;
+          const a = toPx(p[0], p[1]);
+          const bx = a[0] + ux, by = a[1] - uy;
+          const op = uniform ? '0.7' : (0.12 + 0.76 * norm).toFixed(2);
+          const nx = -uy / len, ny = -ux / len;
+          out += '<path d="M' + a[0].toFixed(1) + ' ' + a[1].toFixed(1) + ' L' + bx.toFixed(1) + ' ' + by.toFixed(1) +
+            '" stroke="currentColor" stroke-width="1.1" stroke-linecap="round" opacity="' + op + '"></path>' +
+            '<path d="M' + bx.toFixed(1) + ' ' + by.toFixed(1) +
+            ' L' + (bx - ux * 0.42 + nx * 2.1).toFixed(1) + ' ' + (by + uy * 0.42 + ny * 2.1).toFixed(1) +
+            ' L' + (bx - ux * 0.42 - nx * 2.1).toFixed(1) + ' ' + (by + uy * 0.42 - ny * 2.1).toFixed(1) +
+            ' Z" fill="currentColor" opacity="' + op + '"></path>';
+        });
+        return out;
+      };
+      const blobs = modes.map(m => {
+        const c = toPx(m.x, m.y);
+        const r = 20 * (0.7 + m.w);
+        return '<circle cx="' + c[0].toFixed(1) + '" cy="' + c[1].toFixed(1) + '" r="' + r.toFixed(1) + '" fill="#1d1d1f" opacity="0.05"></circle>' +
+          '<circle cx="' + c[0].toFixed(1) + '" cy="' + c[1].toFixed(1) + '" r="' + (r * 0.4).toFixed(1) + '" fill="#1d1d1f" opacity="0.12"></circle>';
+      }).join('');
+      // The flow panel transports one cloud onto the other, so it gets a
+      // source on the left and a target on the right instead of two basins.
+      const railBg = (() => {
+        const a = toPx(-1.35, 0), z = toPx(1.35, 0);
+        return '<ellipse cx="' + a[0].toFixed(1) + '" cy="' + a[1].toFixed(1) + '" rx="18" ry="58" fill="#1d1d1f" opacity="0.06"></ellipse>' +
+          '<ellipse cx="' + z[0].toFixed(1) + '" cy="' + z[1].toFixed(1) + '" rx="18" ry="58" fill="#1d1d1f" opacity="0.06"></ellipse>' +
+          '<text x="' + a[0].toFixed(1) + '" y="' + (H - 3) + '" text-anchor="middle" font-size="10" fill="#6e6e73">noise</text>' +
+          '<text x="' + z[0].toFixed(1) + '" y="' + (H - 3) + '" text-anchor="middle" font-size="10" fill="#6e6e73">data</text>';
+      })();
+
+      const fig = this.el('figure', 'margin:0;display:flex;flex-direction:column;gap:14px');
+      const frame = this.el('div', 'width:100%;background:#f5f5f7;border-radius:18px;padding:30px;box-sizing:border-box');
+      const row = this.el('div', 'display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:30px');
+      const panel = (label, sub, body, bg) => {
+        const g = this.el('div', 'display:flex;flex-direction:column;gap:10px;min-width:0');
+        g.appendChild(this.el('div', 'font-size:12px;letter-spacing:-0.12px;color:var(--ac2,#0066cc)', label));
+        const svg = document.createElementNS('http://www.w3.org/2000/svg', 'svg');
+        svg.setAttribute('viewBox', '0 0 ' + W + ' ' + H);
+        svg.setAttribute('width', '100%');
+        svg.setAttribute('role', 'img');
+        svg.setAttribute('aria-label', label + ' — ' + sub);
+        svg.style.cssText = 'display:block;height:auto;color:var(--ac,#0071e3)';
+        svg.innerHTML = (bg === undefined ? blobs : bg) + body;
+        g.appendChild(svg);
+        g.appendChild(this.el('div', 'font-size:13px;line-height:19px;letter-spacing:-0.13px;color:#515154;text-wrap:pretty', sub));
+        return g;
+      };
+      row.appendChild(panel('Score field  ∇ₓ log p(x)', 'Every arrow points uphill in density, and the two basins pull against each other. Far from the data the field is long and steep; at a mode it collapses to nothing. A sampler here has to take many small, unequal steps.', arrows(scoreAt, false)));
+      row.appendChild(panel('Velocity field  v(x, t) after reflow', 'The same transport, straightened: one direction, one magnitude, everywhere. Nothing varies across the field, which is why a single coarse Euler step already lands close to the data.', arrows(velAt, true), railBg));
+      frame.appendChild(row);
+      fig.appendChild(frame);
+      if (b.title) fig.appendChild(this.el('figcaption', 'font-size:13px;line-height:19px;letter-spacing:-0.13px;color:#6e6e73', b.title));
+      return fig;
+    }
+    if (b.type === 'diagram') {
+      const fig = this.el('figure', 'margin:0;display:flex;flex-direction:column;gap:14px');
+      const frame = this.el('div', 'width:100%;background:#f5f5f7;border-radius:18px;padding:34px 30px;box-sizing:border-box');
+      const panel = (label, sub, path, straight) => {
+        const g = this.el('div', 'display:flex;flex-direction:column;gap:12px;min-width:0');
+        g.appendChild(this.el('div', 'font-size:12px;letter-spacing:-0.12px;color:var(--ac2,#0066cc)', label));
+        const svg = document.createElementNS('http://www.w3.org/2000/svg', 'svg');
+        svg.setAttribute('viewBox', '0 0 320 150');
+        svg.setAttribute('width', '100%');
+        svg.setAttribute('role', 'img');
+        svg.setAttribute('aria-label', label + ' — ' + sub);
+        svg.style.cssText = 'display:block;height:auto;overflow:visible';
+        svg.innerHTML =
+          '<circle cx="34" cy="75" r="26" fill="#1d1d1f" opacity="0.08"></circle>' +
+          '<circle cx="34" cy="75" r="13" fill="#1d1d1f" opacity="0.14"></circle>' +
+          '<rect x="270" y="49" width="34" height="52" rx="6" fill="#1d1d1f" opacity="0.1"></rect>' +
+          '<rect x="279" y="60" width="16" height="30" rx="3" fill="#1d1d1f" opacity="0.18"></rect>' +
+          '<path d="' + path + '" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"' +
+          (straight ? '' : ' stroke-dasharray="1 5"') + '></path>' +
+          (straight
+            ? '<path d="M258 75 l-9 -5 v10 z" fill="currentColor"></path>'
+            : '<path d="M258 75 l-9 -5 v10 z" fill="currentColor" opacity="0.75"></path>') +
+          '<text x="34" y="130" text-anchor="middle" font-size="10" fill="#6e6e73">noise</text>' +
+          '<text x="287" y="130" text-anchor="middle" font-size="10" fill="#6e6e73">data</text>';
+        svg.style.color = 'var(--ac,#0071e3)';
+        g.appendChild(svg);
+        g.appendChild(this.el('div', 'font-size:13px;line-height:19px;letter-spacing:-0.13px;color:#515154;text-wrap:pretty', sub));
+        return g;
+      };
+      const row = this.el('div', 'display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:30px');
+      row.appendChild(panel('Diffusion · SDE', 'Many small stochastic steps along a curved path. Accuracy comes from step count.',
+        'M60 75 C 90 40, 110 110, 138 62 S 176 108, 202 68 S 236 96, 254 75', false));
+      row.appendChild(panel('Rectified flow · ODE', 'A velocity field straightened by reflow. The same transport in a handful of steps.',
+        'M60 75 L 254 75', true));
+      frame.appendChild(row);
+      fig.appendChild(frame);
+      if (b.title || b.cite) {
+        const cap = this.el('figcaption', 'font-size:13px;line-height:19px;letter-spacing:-0.13px;color:#6e6e73');
+        if (b.title) cap.appendChild(this.el('span', 'display:block', b.title));
+        if (b.cite) {
+          const line = this.el('span', 'display:block;margin-top:6px;color:#a1a1a6');
+          const m = b.cite.match(/^(.*?)\s*<(.+)>$/);
+          if (m) {
+            line.appendChild(document.createTextNode(m[1] + ' '));
+            const a = this.el('a', 'color:var(--ac2,#0066cc);text-decoration:none', m[2].replace(/^https?:\/\//, ''));
+            a.href = m[2];
+            a.target = '_blank';
+            a.rel = 'noopener';
+            line.appendChild(a);
+          } else line.textContent = b.cite;
+          cap.appendChild(line);
+        }
+        fig.appendChild(cap);
+      }
+      return fig;
+    }
+    if (b.type === 'embed') {
+      const fig = this.el('figure', 'margin:0;display:flex;flex-direction:column;gap:12px');
+      const frame = this.el('div', 'position:relative;width:100%;aspect-ratio:16/9;background:#000000;border-radius:18px;overflow:hidden');
+      const idm = (b.title || '').match(/[\w-]{8,}$/);
+      const id = idm ? idm[0] : '';
+      // Third-party frames can be blocked outright, so start from the poster
+      // and mount the player on click — the block never renders as an error.
+      const poster = this.el('img', 'position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block');
+      poster.src = 'https://i.ytimg.com/vi/' + id + '/maxresdefault.jpg';
+      poster.alt = b.caption || 'Video poster';
+      poster.addEventListener('error', () => { poster.src = 'https://i.ytimg.com/vi/' + id + '/hqdefault.jpg'; }, { once: true });
+      frame.appendChild(poster);
+      const play = this.el('a', 'position:absolute;inset:0;display:flex;align-items:center;justify-content:center;border:0;background:rgba(0,0,0,0.18);cursor:pointer;padding:0;text-decoration:none');
+      play.setAttribute('aria-label', 'Watch on YouTube');
+      const dot = this.el('span', 'width:66px;height:66px;border-radius:980px;background:rgba(255,255,255,0.94);display:flex;align-items:center;justify-content:center;box-shadow:0 6px 24px rgba(0,0,0,0.3)');
+      dot.innerHTML = '<svg width="22" height="22" viewBox="0 0 24 24" fill="#1d1d1f" aria-hidden="true"><path d="M8 5v14l11-7z"></path></svg>';
+      play.appendChild(dot);
+      // Embedding can be refused outright (Error 153 is a referrer/permission
+      // rejection, not something an origin check can predict), so the poster
+      // is a plain link to YouTube — it can never render a third-party error.
+      play.href = 'https://www.youtube.com/watch?v=' + id;
+      play.target = '_blank';
+      play.rel = 'noopener';
+      frame.appendChild(play);
+      const badge = this.el('span', 'position:absolute;left:16px;bottom:14px;display:inline-flex;align-items:center;height:26px;padding:0 12px;border-radius:980px;background:rgba(0,0,0,0.55);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);color:#ffffff;font-size:12px;letter-spacing:-0.12px;pointer-events:none', 'Watch on YouTube');
+      frame.appendChild(badge);
+      fig.appendChild(frame);
+      if (b.caption) fig.appendChild(this.el('figcaption', 'font-size:13px;line-height:19px;letter-spacing:-0.13px;color:#6e6e73', b.caption));
+      return fig;
+    }
+    if (b.type === 'figure') {
+      const fig = this.el('figure', 'margin:0;display:flex;flex-direction:column;gap:12px');
+      const frame = this.el('div', 'width:100%;aspect-ratio:' + (b.ratio || '16/9') + ';background:#f5f5f7;border-radius:18px;overflow:hidden;position:relative');
+      const slot = document.createElement('image-slot');
+      slot.setAttribute('id', b.id || 'fig-' + (b.title || '').slice(0, 24).replace(/\W+/g, '-'));
+      slot.setAttribute('shape', 'rounded');
+      slot.setAttribute('radius', '18');
+      slot.setAttribute('fit', 'contain');
+      slot.setAttribute('placeholder', b.placeholder || 'Drop a figure here');
+      frame.appendChild(slot);
+      fig.appendChild(frame);
+      if (b.title) fig.appendChild(this.el('figcaption', 'font-size:13px;line-height:19px;letter-spacing:-0.13px;color:#6e6e73;max-width:60ch', b.title));
+      return fig;
+    }
+    if (b.type === 'refs') {
+      const list = this.el('div', 'display:flex;flex-direction:column');
+      b.items.forEach((it, i) => {
+        const parts = it.split('|');
+        const row = this.el(parts[2] ? 'a' : 'div', 'display:flex;gap:18px;align-items:baseline;padding:16px 0;border-top:1px solid rgba(0,0,0,0.08);color:#1d1d1f;text-decoration:none' + (i === b.items.length - 1 ? ';border-bottom:1px solid rgba(0,0,0,0.08)' : ''));
+        if (parts[2]) { row.href = parts[2].trim(); row.target = '_blank'; row.rel = 'noopener'; }
+        row.appendChild(this.el('span', 'flex:0 0 74px;font-size:12px;letter-spacing:-0.12px;color:#6e6e73;font-variant-numeric:tabular-nums', (parts[1] || '').trim()));
+        row.appendChild(this.el('span', 'flex:1;min-width:0;font-size:15px;line-height:22px;letter-spacing:-0.3px;text-wrap:pretty', (parts[0] || '').trim()));
+        if (parts[2]) row.appendChild(this.el('span', 'font-size:14px;color:var(--ac2,#0066cc)', '→'));
+        list.appendChild(row);
+      });
+      return list;
+    }
+    if (b.type === 'series') {
+      const box = this.el('div', 'display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:16px');
+      box.dataset.series = '1';
+      if (b.items && b.items.length) box.dataset.slugs = b.items.join(';');
+      return box;
+    }
+    if (b.type === 'velog') {
+      const box = this.el('div', 'display:flex;flex-direction:column');
+      box.dataset.posts = '1';
+      box.dataset.limit = String(parseInt(b.title, 10) || 4);
+      return box;
+    }
+    if (b.type === 'pills') {
+      const row = this.el('div', 'display:flex;flex-wrap:wrap;gap:8px');
+      b.title.split(',').forEach(t => {
+        if (t.trim()) row.appendChild(this.el('span', 'display:inline-flex;align-items:center;height:26px;padding:0 12px;border-radius:980px;background:#f5f5f7;font-size:12px;letter-spacing:-0.12px;color:#1d1d1f', t.trim()));
+      });
+      return row;
+    }
+    if (b.type === 'entry') {
+      const row = this.el('div', 'display:grid;grid-template-columns:minmax(0,1fr);gap:6px;padding:24px 0' + (isLast ? '' : ';border-bottom:1px solid rgba(0,0,0,0.08)'));
+      if (b.date) row.appendChild(this.el('div', 'font-size:12px;letter-spacing:-0.12px;color:#6e6e73', b.date));
+      row.appendChild(this.el('div', "font-family:'SF Pro Display',-apple-system,sans-serif;font-size:20px;line-height:25px;font-weight:600", b.title));
+      if (b.org) row.appendChild(this.el('div', 'font-size:17px;line-height:25px;letter-spacing:-0.374px;color:#515154', b.org));
+      return row;
+    }
+    if (b.type === 'post') {
+      const a = this.el('a', 'display:flex;align-items:center;gap:20px;flex-wrap:wrap;padding:22px 0;border-top:1px solid rgba(0,0,0,0.08);color:#1d1d1f;text-decoration:none' + (isLast ? ';border-bottom:1px solid rgba(0,0,0,0.08)' : ''));
+      a.href = b.href || '#';
+      a.appendChild(this.el('span', 'flex:0 0 96px;font-size:12px;letter-spacing:-0.12px;color:#6e6e73', b.date || ''));
+      const mid = this.el('span', 'flex:1 1 260px;min-width:0');
+      mid.appendChild(this.el('span', "display:block;font-family:'SF Pro Display',-apple-system,sans-serif;font-size:19px;line-height:25px;font-weight:600;margin-bottom:5px", b.title));
+      if (b.body) mid.appendChild(this.el('span', 'display:block;font-size:14px;line-height:20px;letter-spacing:-0.224px;color:#6e6e73', b.body));
+      a.appendChild(mid);
+      a.appendChild(this.el('span', 'font-size:17px;color:var(--ac2,#0066cc)', '→'));
+      return a;
+    }
+    return this.el('p', 'font-size:17px;line-height:25px;color:#515154;margin:0', b.body || b.title || '');
+  }
+
+  // --- velog feed ---------------------------------------------------------
+  // posts.json is generated at build time (scripts/sync-velog.mjs pulls the
+  // velog RSS in CI); the page just reads the committed file, so nothing here
+  // depends on a cross-origin request at runtime.
+  postRow(p, isLast) {
+    const a = this.el('a', 'display:flex;align-items:center;gap:20px;flex-wrap:wrap;padding:22px 0;border-top:1px solid rgba(0,0,0,0.08);color:#1d1d1f;text-decoration:none' + (isLast ? ';border-bottom:1px solid rgba(0,0,0,0.08)' : ''));
+    a.href = p.slug ? '#/post/' + p.slug : (p.href || '#');
+    let when = '';
+    if (p.date) {
+      const d = new Date(p.date);
+      if (!isNaN(d)) when = d.toLocaleDateString('en-US', { month: 'short', year: 'numeric' });
+    }
+    a.appendChild(this.el('span', 'flex:0 0 96px;font-size:12px;letter-spacing:-0.12px;color:#6e6e73', when));
+    const mid = this.el('span', 'flex:1 1 260px;min-width:0');
+    const head = this.el('span', "display:block;font-family:'SF Pro Display',-apple-system,sans-serif;font-size:19px;line-height:25px;font-weight:600;margin-bottom:5px", p.cleanTitle || p.title || '');
+    if (p.series) {
+      const tag = this.el('span', 'display:inline-block;margin-right:8px;padding:1px 8px;border-radius:980px;background:#f5f5f7;font-size:11px;font-weight:400;letter-spacing:-0.11px;color:#6e6e73;vertical-align:middle', p.series);
+      head.insertBefore(tag, head.firstChild);
+    }
+    mid.appendChild(head);
+    if (p.summary) mid.appendChild(this.el('span', 'display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden;font-size:14px;line-height:20px;letter-spacing:-0.224px;color:#6e6e73', p.summary));
+    a.appendChild(mid);
+    a.appendChild(this.el('span', 'font-size:17px;color:var(--ac2,#0066cc)', '→'));
+    return a;
+  }
+
+  // --- velog page reader --------------------------------------------------
+  // velog renders series and post pages on the client, so the RSS feed (ten
+  // newest posts, site-wide) can't describe a full series. r.jina.ai returns
+  // any velog URL as markdown with CORS open, which gives both the complete
+  // series index and each post's source — cached per URL.
+  // r.jina.ai renders each velog page in a real browser, so a call can take
+  // many seconds or fail. Calls are queued one at a time (parallel ones are
+  // what made this flaky), retried twice, and any cached copy — even a stale
+  // one — is served rather than showing an error.
+  jina(url, format, opts) {
+    const o = opts || {};
+    const key = 'chanlee-jina:' + (format || 'md') + ':' + url;
+    let cached = null;
+    try { cached = JSON.parse(localStorage.getItem(key) || 'null'); } catch (e) {}
+    if (cached && cached.md && Date.now() - cached.t < 12 * 3600 * 1000) return Promise.resolve(cached.md);
+
+    if (cached && cached.md && o.validate && !o.validate(cached.md)) cached = null;
+
+    this._inflight = this._inflight || {};
+    if (this._inflight[key]) return this._inflight[key];
+
+    const attempt = tries => {
+      const ctrl = typeof AbortController === 'function' ? new AbortController() : null;
+      const timer = ctrl ? setTimeout(() => ctrl.abort(), 30000) : null;
+      const headers = { 'x-timeout': '40' };
+      if (format === 'html') headers['x-return-format'] = 'html';
+      if (o.selector) headers['x-target-selector'] = o.selector;
+      if (o.fresh) headers['x-no-cache'] = 'true';
+      return fetch('https://r.jina.ai/' + url, { headers: headers, signal: ctrl ? ctrl.signal : undefined })
+        .then(r => (r.ok ? r.text() : Promise.reject(new Error(String(r.status)))))
+        .then(md => {
+          if (!md || md.length < 400) throw new Error('short body');
+          // Never cache a snapshot that came back as whole-page chrome.
+          if (o.validate && !o.validate(md)) throw new Error('bad extraction');
+          this.cachePut(key, md);
+          return md;
+        })
+        .catch(err => {
+          if (tries > 0) return new Promise(res => setTimeout(res, 1200)).then(() => attempt(tries - 1));
+          throw err;
+        })
+        .finally(() => { if (timer) clearTimeout(timer); });
+    };
+
+    const job = this.schedule(() => attempt(2), this._urgent === url ? 0 : 1)
+      .then(md => md, () => null)
+      .then(md => {
+        delete this._inflight[key];
+        if (md) return md;
+        if (cached && cached.md) return cached.md;
+        throw new Error('reader unavailable');
+      });
+    this._inflight[key] = job;
+    return job;
+  }
+
+  // Two readers at a time, and whatever the user just opened goes first — a
+  // single strict queue meant a later series waited behind every earlier one.
+  schedule(task, prio) {
+    this._pool = this._pool || { running: 0, waiting: [] };
+    const pool = this._pool;
+    return new Promise((resolve, reject) => {
+      pool.waiting.push({ task: task, prio: prio || 0, resolve: resolve, reject: reject });
+      pool.waiting.sort((a, b) => a.prio - b.prio);
+      const pump = () => {
+        while (pool.running < 2 && pool.waiting.length) {
+          const job = pool.waiting.shift();
+          pool.running++;
+          job.task().then(job.resolve, job.reject).then(() => {
+            pool.running--;
+            pump();
+          });
+        }
+      };
+      pump();
+    });
+  }
+
+  urgent(url, format, opts) {
+    this._urgent = url;
+    return this.jina(url, format, opts);
+  }
+
+  // The reader sometimes returns velog's whole page instead of the article.
+  // Ask for the markdown body by selector, reject a chrome dump outright, and
+  // still trim any leftover header/footer furniture before rendering.
+  goodArticle(md) {
+    const body = String(md || '');
+    if (/^(?:\s*|Title:.*|URL Source:.*|Markdown Content:\s*|Warning:.*)$/m.test(body) === false) return true;
+    const head = body.replace(/^Title:.*$/m, '').replace(/^URL Source:.*$/m, '').replace(/^Markdown Content:\s*/m, '').trim().slice(0, 200);
+    if (/lumerico284\.log|로그인/.test(head)) return false;
+    if (/목록 보기|댓글 작성/.test(body)) return false;
+    return true;
+  }
+
+  // Ask for the rendered HTML and take velog's article container: it is the
+  // only deterministic extraction — the markdown conversion sometimes returns
+  // the whole page and flattens every formula into single-token lines.
+  fetchArticle(url) {
+    return this.urgent(url, 'html', { validate: h => h.indexOf('atom-one') >= 0 })
+      .then(html => {
+        const doc = new DOMParser().parseFromString(html, 'text/html');
+        const body = doc.querySelector('.atom-one');
+        if (!body) throw new Error('no article body');
+        body.querySelectorAll('script,style,iframe,object,embed,link,noscript').forEach(n => n.remove());
+        body.querySelectorAll('img').forEach(img => {
+          img.setAttribute('loading', 'lazy');
+          img.setAttribute('decoding', 'async');
+          if (!img.getAttribute('alt')) img.setAttribute('alt', '');
+        });
+        body.querySelectorAll('a').forEach(a => {
+          const href = a.getAttribute('href') || '';
+          if (href.charAt(0) === '/') a.setAttribute('href', 'https://velog.io' + href);
+          a.target = '_blank';
+          a.rel = 'noopener';
+        });
+        // KaTeX output is already in the markup and katex.min.css is loaded,
+        // so leave the rendered math alone and skip a second typeset pass.
+        return { html: body.innerHTML, typeset: body.querySelectorAll('.katex').length === 0 };
+      });
+  }
+
+  stripChrome(md) {
+    let body = String(md || '');
+    // Head: everything up to the series widget ("목록 보기" + "n/m") or the
+    // author·date line that velog prints above the article.
+    const heads = [/목록 보기\s*\n+\s*\d+\s*\/\s*\d+\s*\n/, /^.*·\s*\d{4}년\s*\d{1,2}월\s*\d{1,2}일.*$/m];
+    heads.forEach(re => {
+      const m = body.match(re);
+      if (m && m.index < body.length * 0.4) body = body.slice(m.index + m[0].length);
+    });
+    // Tail: previous/next post navigation, the author bio, comments.
+    const tails = [/^\s*이전 포스트\s*$/m, /^\s*다음 포스트\s*$/m, /^\s*\d+개의 댓글\s*$/m, /^\s*댓글 작성\s*$/m, /^\s*팔로우\s*$/m];
+    tails.forEach(re => {
+      const m = body.match(re);
+      if (m && m.index > body.length * 0.4) body = body.slice(0, m.index);
+    });
+    return body.trim();
+  }
+
+  // Resolve a feed post's "[Prefix]" display name to the slug of a series we
+  // have actually loaded, by matching a post it contains.
+  slugForSeriesName(name) {
+    if (!name) return '';
+    const cache = this._seriesCache || {};
+    const keys = Object.keys(cache);
+    for (let i = 0; i < keys.length; i++) {
+      const rec = cache[keys[i]];
+      if (rec.posts.length && rec.posts[0].series === name) return keys[i];
+      if (rec.name === name) return keys[i];
+    }
+    return '';
+  }
+
+  // localStorage fills quickly with rendered pages; on quota failure drop the
+  // oldest reader entries and retry once rather than losing the write.
+  cachePut(key, md) {
+    const write = () => localStorage.setItem(key, JSON.stringify({ t: Date.now(), md: md }));
+    try { write(); return; } catch (e) {}
+    try {
+      const entries = Object.keys(localStorage)
+        .filter(k => k.indexOf('chanlee-jina') === 0 && k !== key)
+        .map(k => {
+          let t = 0;
+          try { t = (JSON.parse(localStorage.getItem(k)) || {}).t || 0; } catch (err) {}
+          return { k: k, t: t };
+        })
+        .sort((a, b) => a.t - b.t);
+      entries.slice(0, Math.max(3, Math.ceil(entries.length / 2))).forEach(e => localStorage.removeItem(e.k));
+      write();
+    } catch (e) {}
+  }
+
+  seriesUrl(slug) {
+    return 'https://velog.io/@' + VELOG_HANDLE + '/series/' + encodeURI(slug);
+  }
+
+  // The rendered series page carries every entry — number, title, the post's
+  // own blurb and its date — while the markdown view only samples a window,
+  // so parse the HTML with the DOM.
+  parseSeriesHtml(html) {
+    const doc = new DOMParser().parseFromString(html, 'text/html');
+    const out = [];
+    Array.from(doc.querySelectorAll('h2')).forEach(h2 => {
+      const link = h2.querySelector('a[href*="/@"]');
+      const num = h2.querySelector('.number');
+      if (!link) return;
+      const title = (link.textContent || '').trim();
+      const cut = title.match(/^\s*\[([^\]]+)\]\s*(.+)$/);
+      const holder = h2.parentElement;
+      const info = holder ? holder.querySelector('.post-info') : null;
+      const blurb = info ? (info.querySelector('p') || {}).textContent : '';
+      const dateText = info ? ((info.querySelector('.date') || {}).textContent || '') : '';
+      const href = link.getAttribute('href') || '';
+      const abs = href.charAt(0) === '/' ? 'https://velog.io' + href : href;
+      out.push({
+        n: num ? Number((num.textContent || '').replace(/\D/g, '')) : 0,
+        title: title,
+        cleanTitle: cut ? cut[2].trim() : title,
+        series: cut ? cut[1].trim() : '',
+        href: abs,
+        slug: decodeURIComponent(abs.split('/').filter(Boolean).pop() || ''),
+        summary: (blurb || '').trim(),
+        dateText: (dateText || '').trim()
+      });
+    });
+    const seen = {};
+    return out.filter(p => {
+      if (!p.slug || seen[p.slug]) return false;
+      seen[p.slug] = 1;
+      return true;
+    }).sort((a, b) => (b.n || 0) - (a.n || 0));
+  }
+
+  seriesNameFromHtml(html, slug) {
+    const m = html.match(/<title[^>]*>([^<]+)</i);
+    if (m) {
+      const t = m[1].split('|')[1];
+      if (t) return t.split(' - ')[0].trim();
+    }
+    return slug.replace(/-/g, ' ');
+  }
+
+  // The index page's cards hydrate after the reader's HTML snapshot, but its
+  // markdown view does carry the links — so read markdown first there, and
+  // only fall back to HTML.
+  discoverSeries() {
+    if (this._seriesIndex && this._seriesIndex.length) return Promise.resolve(this._seriesIndex);
+    const url = 'https://velog.io/@' + VELOG_HANDLE + '/series';
+    const pick = body => {
+      const slugs = [];
+      const re = /\/series\/([A-Za-z0-9%._-]+)/g;
+      let m;
+      while ((m = re.exec(body))) {
+        const slug = m[1];
+        if (slug && slugs.indexOf(slug) < 0) slugs.push(slug);
+      }
+      return slugs;
+    };
+    const keep = found => SERIES_ALLOW.filter(s => found.indexOf(s) >= 0);
+    return this.jina(url).then(md => {
+      let slugs = pick(md);
+      if (slugs.length) { this._seriesIndex = keep(slugs); return this._seriesIndex; }
+      return this.jina(url, 'html').then(html => {
+        slugs = pick(html);
+        this._seriesIndex = keep(slugs);
+        return this._seriesIndex;
+      });
+    });
+  }
+
+  seriesTitleOf(md, slug) {
+    const m = md.match(/^Title:\s*.*?\|\s*(.+?)\s*-\s*[^-]*$/m);
+    return m ? m[1].trim() : slug.replace(/-/g, ' ');
+  }
+
+  loadSeries(slug, prioritise) {
+    this._seriesCache = this._seriesCache || {};
+    if (this._seriesCache[slug]) return Promise.resolve(this._seriesCache[slug]);
+    const url = this.seriesUrl(slug);
+    return (prioritise ? this.urgent(url, 'html') : this.jina(url, 'html')).then(html => {
+      const posts = this.parseSeriesHtml(html);
+      if (!posts.length) throw new Error('no posts parsed');
+      // The feed carries dates and blurbs for the newest posts; merge them in
+      // and add any feed post of this series the listing page missed.
+      const feed = this._posts || [];
+      // Feed slugs arrive percent-encoded, listing slugs decoded — compare the
+      // decoded form or the same post gets appended a second time.
+      const dec = v => { try { return decodeURIComponent(v || ''); } catch (e) { return v || ''; } };
+      posts.forEach(p => {
+        p.seriesSlug = slug;
+        const hit = feed.filter(f => dec(f.slug) === dec(p.slug))[0];
+        if (hit) {
+          hit.seriesSlug = slug;
+          p.date = hit.date;
+          if (!p.summary) p.summary = hit.summary;
+          if (hit.content) p.content = hit.content;
+        }
+      });
+      const name = this.seriesNameFromHtml(html, slug);
+      const known = posts.map(p => dec(p.slug));
+      feed.forEach(f => {
+        if (f.series && posts.length && f.series === posts[0].series && known.indexOf(dec(f.slug)) < 0) {
+          f.seriesSlug = slug;
+          posts.push(Object.assign({ n: 0 }, f, { seriesSlug: slug }));
+        }
+      });
+      posts.sort((a, b) => {
+        if (a.n && b.n) return b.n - a.n;
+        return new Date(b.date || 0) - new Date(a.date || 0);
+      });
+      const rec = { slug: slug, name: name, posts: posts };
+      this._seriesCache[slug] = rec;
+      return rec;
+    });
+  }
+
+  // --- markdown -> html ---------------------------------------------------
+  mdToHtml(src) {
+    let md = String(src || '')
+      .replace(/^Title:.*$/m, '')
+      .replace(/^URL Source:.*$/m, '')
+      .replace(/^Markdown Content:\s*/m, '')
+      .replace(/^Warning:.*$/m, '')
+      .trim();
+
+
+    const math = [];
+    md = md.replace(/\$\$[\s\S]*?\$\$|\$[^$\n]+\$/g, m => {
+      math.push(m);
+      return '\u0000M' + (math.length - 1) + '\u0000';
+    });
+
+    const code = [];
+    md = md.replace(/```([a-z0-9+#-]*)\n([\s\S]*?)```/gi, (m, lang, body) => {
+      code.push('<pre><code>' + this.esc(body.replace(/\n$/, '')) + '</code></pre>');
+      return '\u0000C' + (code.length - 1) + '\u0000';
+    });
+
+    const lines = md.split('\n');
+    const html = [];
+    let list = null;
+    const closeList = () => { if (list) { html.push('</' + list + '>'); list = null; } };
+    lines.forEach(raw => {
+      const line = raw.replace(/\s+$/, '');
+      if (!line.trim()) { closeList(); return; }
+      const ph = line.match(/^\u0000C(\d+)\u0000$/);
+      if (ph) { closeList(); html.push(code[Number(ph[1])]); return; }
+      if (/^(-{3,}|\*{3,}|_{3,})$/.test(line.trim())) { closeList(); html.push('<hr>'); return; }
+      const h = line.match(/^(#{1,6})\s+(.*)$/);
+      if (h) {
+        closeList();
+        const lvl = Math.min(h[1].length + 1, 6);
+        html.push('<h' + lvl + '>' + this.inline(h[2]) + '</h' + lvl + '>');
+        return;
+      }
+      const q = line.match(/^>\s?(.*)$/);
+      if (q) { closeList(); html.push('<blockquote>' + this.inline(q[1]) + '</blockquote>'); return; }
+      const ol = line.match(/^\s*\d+\.\s+(.*)$/);
+      const ul = line.match(/^\s*[-*+]\s+(.*)$/);
+      if (ol || ul) {
+        const want = ol ? 'ol' : 'ul';
+        if (list !== want) { closeList(); html.push('<' + want + '>'); list = want; }
+        html.push('<li>' + this.inline((ol || ul)[1]) + '</li>');
+        return;
+      }
+      closeList();
+      html.push('<p>' + this.inline(line) + '</p>');
+    });
+    closeList();
+
+    let out = html.join('\n');
+    out = out.replace(/\u0000C(\d+)\u0000/g, (m, i) => code[Number(i)]);
+    out = out.replace(/\u0000M(\d+)\u0000/g, (m, i) => math[Number(i)]);
+    return out;
+  }
+
+  esc(s) {
+    return String(s).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
+  }
+
+  inline(s) {
+    let t = this.esc(s);
+    t = t.replace(/`([^`]+)`/g, (m, c) => '<code>' + c + '</code>');
+    t = t.replace(/!\[([^\]]*)\]\(([^)\s]+)[^)]*\)/g, (m, alt, url) => '<img src="' + url + '" alt="' + alt + '">');
+    t = t.replace(/\[([^\]]+)\]\(([^)\s]+)[^)]*\)/g, (m, txt, url) => '<a href="' + url + '" target="_blank" rel="noopener">' + txt + '</a>');
+    t = t.replace(/\*\*([^*]+)\*\*/g, '<strong>$1</strong>');
+    t = t.replace(/(^|[^*])\*([^*\n]+)\*/g, '$1<em>$2</em>');
+    t = t.replace(/__([^_]+)__/g, '<strong>$1</strong>');
+    // Underscore emphasis. JS \w is ASCII-only, so Hangul already counts as a
+    // word boundary — Korean particles may follow the closing marker directly,
+    // while snake_case identifiers stay untouched.
+    t = t.replace(/(^|[^\w*])_([^_\n]+?)_(?!\w)/g, '$1<em>$2</em>');
+    return t;
+  }
+
+  seriesOf(posts) {
+    const map = {};
+    (posts || []).forEach(p => {
+      const key = p.series || 'Notes';
+      if (!map[key]) map[key] = { name: key, posts: [] };
+      map[key].posts.push(p);
+    });
+    return Object.keys(map).map(k => map[k]).sort((a, b) => b.posts.length - a.posts.length);
+  }
+
+  fmtDate(v) {
+    if (!v) return '';
+    const ko = String(v).match(/(\d{4})년\s*(\d{1,2})월\s*(\d{1,2})일/);
+    const d = ko ? new Date(Number(ko[1]), Number(ko[2]) - 1, Number(ko[3])) : new Date(String(v).replace(' ', 'T'));
+    return isNaN(d) ? '' : d.toLocaleDateString('en-US', { month: 'short', year: 'numeric' });
+  }
+
+  // One source of truth: the loader fills this._seriesIndex / _seriesCache and
+  // calls paintSeries; painting is a pure function of that state, so a repaint
+  // at any moment produces the same gallery.
+  ensureSeries() {
+    if (this._seriesRun) return;
+    this._seriesRun = 1;
+    this._seriesCache = this._seriesCache || {};
+    this._failedSeries = this._failedSeries || {};
+    this.discoverSeries()
+      .then(slugs => {
+        this._seriesIndex = slugs || [];
+        this.paintSeries();
+        return (this._seriesIndex).reduce((chain, slug) => chain.then(() =>
+          this.loadSeries(slug).then(() => { this.paintSeries(); }, () => { this._failedSeries[slug] = 1; this.paintSeries(); })
+        ), Promise.resolve());
+      })
+      .catch(() => { this._seriesIndexFailed = 1; this.paintSeries(); });
+  }
+
+  paintSeries() {
+    document.querySelectorAll('[data-series]').forEach(box => {
+      const declared = (box.dataset.slugs || '').split(';').map(s => s.trim()).filter(Boolean);
+      const slugs = declared.length ? declared : (this._seriesIndex || []);
+      box.textContent = '';
+      if (!slugs.length) {
+        if (this._seriesIndex && !this._seriesIndex.length) {
+          box.appendChild(this.el('div', 'font-size:14px;line-height:21px;letter-spacing:-0.224px;color:#6e6e73', 'No series to show yet.'));
+          return;
+        }
+        if (this._seriesIndexFailed) {
+          const retry = this.el('button', 'height:36px;padding:0 15px;border-radius:980px;border:none;background:var(--ac,#0071e3);color:#ffffff;font-size:14px;cursor:pointer', 'Reload series');
+          retry.type = 'button';
+          retry.addEventListener('click', () => {
+            this._seriesRun = 0;
+            this._seriesIndex = null;
+            this._seriesIndexFailed = 0;
+            this.ensureSeries();
+          });
+          box.appendChild(retry);
+        } else {
+          box.appendChild(this.seriesCard({ name: 'Loading series…', posts: [] }));
+        }
+        return;
+      }
+      slugs.forEach(slug => {
+        const rec = (this._seriesCache || {})[slug];
+        if (rec) { box.appendChild(this.seriesCard(rec)); return; }
+        if ((this._failedSeries || {})[slug]) {
+          const card = this.seriesCard({ slug: slug, name: slug.replace(/-/g, ' '), posts: [] });
+          box.appendChild(card);
+          return;
+        }
+        box.appendChild(this.seriesCard({ name: slug.replace(/-/g, ' '), posts: [] }));
+      });
+    });
+  }
+
+  paintSeriesLegacy() {
+    document.querySelectorAll('[data-series]').forEach(box => {
+      const posts = this._posts;
+      box.textContent = '';
+      if (!posts) return;
+      const groups = this.seriesOf(posts).map(g => ({ name: g.name, posts: [] }));
+      groups.forEach(g => {
+        const card = this.el('a', 'display:flex;flex-direction:column;background:#f5f5f7;border-radius:18px;padding:26px 26px 24px;color:#1d1d1f;text-decoration:none;transition:transform 240ms cubic-bezier(0.28,0.11,0.32,1),background 240ms ease;min-height:190px');
+        card.href = '#/series/' + encodeURIComponent(g.name);
+        card.addEventListener('mouseenter', () => { card.style.transform = 'translateY(-3px)'; card.style.background = '#efeff1'; });
+        card.addEventListener('mouseleave', () => { card.style.transform = 'none'; card.style.background = '#f5f5f7'; });
+        card.appendChild(this.el('div', 'font-size:12px;letter-spacing:-0.12px;color:var(--ac2,#0066cc);margin-bottom:14px', 'Series'));
+        card.appendChild(this.el('div', "font-family:'SF Pro Display',-apple-system,sans-serif;font-size:24px;line-height:29px;font-weight:600;letter-spacing:-0.3px;margin-bottom:10px;text-wrap:pretty", g.name));
+        card.appendChild(this.el('div', 'display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden;font-size:14px;line-height:20px;letter-spacing:-0.224px;color:#6e6e73', (g.posts[0] && (g.posts[0].cleanTitle || g.posts[0].title)) || ''));
+        const foot = this.el('div', 'display:flex;align-items:center;justify-content:space-between;gap:12px;margin-top:auto;padding-top:22px');
+        foot.appendChild(this.el('span', 'font-size:12px;letter-spacing:-0.12px;color:#6e6e73', g.posts.length + (g.posts.length === 1 ? ' recent post · ' : ' recent posts · ') + this.fmtDate(g.posts[0] && g.posts[0].date)));
+        foot.appendChild(this.el('span', 'font-size:15px;color:var(--ac2,#0066cc)', '→'));
+        card.appendChild(foot);
+        box.appendChild(card);
+      });
+    });
+  }
+
+  // velog's markdown pass italicises `*…*` / `_…_` pairs even inside math, so
+  // some formulas reach us with <em> where a delimiter used to be. Restore it
+  // inside math spans only — italics in prose stay italics.
+  repairMath(html) {
+    const s = String(html);
+    const DELIMS = { strong: '**', b: '**', del: '~', s: '~', em: '_', i: '_' };
+    let out = '';
+    let i = 0;
+    let inMath = false;
+    const open = [];
+    while (i < s.length) {
+      const ch = s[i];
+      if (ch === '$' && s[i - 1] !== '\\') {
+        const dbl = s[i + 1] === '$';
+        out += dbl ? '$$' : '$';
+        i += dbl ? 2 : 1;
+        inMath = !inMath;
+        continue;
+      }
+      if (ch === '<') {
+        const m = /^<(\/?)(em|strong|del|s|i|b)>/i.exec(s.slice(i, i + 12));
+        if (m) {
+          const tag = m[2].toLowerCase();
+          if (m[1] !== '/') {
+            // A pair that starts inside math had its delimiter eaten; close it
+            // with the same delimiter even if the closing tag lands later.
+            let delim = null;
+            if (inMath) {
+              const prev = out.slice(-1);
+              delim = tag === 'em' || tag === 'i' ? ((prev === '^' || prev === '_') ? '*' : '_') : DELIMS[tag];
+            }
+            open.push({ tag: tag, delim: delim });
+            out += delim || m[0];
+          } else {
+            let idx = -1;
+            for (let k = open.length - 1; k >= 0; k--) { if (open[k].tag === tag) { idx = k; break; } }
+            const rec = idx >= 0 ? open.splice(idx, 1)[0] : null;
+            out += rec && rec.delim ? rec.delim : m[0];
+          }
+          i += m[0].length;
+          continue;
+        }
+        // Any other tag is copied verbatim so a `$` in an attribute cannot
+        // flip the math state.
+        const gt = s.indexOf('>', i);
+        if (gt < 0) { out += s.slice(i); break; }
+        out += s.slice(i, gt + 1);
+        i = gt + 1;
+        continue;
+      }
+      out += ch;
+      i++;
+    }
+    return out;
+  }
+
+  renderReader(slug) {
+    const main = document.querySelector('[data-region="main"]');
+    if (!main) return;
+    main.querySelectorAll('[data-rst]').forEach(n => n.remove());
+    const wrap = this.el('section');
+    wrap.dataset.rst = '1';
+    const want = decodeURIComponent(slug);
+    let post = (this._posts || []).filter(p => decodeURIComponent(p.slug || '') === want)[0];
+    if (!post) {
+      const caches = this._seriesCache || {};
+      Object.keys(caches).forEach(k => {
+        caches[k].posts.forEach(p => { if (decodeURIComponent(p.slug || '') === want && !post) post = Object.assign({ seriesSlug: k }, p); });
+      });
+    }
+    const trail = [{ label: 'Writings', href: '#/writing' }];
+    // Only a real velog slug may be linked; a display name from the feed
+    // prefix would open an invented series page with fabricated numbering.
+    const sslug = post ? (post.seriesSlug || this.slugForSeriesName(post.series)) : '';
+    if (post && (sslug || post.series)) {
+      const rec = sslug ? (this._seriesCache || {})[sslug] : null;
+      trail.push(sslug
+        ? { label: (rec && rec.name) || post.series || sslug, href: '#/series/' + encodeURIComponent(sslug) }
+        : { label: post.series });
+    }
+    trail.push({ label: post ? (post.cleanTitle || post.title) : 'Post' });
+    wrap.appendChild(this.crumbs(trail));
+    if (!post) {
+      wrap.appendChild(this.el('p', 'font-size:17px;line-height:25px;color:#6e6e73;margin:0', this._posts ? 'That post is not in the current feed.' : 'Loading…'));
+      main.insertBefore(wrap, main.querySelector('[data-section="footer"]') || null);
+      return;
+    }
+    // Series-sourced posts carry their date as text, feed posts as a stamp.
+    const when = this.fmtDate(post.date || post.dateText);
+    if (when) {
+      const meta = this.el('div', 'display:flex;align-items:center;gap:10px;flex-wrap:wrap;margin-bottom:14px');
+      meta.appendChild(this.el('span', 'font-size:12px;letter-spacing:-0.12px;color:#6e6e73', when));
+      wrap.appendChild(meta);
+    }
+    wrap.appendChild(this.el('h1', "font-family:'SF Pro Display',-apple-system,sans-serif;font-size:clamp(28px,3.6vw,40px);line-height:1.12;font-weight:600;letter-spacing:-0.5px;margin:0 0 28px;max-width:22ch;text-wrap:pretty", post.cleanTitle || post.title));
+
+    const article = this.el('div', 'max-width:70ch;min-width:0;overflow-x:hidden');
+    article.dataset.article = '1';
+    if (post.content) {
+      article.innerHTML = this.repairMath(post.content);
+      article.querySelectorAll('script,style,iframe,object,embed,link').forEach(n => n.remove());
+      article.querySelectorAll('a').forEach(a => { a.target = '_blank'; a.rel = 'noopener'; });
+      article.querySelectorAll('img').forEach(img => {
+        img.setAttribute('loading', 'lazy');
+        img.setAttribute('decoding', 'async');
+        if (!img.getAttribute('alt')) img.setAttribute('alt', '');
+      });
+    } else {
+      // Not in the ten-post feed: read the post's own page as markdown.
+      article.innerHTML = '<p style="color:#6e6e73">Loading the post…</p>';
+      this.fetchArticle(post.href).then(res => {
+        if ((this.state.route || '').indexOf('post/') !== 0) return;
+        article.innerHTML = res.html;
+        if (res.typeset) this.typeset(article);
+      }).catch(() => {
+        article.innerHTML = '<p style="color:#6e6e73">Could not load this post right now. Open it on velog below.</p>';
+      });
+    }
+    wrap.appendChild(article);
+
+    const foot = this.el('div', 'margin-top:40px;padding-top:24px;border-top:1px solid rgba(0,0,0,0.08);display:flex;gap:12px;flex-wrap:wrap');
+    const orig = this.el('a', 'display:inline-flex;align-items:center;height:36px;padding:0 15px;border-radius:980px;border:1px solid var(--ac2,#0066cc);color:var(--ac2,#0066cc);font-size:14px;text-decoration:none', 'Read on velog');
+    orig.href = post.href;
+    orig.target = '_blank';
+    orig.rel = 'noopener';
+    foot.appendChild(orig);
+    if (sslug) {
+      const rec = (this._seriesCache || {})[sslug];
+      const back = this.el('a', 'display:inline-flex;align-items:center;height:36px;padding:0 15px;border-radius:980px;background:#f5f5f7;color:#1d1d1f;font-size:14px;text-decoration:none', '← Back to ' + ((rec && rec.name) || post.series || sslug));
+      back.href = '#/series/' + encodeURIComponent(sslug);
+      foot.appendChild(back);
+    }
+    wrap.appendChild(foot);
+
+    main.insertBefore(wrap, main.querySelector('[data-section="footer"]') || null);
+    this.typeset(article);
+  }
+
+  typeset(node) {
+    const run = () => {
+      if (!window.renderMathInElement) return;
+      try {
+        window.renderMathInElement(node, {
+          delimiters: [
+            { left: '$$', right: '$$', display: true },
+            { left: '$', right: '$', display: false },
+            { left: '\\[', right: '\\]', display: true },
+            { left: '\\(', right: '\\)', display: false }
+          ],
+          throwOnError: false,
+          strict: false
+        });
+      } catch (e) {}
+    };
+    if (window.renderMathInElement) run();
+    else setTimeout(run, 600);
+  }
+
+  paintPosts() {
+    const posts = this._posts;
+    if (!posts) return;
+    // Keep the latest-posts list to the same series the gallery allows.
+    const names = SERIES_ALLOW.map(s => s.replace(/-\d+$/, '').replace(/-/g, ' ').toLowerCase());
+    const allowed = posts.filter(p => {
+      if (!p.series) return true;
+      const n = p.series.toLowerCase();
+      return names.some(a => a.indexOf(n) >= 0 || n.indexOf(a.split(' ')[0]) >= 0);
+    });
+    document.querySelectorAll('[data-posts]').forEach(box => {
+      const limit = Number(box.dataset.limit || 4);
+      box.textContent = '';
+      const list = allowed.slice(0, limit);
+      if (!list.length) {
+        const empty = this.el('div', 'padding:22px 0;border-top:1px solid rgba(0,0,0,0.08);border-bottom:1px solid rgba(0,0,0,0.08);font-size:14px;line-height:21px;letter-spacing:-0.224px;color:#6e6e73', 'Could not reach the velog feed right now. Open the archive on velog.io.');
+        box.appendChild(empty);
+        return;
+      }
+      list.forEach((p, i) => box.appendChild(this.postRow(p, i === list.length - 1)));
+    });
+  }
+
+  // velog posts are titled "[Series] Title"; that prefix is what groups a run
+  // of posts into a series here.
+  decorate(p) {
+    const m = (p.title || '').match(/^\s*\[([^\]]+)\]\s*(.+)$/);
+    p.series = m ? m[1].trim() : '';
+    p.cleanTitle = m ? m[2].trim() : p.title;
+    p.slug = (p.href || '').split('/').filter(Boolean).pop() || '';
+    return p;
+  }
+
+  // Each velog post opens with its own intro section, so take the first real
+  // paragraph of the body rather than a blind slice of the whole article.
+  blurb(html) {
+    const src = String(html || '');
+    let text = '';
+    try {
+      const doc = new DOMParser().parseFromString('<body>' + src + '</body>', 'text/html');
+      const clean = n => (n.textContent || '').replace(/\s+/g, ' ').trim();
+      const paras = Array.from(doc.querySelectorAll('p')).map(clean).filter(t => t.length > 24);
+      text = paras[0] || clean(doc.body);
+    } catch (e) {
+      text = src.replace(/<[^>]+>/g, ' ').replace(/\s+/g, ' ').trim();
+    }
+    // Inline LaTeX reads as noise in a one-line blurb.
+    text = text.replace(/\$\$?[^$]*\$\$?/g, '').replace(/\s+/g, ' ').trim();
+    return text.length > 130 ? text.slice(0, 129).trimEnd() + '…' : text;
+  }
+
+  parseFeed(xml) {
+    const doc = new DOMParser().parseFromString(xml, 'application/xml');
+    if (doc.querySelector('parsererror')) return [];
+    const text = (node, tag) => {
+      const n = node.getElementsByTagName(tag)[0];
+      return n ? (n.textContent || '').trim() : '';
+    };
+    return Array.from(doc.getElementsByTagName('item')).map(item => this.decorate({
+      title: text(item, 'title'),
+      href: text(item, 'link'),
+      date: text(item, 'pubDate'),
+      summary: this.blurb(text(item, 'description')),
+      content: text(item, 'description')
+    })).filter(p => p.title && p.href);
+  }
+
+  parseJsonFeed(body) {
+    let data = null;
+    try { data = JSON.parse(body); } catch (e) { return []; }
+    const items = Array.isArray(data.items) ? data.items : [];
+    return items.map(it => this.decorate({
+      title: String(it.title || '').trim(),
+      href: String(it.link || '').trim(),
+      date: String(it.pubDate || '').trim(),
+      summary: this.blurb(it.description || it.content || ''),
+      content: String(it.content || it.description || '')
+    })).filter(p => p.title && p.href);
+  }
+
+  // Runtime fetch: velog's feed sends no CORS header, so try it directly first
+  // (in case that changes) and fall back to CORS-enabled feed readers. Each
+  // attempt gets its own deadline so one hanging host can't stall the section.
+  fetchFeed() {
+    const feed = 'https://api.velog.io/rss/@' + VELOG_HANDLE;
+    const sources = [
+      { url: feed, json: false },
+      { url: 'https://api.rss2json.com/v1/api.json?rss_url=' + encodeURIComponent(feed), json: true },
+      { url: 'https://api.allorigins.win/raw?url=' + encodeURIComponent(feed), json: false },
+      { url: 'https://api.codetabs.com/v1/proxy?quest=' + encodeURIComponent(feed), json: false }
+    ];
+    const attempt = i => {
+      if (i >= sources.length) return Promise.reject(new Error('feed unreachable'));
+      const src = sources[i];
+      const ctrl = typeof AbortController === 'function' ? new AbortController() : null;
+      const timer = ctrl ? setTimeout(() => ctrl.abort(), 4500) : null;
+      return fetch(src.url, { cache: 'no-store', signal: ctrl ? ctrl.signal : undefined })
+        .then(r => (r.ok ? r.text() : Promise.reject(new Error(String(r.status)))))
+        .then(body => {
+          const posts = src.json ? this.parseJsonFeed(body) : this.parseFeed(body);
+          if (!posts.length) throw new Error('empty feed');
+          return posts.slice(0, 20);
+        })
+        .catch(() => attempt(i + 1))
+        .finally(() => { if (timer) clearTimeout(timer); });
+    };
+    return attempt(0);
+  }
+
+  paintFeed() {
+    this.paintPosts();
+    this.ensureSeries();
+    this.paintSeries();
+    const route = this.state.route || '';
+    if (route.indexOf('post/') === 0) this.renderReader(route.slice(5));
+    else if (route.indexOf('series/') === 0) this.renderSeriesPage(decodeURIComponent(route.slice(7)));
+  }
+
+  crumbs(trail) {
+    const bar = this.el('div', 'display:flex;align-items:center;gap:8px;flex-wrap:wrap;margin-bottom:26px');
+    trail.forEach((step, i) => {
+      if (i) bar.appendChild(this.el('span', 'font-size:13px;color:#a1a1a6', '/'));
+      if (step.href) {
+        const a = this.el('a', 'font-size:13px;letter-spacing:-0.13px;color:var(--ac2,#0066cc);text-decoration:none', step.label);
+        a.href = step.href;
+        bar.appendChild(a);
+      } else {
+        bar.appendChild(this.el('span', 'font-size:13px;letter-spacing:-0.13px;color:#6e6e73;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;max-width:46ch', step.label));
+      }
+    });
+    return bar;
+  }
+
+  seriesCard(rec) {
+    const card = this.el(rec.slug ? 'a' : 'div', 'display:flex;flex-direction:column;background:#f5f5f7;border-radius:18px;padding:26px 26px 24px;color:#1d1d1f;text-decoration:none;transition:transform 240ms cubic-bezier(0.28,0.11,0.32,1),background 240ms ease;min-height:190px');
+    if (rec.slug) card.href = '#/series/' + encodeURIComponent(rec.slug);
+    card.addEventListener('mouseenter', () => { card.style.transform = 'translateY(-3px)'; card.style.background = '#efeff1'; });
+    card.addEventListener('mouseleave', () => { card.style.transform = 'none'; card.style.background = '#f5f5f7'; });
+    card.appendChild(this.el('div', 'font-size:12px;letter-spacing:-0.12px;color:var(--ac2,#0066cc);margin-bottom:14px', 'Series'));
+    card.appendChild(this.el('div', "font-family:'SF Pro Display',-apple-system,sans-serif;font-size:24px;line-height:29px;font-weight:600;letter-spacing:-0.3px;margin-bottom:10px;text-wrap:pretty", rec.name));
+    card.appendChild(this.el('div', 'display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden;font-size:14px;line-height:20px;letter-spacing:-0.224px;color:#6e6e73', rec.posts.length ? 'Latest: ' + (rec.posts[0].cleanTitle || rec.posts[0].title) : (rec.slug ? 'Could not load — open to retry' : 'Loading…')));
+    const foot = this.el('div', 'display:flex;align-items:center;justify-content:space-between;gap:12px;margin-top:auto;padding-top:22px');
+    const latest = rec.posts.length ? this.fmtDate(rec.posts[0].date || rec.posts[0].dateText) : '';
+    foot.appendChild(this.el('span', 'font-size:12px;letter-spacing:-0.12px;color:#6e6e73', rec.posts.length ? rec.posts.length + (rec.posts.length === 1 ? ' post' : ' posts') + (latest ? ' · ' + latest : '') : ''));
+    foot.appendChild(this.el('span', 'font-size:15px;color:var(--ac2,#0066cc)', '→'));
+    card.appendChild(foot);
+    return card;
+  }
+
+  paintDeclaredSeries(box, slugs) {
+    if (box.dataset.painted === slugs.join(';')) return;
+    box.dataset.painted = slugs.join(';');
+    box.textContent = '';
+    slugs.forEach(slug => {
+      const holder = this.el('div', 'display:contents');
+      box.appendChild(holder);
+      const skeleton = this.seriesCard({ slug: slug, name: slug.replace(/-/g, ' '), posts: [] });
+      holder.appendChild(skeleton);
+      this.loadSeries(slug).then(rec => {
+        holder.textContent = '';
+        holder.appendChild(this.seriesCard(rec));
+      }).catch(() => {
+        holder.textContent = '';
+        const card = this.seriesCard({ slug: slug, name: slug.replace(/-/g, ' '), posts: [] });
+        card.querySelectorAll('div')[2].textContent = 'Could not load this series. Tap to retry.';
+        card.addEventListener('click', e => {
+          e.preventDefault();
+          delete box.dataset.painted;
+          this.paintSeries();
+        });
+        holder.appendChild(card);
+      });
+    });
+  }
+
+  renderSeriesPage(key) {
+    const main = document.querySelector('[data-region="main"]');
+    if (!main) return;
+    const cached = (this._seriesCache || {})[key];
+    this._failedSeries = this._failedSeries || {};
+    this._pendingSeries = this._pendingSeries || {};
+    // A failure must be terminal until the user retries: re-entering the load
+    // from the render pass spins the main thread when the body is cached.
+    if (!cached && !this._pendingSeries[key] && !this._failedSeries[key]) {
+      this._pendingSeries[key] = 1;
+      const settle = ok => {
+        delete this._pendingSeries[key];
+        if (!ok) this._failedSeries[key] = 1;
+        const cur = decodeURIComponent((this.state.route || '').replace(/^series\//, ''));
+        if (cur === decodeURIComponent(key)) this.renderSeriesPage(key);
+      };
+      this.loadSeries(key, true).then(() => settle(true), () => settle(false));
+    }
+    main.querySelectorAll('[data-rst]').forEach(n => n.remove());
+    const wrap = this.el('section');
+    wrap.dataset.rst = '1';
+    const name = cached ? cached.name : key.replace(/-/g, ' ');
+    wrap.appendChild(this.crumbs([{ label: 'Writings', href: '#/writing' }, { label: name }]));
+
+    const posts = cached ? cached.posts : [];
+    wrap.appendChild(this.el('h1', "font-family:'SF Pro Display',-apple-system,sans-serif;font-size:clamp(30px,4vw,44px);line-height:1.08;font-weight:600;letter-spacing:-0.6px;margin:0 0 12px", name));
+    const pending = (this._pendingSeries || {})[key];
+    let note = posts.length ? posts.length + (posts.length === 1 ? ' post' : ' posts') : (pending ? 'Loading…' : '');
+    wrap.appendChild(this.el('p', 'font-size:17px;line-height:25px;letter-spacing:-0.374px;color:#6e6e73;margin:0 0 36px', note));
+    if (!posts.length && !pending) {
+      const box = this.el('div', 'display:flex;flex-direction:column;gap:16px;align-items:flex-start');
+      box.appendChild(this.el('p', 'font-size:17px;line-height:25px;color:#6e6e73;margin:0', 'Could not load this series.'));
+      const row = this.el('div', 'display:flex;gap:10px;flex-wrap:wrap');
+      const retry = this.el('button', 'height:36px;padding:0 15px;border-radius:980px;border:none;background:var(--ac,#0071e3);color:#ffffff;font-size:14px;cursor:pointer', 'Try again');
+      retry.type = 'button';
+      retry.addEventListener('click', () => {
+        delete (this._seriesCache || {})[key];
+        delete this._failedSeries[key];
+        try { localStorage.removeItem('chanlee-jina:html:' + this.seriesUrl(key)); } catch (e) {}
+        this.renderSeriesPage(key);
+      });
+      const away = this.el('a', 'display:inline-flex;align-items:center;height:36px;padding:0 15px;border-radius:980px;border:1px solid var(--ac2,#0066cc);color:var(--ac2,#0066cc);font-size:14px;text-decoration:none', 'Open on velog');
+      away.href = this.seriesUrl(key);
+      away.target = '_blank';
+      away.rel = 'noopener';
+      row.appendChild(retry);
+      row.appendChild(away);
+      box.appendChild(row);
+      wrap.appendChild(box);
+      main.insertBefore(wrap, main.querySelector('[data-section="footer"]') || null);
+      return;
+    }
+
+    const list = this.el('div', 'display:flex;flex-direction:column');
+    posts.forEach((p, i) => {
+      const a = this.el('a', 'display:flex;gap:22px;align-items:flex-start;padding:26px 0;border-top:1px solid rgba(0,0,0,0.08);color:#1d1d1f;text-decoration:none' + (i === posts.length - 1 ? ';border-bottom:1px solid rgba(0,0,0,0.08)' : ''));
+      a.href = '#/post/' + p.slug;
+      a.appendChild(this.el('span', "flex:0 0 auto;font-family:'SF Pro Display',-apple-system,sans-serif;font-size:22px;line-height:28px;font-weight:600;color:#d2d2d7;font-variant-numeric:tabular-nums", String(p.n || posts.length - i).padStart(2, '0')));
+      const mid = this.el('span', 'flex:1;min-width:0;display:block');
+      mid.appendChild(this.el('span', "display:block;font-family:'SF Pro Display',-apple-system,sans-serif;font-size:21px;line-height:27px;font-weight:600;letter-spacing:-0.3px;margin-bottom:7px", p.cleanTitle || p.title));
+      if (p.summary) mid.appendChild(this.el('span', 'display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden;font-size:15px;line-height:22px;letter-spacing:-0.3px;color:#6e6e73', p.summary));
+      mid.appendChild(this.el('span', 'display:block;font-size:12px;letter-spacing:-0.12px;color:#a1a1a6;margin-top:10px', this.fmtDate(p.date || p.dateText)));
+      a.appendChild(mid);
+      a.appendChild(this.el('span', 'flex:0 0 auto;font-size:17px;color:var(--ac2,#0066cc);padding-top:4px', '→'));
+      list.appendChild(a);
+    });
+    wrap.appendChild(list);
+    if (posts.length) {
+      const more = this.el('div', 'margin-top:28px');
+      const a = this.el('a', 'display:inline-flex;align-items:center;height:36px;padding:0 15px;border-radius:980px;border:1px solid var(--ac2,#0066cc);color:var(--ac2,#0066cc);font-size:14px;text-decoration:none', 'This series on velog');
+      a.href = cached ? this.seriesUrl(cached.slug) : 'https://velog.io/@' + VELOG_HANDLE + '/series';
+      a.target = '_blank';
+      a.rel = 'noopener';
+      more.appendChild(a);
+      wrap.appendChild(more);
+    }
+    main.insertBefore(wrap, main.querySelector('[data-section="footer"]') || null);
+  }
+
+  loadPosts() {
+    if (this._posts) { this.paintFeed(); return; }
+    let cached = null;
+    try {
+      cached = JSON.parse(localStorage.getItem(FEED_CACHE) || 'null');
+      if (cached && cached.v !== FEED_FORMAT) cached = null;
+      localStorage.removeItem('chanlee-velog-feed-v2');
+    } catch (e) { cached = null; }
+    const fresh = cached && Array.isArray(cached.posts) && Date.now() - (cached.t || 0) < 6 * 3600 * 1000;
+    if (cached && Array.isArray(cached.posts) && cached.posts.length) {
+      this._posts = cached.posts;
+      this.paintFeed();
+    }
+    if (fresh) return;
+    this.fetchFeed()
+      .then(posts => {
+        this._posts = posts;
+        try { localStorage.setItem(FEED_CACHE, JSON.stringify({ v: FEED_FORMAT, t: Date.now(), posts: posts })); } catch (e) {}
+        this.paintFeed();
+        if (this._sweep) this._sweep();
+      })
+      .catch(() => {
+        if (this._posts) return;
+        this._posts = [];
+        this.paintFeed();
+      });
+  }
+
+  pageSource(route) {
+    const pages = this.state.cfg.pages || {};
+    if (pages[route] !== undefined) return pages[route];
+    return route === 'main' ? '' : (RST_PAGES[route] || '');
+  }
+
+  // What the editor should show for a page: an unsaved draft first, then the
+  // stored source, then the built-in default.
+  seedFor(key) {
+    const stored = this.pageSource(key);
+    if (stored) return stored;
+    return key === 'main' ? RST_DEFAULT : (RST_PAGES[key] || '');
+  }
+
+  draftFor(key) {
+    const drafts = this._drafts || (this._drafts = {});
+    return drafts[key] !== undefined ? drafts[key] : this.seedFor(key);
+  }
+
+  stashDraft() {
+    if (!this._ta || !this._taKey) return;
+    const val = this._ta.value;
+    // An empty buffer is never a real edit — it would blank the page.
+    if (!val.trim()) return;
+    this._drafts = this._drafts || {};
+    this._drafts[this._taKey] = val;
+  }
+
+  syncNav() {
+    const raw = this.state.route || 'main';
+    const route = raw.indexOf('series/') === 0 || raw.indexOf('post/') === 0 ? 'writing' : raw;
+    const aside = document.querySelector('[data-region="aside"]');
+    const wrap = document.getElementById('top');
+    const full = this.isWritingRoute(raw);
+    if (aside) setShown(aside, !full);
+    // Keep #top's own 1080px/22px frame intact — the reading column narrows
+    // itself instead, so the page gutters never change between routes.
+    if (wrap) wrap.style.maxWidth = '1080px';
+    const col = document.querySelector('[data-region="main"]');
+    if (col) {
+      col.style.maxWidth = full ? '860px' : '';
+      col.style.margin = full ? '0 auto' : '';
+    }
+    document.querySelectorAll('[data-nav] a[data-page]').forEach(a => {
+      const on = a.dataset.page === route;
+      a.style.opacity = on ? '1' : '0.62';
+      a.style.fontWeight = on ? '600' : '400';
+      if (on) a.setAttribute('aria-current', 'page');
+      else a.removeAttribute('aria-current');
+    });
+    const label = PAGE_LABELS[route] || '';
+    document.title = route === 'main' ? 'Chan Lee' : 'Chan Lee · ' + label;
+  }
+
+  renderRst() {
+    const main = document.querySelector('[data-region="main"]');
+    if (!main) return false;
+    this.syncNav();
+    const route = this.state.route || 'main';
+    if (route.indexOf('post/') === 0 || route.indexOf('series/') === 0) {
+      Array.from(main.querySelectorAll('[data-section]'))
+        .filter(n => n.dataset.section !== 'footer')
+        .forEach(n => {
+          if (n.id && !n.dataset.oldId) { n.dataset.oldId = n.id; n.removeAttribute('id'); }
+          n.style.display = 'none';
+        });
+      if (route.indexOf('series/') === 0) this.renderSeriesPage(decodeURIComponent(route.slice(7)));
+      else this.renderReader(route.slice(5));
+      return true;
+    }
+    const src = this.pageSource(route);
+    main.querySelectorAll('[data-rst]').forEach(n => n.remove());
+    const authored = Array.from(main.querySelectorAll('[data-section]')).filter(n => n.dataset.section !== 'footer');
+    if (!src || !src.trim()) {
+      authored.forEach(n => {
+        if (n.dataset.oldId) { n.id = n.dataset.oldId; delete n.dataset.oldId; }
+        n.style.display = n.dataset.dsp || '';
+      });
+      return false;
+    }
+    // Park the authored ids while a source is active — two nodes sharing an id
+    // would send every nav anchor to the hidden one.
+    authored.forEach(n => {
+      if (n.id && !n.dataset.oldId) { n.dataset.oldId = n.id; n.removeAttribute('id'); }
+      n.style.display = 'none';
+    });
+    const foot = main.querySelector('[data-section="footer"]');
+    parseRst(src).forEach(sec => {
+      const node = this.el('section', 'scroll-margin-top:88px');
+      node.dataset.rst = '1';
+      node.id = sec.id;
+      node.dataset.screenLabel = sec.title;
+      if (sec.title) node.appendChild(this.el('h2', "font-family:'SF Pro Display',-apple-system,sans-serif;font-size:clamp(26px,3vw,32px);line-height:1.15;font-weight:600;letter-spacing:-0.3px;margin:0 0 24px", sec.title));
+      const layout = sec.layout === 'grid'
+        ? 'display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:16px'
+        : sec.layout === 'list' ? 'display:flex;flex-direction:column' : 'display:flex;flex-direction:column;gap:16px';
+      const wrap = this.el('div', layout);
+      sec.blocks.forEach((b, i) => wrap.appendChild(this.rstBlock(b, i === sec.blocks.length - 1)));
+      node.appendChild(wrap);
+      main.insertBefore(node, foot || null);
+    });
+    return true;
+  }
+
+  moveItem(sec, key, d) {
+    const cont = document.querySelector('[data-items="' + sec + '"]');
+    if (!cont) return;
+    const keys = Array.from(cont.children).filter(el => el.dataset.item).map(el => el.dataset.item);
+    const i = keys.indexOf(key);
+    const j = i + d;
+    if (i < 0 || j < 0 || j >= keys.length) return;
+    const t = keys[i]; keys[i] = keys[j]; keys[j] = t;
+    this.update(c => {
+      const st = c.items[sec] || {};
+      st.order = keys;
+      c.items[sec] = st;
+    });
+  }
+
+  deleteItem(sec, key, isExtra) {
+    this.update(c => {
+      if (isExtra) {
+        c.extras[sec] = (c.extras[sec] || []).filter(b => b.id !== key);
+        return;
+      }
+      const st = c.items[sec] || {};
+      st.hidden = st.hidden || {};
+      st.hidden[key] = true;
+      c.items[sec] = st;
+    });
+  }
+
+  restoreItem(sec, key) {
+    this.update(c => {
+      const st = c.items[sec] || {};
+      st.hidden = st.hidden || {};
+      delete st.hidden[key];
+      c.items[sec] = st;
+    });
+  }
+
+  addBlock(sec, type) {
+    const seed = BLOCK_SEED[type] || BLOCK_SEED.text;
+    const id = 'x' + Date.now().toString(36) + Math.floor(Math.random() * 999).toString(36);
+    this.update(c => {
+      c.extras[sec] = (c.extras[sec] || []).concat([{ id: id, type: type, title: seed.title, body: seed.body }]);
+    });
+  }
+
+  move(listName, i, d) {
+    this.update(c => {
+      const arr = c[listName];
+      const j = i + d;
+      if (j < 0 || j >= arr.length) return;
+      const t = arr[i]; arr[i] = arr[j]; arr[j] = t;
+    });
+  }
+
+  // Soft edge fade on scrollable sub-panels: the mask follows scroll position,
+  // so the top edge only softens once there is content above it.
+  syncFades() {
+    document.querySelectorAll('[data-scrollfade]').forEach(el => {
+      const top = el.scrollTop > 2 ? 22 : 0;
+      const room = el.scrollHeight - el.clientHeight - el.scrollTop;
+      const bottom = room > 2 ? 26 : 0;
+      const mask = 'linear-gradient(180deg, transparent 0, #000 ' + top + 'px, #000 calc(100% - ' + bottom + 'px), transparent 100%)';
+      el.style.webkitMaskImage = mask;
+      el.style.maskImage = mask;
+    });
+  }
+
+  componentDidMount() {
+    this.setState({ cfg: this.load(), route: this.routeFromHash() }, () => { this.keyTexts(); this.applyCfg(); });
+
+    this._onRoute = () => {
+      const route = this.routeFromHash();
+      if (route === this.state.route) return;
+      this.setState({ route: route }, () => {
+        this.applyCfg();
+        window.scrollTo(0, 0);
+      });
+    };
+    window.addEventListener('hashchange', this._onRoute);
+
+    this._fade = () => this.syncFades();
+    document.querySelectorAll('[data-scrollfade]').forEach(el => el.addEventListener('scroll', this._fade, { passive: true }));
+    window.addEventListener('resize', this._fade);
+    requestAnimationFrame(this._fade);
+
+    this._onBlur = e => {
+      if (!this.state.editMode) return;
+      const node = e.target && e.target.closest ? e.target.closest('[data-xkey],[data-ekey]') : null;
+      if (!node) return;
+      const val = readText(node);
+      if (node.dataset.xkey) {
+        const parts = node.dataset.xkey.split(':');
+        this.update(c => {
+          Object.keys(c.extras).forEach(sec => {
+            c.extras[sec] = c.extras[sec].map(b => {
+              if (b.id !== parts[0]) return b;
+              const next = Object.assign({}, b);
+              next[parts[1]] = val;
+              return next;
+            });
+          });
+        });
+        return;
+      }
+      const key = node.dataset.ekey;
+      this.update(c => { c.text[key] = val; });
+    };
+    this._onClick = e => {
+      if (!this.state.editMode) return;
+      const a = e.target && e.target.closest ? e.target.closest('a') : null;
+      if (a) e.preventDefault();
+    };
+    // Paste plain text only, and keep each editable block a single paragraph.
+    this._onPaste = e => {
+      if (!this.state.editMode) return;
+      const el = e.target && e.target.closest ? e.target.closest('[data-ekey],[data-xkey]') : null;
+      if (!el) return;
+      e.preventDefault();
+      const data = e.clipboardData || window.clipboardData;
+      const txt = (data ? data.getData('text/plain') : '').replace(/\s*\n+\s*/g, ' ');
+      document.execCommand('insertText', false, txt);
+    };
+    this._onKey = e => {
+      if (!this.state.editMode) return;
+      const el = e.target && e.target.closest ? e.target.closest('[data-ekey],[data-xkey]') : null;
+      if (!el) return;
+      if (e.key === 'Enter') { e.preventDefault(); el.blur(); }
+      if (e.key === 'Escape') el.blur();
+    };
+    document.addEventListener('focusout', this._onBlur);
+    document.addEventListener('click', this._onClick, true);
+    document.addEventListener('paste', this._onPaste);
+    document.addEventListener('keydown', this._onKey);
+
+    const nodes = Array.from(document.querySelectorAll('[data-reveal]'));
+    const show = n => {
+      if (n.dataset.revealed) return;
+      n.dataset.revealed = '1';
+      n.style.opacity = '1';
+      // 'none', not translateY(0): a transform makes the block a containing
+      // block for position:fixed descendants (the photo's reframe panel).
+      n.style.transform = 'none';
+      if (this._io) this._io.unobserve(n);
+    };
+    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches || !('IntersectionObserver' in window)) {
+      nodes.forEach(n => { n.style.transition = 'none'; show(n); });
+      return;
+    }
+    const sweep = () => nodes.forEach(n => {
+      if (n.getBoundingClientRect().top < window.innerHeight * 0.94) show(n);
+    });
+    this._io = new IntersectionObserver(entries => {
+      entries.forEach(e => { if (e.isIntersecting) show(e.target); });
+      sweep();
+    }, { threshold: 0.08, rootMargin: '0px 0px -6% 0px' });
+    nodes.forEach(n => this._io.observe(n));
+    this._sweep = sweep;
+    window.addEventListener('hashchange', sweep);
+    window.addEventListener('scroll', sweep, { passive: true });
+    requestAnimationFrame(sweep);
+  }
+
+  componentWillUnmount() {
+    if (this._io) this._io.disconnect();
+    if (this._onRoute) window.removeEventListener('hashchange', this._onRoute);
+    if (this._sweep) {
+      window.removeEventListener('hashchange', this._sweep);
+      window.removeEventListener('scroll', this._sweep);
+    }
+    document.removeEventListener('focusout', this._onBlur);
+    document.removeEventListener('click', this._onClick, true);
+    if (this._fade) {
+      document.querySelectorAll('[data-scrollfade]').forEach(el => el.removeEventListener('scroll', this._fade));
+      window.removeEventListener('resize', this._fade);
+    }
+    document.removeEventListener('paste', this._onPaste);
+    document.removeEventListener('keydown', this._onKey);
+  }
+
+  renderVals() {
+    const cfg = this.state.cfg;
+    const dim = k => (cfg.hidden[k] ? '#a1a1a6' : '#1d1d1f');
+    const sections = cfg.order.map((k, i) => ({
+      key: k,
+      label: LABELS[k] || k,
+      color: dim(k),
+      eye: cfg.hidden[k] ? 'Show' : 'Hide',
+      up: () => this.move('order', i, -1),
+      down: () => this.move('order', i, 1),
+      toggle: () => this.update(c => { c.hidden[k] = !c.hidden[k]; })
+    }));
+    const blocks = cfg.blockOrder.map((k, i) => ({
+      key: k,
+      label: BLOCK_LABELS[k] || k,
+      color: dim('blk-' + k),
+      eye: cfg.hidden['blk-' + k] ? 'Show' : 'Hide',
+      up: () => this.move('blockOrder', i, -1),
+      down: () => this.move('blockOrder', i, 1),
+      toggle: () => this.update(c => { c.hidden['blk-' + k] = !c.hidden['blk-' + k]; })
+    }));
+    const active = 'var(--ac,#0071e3)';
+    return {
+      sections, blocks,
+      adminOpen: this.state.adminOpen,
+      toggleAdmin: () => this.setState(s => ({ adminOpen: !s.adminOpen })),
+      leftBg: cfg.side === 'left' ? active : '#ffffff',
+      leftFg: cfg.side === 'left' ? '#ffffff' : '#1d1d1f',
+      rightBg: cfg.side === 'right' ? active : '#ffffff',
+      rightFg: cfg.side === 'right' ? '#ffffff' : '#1d1d1f',
+      sideLeft: () => this.update(c => { c.side = 'left'; }),
+      sideRight: () => this.update(c => { c.side = 'right'; }),
+      editHint: this.isSourceRoute()
+        ? 'This page is generated from its RST source, so its content is edited there.'
+        : 'While editing: click any text to rewrite it, use the handles on each block to move or delete it, and the + button at the end of a section to add a new block.',
+      editLabel: this.state.editMode ? 'Done editing' : 'Edit text inline',
+      editBg: this.state.editMode ? active : '#f5f5f7',
+      editFg: this.state.editMode ? '#ffffff' : '#1d1d1f',
+      // Inline editing only reaches the authored CV blocks; a page rendered
+      // from RST source has to be edited as source, so send the user there
+      // instead of toggling a mode that would appear to do nothing.
+      editLabelForRoute: this.isSourceRoute() ? 'Edit this page’s source' : (this.state.editMode ? 'Done editing' : 'Edit text inline'),
+      toggleEdit: () => {
+        if (this.isSourceRoute()) {
+          const key = this.state.route || 'main';
+          this._drafts = {};
+          this._taKey = key;
+          this._pendingSeed = this.draftFor(key);
+          this.update(c => { c.activePage = key; });
+          this.setState({ sourceOpen: true, adminOpen: false });
+          return;
+        }
+        const on = !this.state.editMode;
+        this.setState({ editMode: on }, () => { this.setEditing(on); this.renderBlocks(); });
+      },
+      swatches: Object.keys(ACCENTS).map(name => ({
+        name: name,
+        color: ACCENTS[name][0],
+        ring: cfg.accent === name
+          ? 'inset 0 0 0 2.5px #ffffff, 0 0 0 2px ' + ACCENTS[name][0]
+          : 'inset 0 0 0 1px rgba(0,0,0,0.06)',
+        pick: () => this.update(c => { c.accent = name; })
+      })),
+      sourceOpen: this.state.sourceOpen,
+      // The textarea can be remounted by a re-render, so the seed is applied
+      // from the ref itself rather than once after opening.
+      srcRef: el => {
+        this._ta = el;
+        if (el && this._pendingSeed != null) { el.value = this._pendingSeed; this._pendingSeed = null; el.focus(); }
+      },
+      pageTabs: PAGE_KEYS.map(key => ({
+        key: key,
+        label: PAGE_LABELS[key],
+        bg: key === cfg.activePage ? '#1d1d1f' : '#f5f5f7',
+        fg: key === cfg.activePage ? '#ffffff' : '#1d1d1f',
+        // Buffers live in a session-local draft map; nothing is written to the
+        // stored config until Apply, so browsing tabs can't overwrite a page.
+        pick: () => {
+          this.stashDraft();
+          const seed = this.draftFor(key);
+          this._taKey = key;
+          this.update(c => { c.activePage = key; });
+          if (this._ta) this._ta.value = seed;
+        }
+      })),
+      openSource: () => {
+        const key = this.state.route || 'main';
+        this._drafts = {};
+        this._taKey = key;
+        this._pendingSeed = this.draftFor(key);
+        this.update(c => { c.activePage = key; });
+        this.setState({ sourceOpen: true, adminOpen: false });
+      },
+      closeSource: () => { this._drafts = {}; this.setState({ sourceOpen: false }); },
+      applySource: () => {
+        this.stashDraft();
+        const drafts = this._drafts || {};
+        const key = this._taKey || cfg.activePage;
+        this.update(c => {
+          Object.keys(drafts).forEach(k => {
+            if (drafts[k] !== this.seedFor(k)) c.pages[k] = drafts[k];
+          });
+        });
+        this._drafts = {};
+        this.setState({ sourceOpen: false }, () => {
+          const want = key === 'main' ? '#/' : '#/' + key;
+          if (this.routeFromHash() !== key) location.hash = want;
+        });
+      },
+      revertSource: () => {
+        this._drafts = {};
+        this.update(c => { c.pages = {}; c.activePage = 'main'; });
+        this.setState({ sourceOpen: false }, () => location.reload());
+      },
+      legend: RST_LEGEND.map(([label, code]) => ({ label: label, code: code })),
+      sourceActive: !!(cfg.pages.main && cfg.pages.main.trim()),
+      copyLabel: this.state.copied ? 'Copied' : 'Copy config JSON',
+      copyJson: () => {
+        const txt = JSON.stringify(this.state.cfg, null, 2);
+        const done = () => this.setState({ copied: true });
+        if (navigator.clipboard && navigator.clipboard.writeText) navigator.clipboard.writeText(txt).then(done, done);
+        else done();
+      },
+      resetAll: () => {
+        try { localStorage.removeItem(STORE); } catch (e) {}
+        this.setState({ cfg: Object.assign({}, DEFAULTS, { hidden: {}, text: {} }), editMode: false }, () => {
+          this.setEditing(false);
+          location.reload();
+        });
+      }
+    };
+  }
+}
+</script>
+</body>
+</html>
