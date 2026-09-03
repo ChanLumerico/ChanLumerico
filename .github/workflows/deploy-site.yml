@@ -1,0 +1,71 @@
+# Builds the React site in blog/ and publishes it to GitHub Pages.
+#
+# This repo (ChanLumerico/ChanLumerico) is the profile repo, so Pages serves
+# it under /ChanLumerico/ and BASE_PATH is set to match. To serve from the
+# user-root repo (ChanLumerico.github.io) instead, drop BASE_PATH — the Vite
+# config already defaults to '/'. Routing is hash-based either way, so only
+# asset URLs are affected.
+name: Deploy site
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'blog/**'
+      - '.github/workflows/deploy-site.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+# A newer push supersedes an in-flight deploy, but never cancels one that is
+# already publishing.
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: blog
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm
+          cache-dependency-path: blog/package-lock.json
+
+      - run: npm ci
+
+      - name: Typecheck, lint and test
+        run: |
+          npm run typecheck
+          npm run lint
+          npm test
+
+      - name: Build
+        run: npx vite build
+        env:
+          BASE_PATH: /ChanLumerico/
+
+      - uses: actions/configure-pages@v5
+
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: blog/dist
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deploy.outputs.page_url }}
+    steps:
+      - id: deploy
+        uses: actions/deploy-pages@v4

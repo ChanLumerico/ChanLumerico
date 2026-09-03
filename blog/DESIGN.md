@@ -474,6 +474,10 @@ Flagged, not silently decided.
 | 7 | Reader route loads KaTeX | prototype loads `katex.min.css` + `katex.js` + `auto-render.js` from CDN on **every** page | prompt's — `katex` is an npm dep, dynamically imported on the post route only |
 | 8 | Home renders from `main.rst` | Home renders the **authored template markup**; `pageSource('main')` returns `''` by default, so `RST_DEFAULT` is only the editor's seed | prompt's — `main.rst` is the source of record. Deltas below |
 | 9 | `base: '/'`, user-root Pages repo `ChanLumerico.github.io` | this checkout is `ChanLumerico/ChanLumerico` (the profile repo — snake + waka workflows), which serves Pages at `/ChanLumerico/` | `base` defaults to `'/'` per the prompt, overridable with `BASE_PATH`. `HashRouter` means only asset URLs care |
+| 10 | Inline-edit any text block on Home | the prototype's own `editLabelForRoute` already sends a source-driven page to the source editor — *"This page is generated from its RST source, so its content is edited there"* — and inline editing only ever reached the authored CV markup | the prototype's own branch: all three pages are source-driven, so Edit opens the RST editor. There is no authored markup left to edit in place |
+| 11 | Add/delete Notion-style blocks | `BLOCK_MENU`'s five types (`text`, `heading`, `card`, `link`, `divider`) were appended as DOM nodes and kept in `localStorage.extras` | the same five, as RST snippets inserted at the caret in the source editor — the only place they can actually be committed |
+| 12 | Crop a profile photo in a modal with a 1:1 circular guide | the DC runtime's `<image-slot>` wrote the crop into an `.image-slots.state.json` sidecar beside the HTML | the guide, the drag and the scroll-zoom are ported; the output is a `portrait.jpg` download for `public/`, plus a live preview held in the draft buffer. There is no sidecar runtime, and the repo is the content of record |
+| 13 | `.. figure::` is "a drop target for an image" | the same `<image-slot>` | `:src:` renders an image; without one the `:placeholder:` copy shows, so the block never renders as a broken image |
 
 ### 7.1 Deltas from moving Home onto `main.rst` (item 8)
 
@@ -491,3 +495,51 @@ authored per-section card styling:
 All of it is recoverable by editing `main.rst`; none of it is a design change
 made by this port. Say the word and I will either add the missing copy to
 `main.rst` or keep Home on hand-written components.
+
+### 7.2 Defects fixed rather than reproduced
+
+Two prototype bugs produce visibly wrong output rather than a design choice,
+so they are fixed here and recorded:
+
+1. **`fmtDate` swallowed every feed date.** It did
+   `new Date(String(v).replace(' ', 'T'))`, which turns the RFC-822 stamp
+   `Tue, 04 Mar 2025 09:00:00 GMT` into `Tue,T04 Mar 2025 …` — an invalid
+   date, rendered as an empty string. The substitution exists for the
+   rss2json shape (`2025-02-01 10:00:00`, which older Safari will only parse
+   with a `T`), so the port tries the string as given first and falls back to
+   the substitution. Pinned by a test for both shapes.
+
+2. **A failed feed could never recover.** `loadPosts` memoised on
+   `this._posts`, so nothing refetched. The prototype had no retry
+   affordance, which hid it; this port's empty state offers "Try again", and
+   that button has to work — `retryFeed()` clears the memo. `reset()` gives
+   the tests a clean singleton.
+
+### 7.3 Fixed while porting the reveal
+
+`useReveal` began as a faithful transcription: one effect, one
+`document.querySelectorAll('[data-reveal]')`. That works in the prototype,
+where the whole page is in the document from the start, and fails here, where
+routes are lazily loaded and every section arrives after Suspense resolves —
+leaving the main column at `opacity: 0`. jsdom has no layout, so the route
+tests passed while a real browser rendered a blank column.
+
+`observeReveal` now takes a single element and shares one observer, and
+`<Reveal>` registers its own node on mount. The threshold, the `-6%` root
+margin, the 94%-of-viewport sweep, the stagger delays and the reduced-motion
+path are unchanged.
+
+---
+
+## 8. Verified against a real browser
+
+Headless Chromium, production build:
+
+- 0 of 21 reveal targets left hidden across the three pages after a scroll pass
+- no horizontal overflow at 1440 / 1240 / 1024 / 820 / 768 / 520 / 480 / 390
+- the gear absent without `?admin=1`, present with it in both query positions
+- the live drill-down reaching `Diffusion 101` (19 posts) and rendering
+  `Fokker-Planck 방정식` — 12k characters of body, 100 KaTeX nodes, breadcrumb
+  `Writings / Diffusion 101 / Fokker-Planck 방정식`, and no page errors
+- the only console errors are the CORS rejection of the direct velog URL,
+  which is the first source of the feed race behaving exactly as designed
