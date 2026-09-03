@@ -12,8 +12,17 @@ const FOCUSABLE = [
 /**
  * Modal keyboard contract: focus moves in on open, Tab cycles inside, Escape
  * closes, and focus returns to whatever opened it.
+ *
+ * `fallback` catches the case where the opener is gone by the time the modal
+ * closes — the admin panel closes as it hands off to a modal, taking its own
+ * buttons with it, and without a fallback the keyboard would be left on
+ * `<body>` with nowhere to tab from.
  */
-export function useFocusTrap<T extends HTMLElement>(open: boolean, onClose: () => void) {
+export function useFocusTrap<T extends HTMLElement>(
+  open: boolean,
+  onClose: () => void,
+  fallback?: () => HTMLElement | null
+) {
   const ref = useRef<T | null>(null)
   const restoreTo = useRef<HTMLElement | null>(null)
 
@@ -22,9 +31,12 @@ export function useFocusTrap<T extends HTMLElement>(open: boolean, onClose: () =
     restoreTo.current = document.activeElement as HTMLElement | null
 
     const node = ref.current
+    // Deliberately not a layout check: `offsetParent` / `getClientRects` are
+    // meaningless in a test renderer, and these modals never hold a
+    // laid-out-but-invisible control. `hidden` and `aria-hidden` are enough.
     const focusables = () =>
       Array.from(node?.querySelectorAll<HTMLElement>(FOCUSABLE) ?? []).filter(
-        el => el.offsetParent !== null || el === document.activeElement
+        el => !el.hasAttribute('hidden') && el.closest('[hidden],[aria-hidden="true"]') === null
       )
 
     const first = focusables()[0]
@@ -56,9 +68,14 @@ export function useFocusTrap<T extends HTMLElement>(open: boolean, onClose: () =
     document.addEventListener('keydown', onKey, true)
     return () => {
       document.removeEventListener('keydown', onKey, true)
-      restoreTo.current?.focus?.()
+      // `<body>` is not an opener: the panel that launched this modal often
+      // unmounts in the same commit, so `document.activeElement` had already
+      // fallen back to the body by the time it was captured.
+      const opener = restoreTo.current
+      if (opener && opener !== document.body && document.contains(opener)) opener.focus()
+      else fallback?.()?.focus()
     }
-  }, [open, onClose])
+  }, [open, onClose, fallback])
 
   return ref
 }

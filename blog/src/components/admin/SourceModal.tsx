@@ -18,6 +18,7 @@ import s from './admin.module.css'
 export function SourceModal({
   open,
   onClose,
+  restoreFocusTo,
   initialPage,
   pages,
   onApply,
@@ -25,12 +26,14 @@ export function SourceModal({
 }: {
   open: boolean
   onClose: () => void
+  /** Where focus goes if the opener is gone by the time this closes. */
+  restoreFocusTo?: () => HTMLElement | null
   initialPage: PageKey
   pages: Readonly<Record<PageKey, string>>
   onApply: (drafts: Partial<Record<PageKey, string>>) => void
   onRevert: (page: PageKey) => void
 }) {
-  const trapRef = useFocusTrap<HTMLDivElement>(open, onClose)
+  const trapRef = useFocusTrap<HTMLDivElement>(open, onClose, restoreFocusTo)
   const taRef = useRef<HTMLTextAreaElement | null>(null)
   const [active, setActive] = useState<PageKey>(initialPage)
   const [buffers, setBuffers] = useState<Record<PageKey, string>>(() => ({ ...pages }))

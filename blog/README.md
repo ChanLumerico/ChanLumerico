@@ -39,7 +39,7 @@ npm run dev          # http://localhost:5173, admin UI always on
 
 ### Tests
 
-149 of them, in four files:
+155 of them, in five files:
 
 - `src/rst/parse.test.ts` — the RST parser, including the section order,
   layouts and block counts of all three shipped pages
@@ -52,6 +52,9 @@ npm run dev          # http://localhost:5173, admin UI always on
 - `src/routes/routes.test.tsx` — one smoke test group per route, with every
   network path stubbed, asserting that each route mounts, paints the right
   landmarks, and never leaves an indefinite spinner behind
+- `src/hooks/useFocusTrap.test.tsx` — the modal keyboard contract: focus in,
+  Tab cycling both ways, Escape, and focus restored even when the opener
+  unmounted as the modal opened
 
 ---
 

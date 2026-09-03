@@ -27,13 +27,16 @@ const START: View = { scale: 1, x: 0, y: 0 }
 export function PhotoCropModal({
   open,
   onClose,
+  restoreFocusTo,
   onApply,
 }: {
   open: boolean
   onClose: () => void
+  /** Where focus goes if the opener is gone by the time this closes. */
+  restoreFocusTo?: () => HTMLElement | null
   onApply: (dataUrl: string) => void
 }) {
-  const trapRef = useFocusTrap<HTMLDivElement>(open, onClose)
+  const trapRef = useFocusTrap<HTMLDivElement>(open, onClose, restoreFocusTo)
   const stageRef = useRef<HTMLDivElement | null>(null)
   const imgRef = useRef<HTMLImageElement | null>(null)
   const dragFrom = useRef<{ px: number; py: number; x: number; y: number } | null>(null)

@@ -1,4 +1,4 @@
-import { useCallback, useState, useSyncExternalStore } from 'react'
+import { useCallback, useRef, useState, useSyncExternalStore } from 'react'
 import { useLocation } from 'react-router-dom'
 import type { PageKey } from '../../config/types'
 import { GearMark } from '../icons'
@@ -29,6 +29,7 @@ export default function AdminLayer() {
   const [panelOpen, setPanelOpen] = useState(false)
   const [sourcePage, setSourcePage] = useState<PageKey | null>(null)
   const [photoOpen, setPhotoOpen] = useState(false)
+  const fabRef = useRef<HTMLButtonElement | null>(null)
 
   const closeSource = useCallback(() => setSourcePage(null), [])
   const closePhoto = useCallback(() => setPhotoOpen(false), [])
@@ -38,6 +39,7 @@ export default function AdminLayer() {
   return (
     <>
       <button
+        ref={fabRef}
         type="button"
         className={[s.fab, 'adminui', state.dirty ? s.fabDirty : ''].filter(Boolean).join(' ')}
         title="Page settings"
@@ -72,6 +74,7 @@ export default function AdminLayer() {
         open={sourcePage !== null}
         initialPage={sourcePage ?? 'main'}
         pages={state.draft.pages}
+        restoreFocusTo={() => fabRef.current}
         onClose={closeSource}
         onApply={drafts => {
           for (const [key, text] of Object.entries(drafts)) {
@@ -83,6 +86,7 @@ export default function AdminLayer() {
 
       <PhotoCropModal
         open={photoOpen}
+        restoreFocusTo={() => fabRef.current}
         onClose={closePhoto}
         onApply={dataUrl =>
           draftStore.updateConfig(c => {

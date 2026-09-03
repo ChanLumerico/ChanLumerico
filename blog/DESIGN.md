@@ -543,3 +543,17 @@ Headless Chromium, production build:
   `Writings / Diffusion 101 / Fokker-Planck 방정식`, and no page errors
 - the only console errors are the CORS rejection of the direct velog URL,
   which is the first source of the feed race behaving exactly as designed
+- the admin panel opening, its nine reorder rows, the accent picker rewriting
+  `--ac` at the document root, hiding a section removing it from the page,
+  the dirty marker appearing on the gear, the source editor seeded from
+  `main.rst` with its legend beside it, Escape closing it, focus returning to
+  the gear, and Discard restoring every hidden section
+
+Two things this pass fixed. `useFocusTrap` filtered its focusable list on
+`offsetParent !== null`, which is a layout read: correct in a browser,
+vacuously false in a test renderer, and unnecessary for modals that never
+hold a laid-out-but-invisible control — it now filters on `hidden` and
+`aria-hidden` instead. And focus restore treated `<body>` as a valid opener,
+so closing a modal launched from the admin panel — which unmounts in the same
+commit, dropping `document.activeElement` to the body before it is captured —
+left the keyboard nowhere. It now falls back to the gear.
