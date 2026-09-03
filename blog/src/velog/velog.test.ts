@@ -136,8 +136,9 @@ describe('allowedByWhitelist', () => {
   })
 
   it('always keeps a post with no series', () => {
-    expect(allowedByWhitelist([decorate({ title: 'Loose note', href: 'https://v/@x/n' })]))
-      .toHaveLength(1)
+    expect(
+      allowedByWhitelist([decorate({ title: 'Loose note', href: 'https://v/@x/n' })])
+    ).toHaveLength(1)
   })
 })
 
@@ -337,7 +338,9 @@ describe('mdToHtml', () => {
 
 describe('goodArticle', () => {
   it('rejects a login/chrome dump', () => {
-    expect(goodArticle('Title: x\nURL Source: y\nMarkdown Content:\nlumerico284.log')).toBe(false)
+    expect(goodArticle('Title: x\nURL Source: y\nMarkdown Content:\nlumerico284.log')).toBe(
+      false
+    )
   })
 
   it('rejects a page carrying velog’s comment furniture', () => {
@@ -345,9 +348,9 @@ describe('goodArticle', () => {
   })
 
   it('accepts a real article body', () => {
-    expect(goodArticle('Title: x\nURL Source: y\nMarkdown Content:\n\nA real derivation.')).toBe(
-      true
-    )
+    expect(
+      goodArticle('Title: x\nURL Source: y\nMarkdown Content:\n\nA real derivation.')
+    ).toBe(true)
   })
 })
 
@@ -387,15 +390,14 @@ describe('plural', () => {
 })
 
 describe('race', () => {
-  const later = <T>(ms: number, value: T) =>
-    new Promise<T>(r => setTimeout(() => r(value), ms))
+  const later = <T>(ms: number, value: T) => new Promise<T>(r => setTimeout(() => r(value), ms))
   const failsAfter = (ms: number) =>
     new Promise<never>((_r, j) => setTimeout(() => j(new Error('nope')), ms))
 
   it('returns the first usable result, not the first to settle', async () => {
-    await expect(
-      race([() => failsAfter(5), () => later(20, 'slow-but-good')])
-    ).resolves.toBe('slow-but-good')
+    await expect(race([() => failsAfter(5), () => later(20, 'slow-but-good')])).resolves.toBe(
+      'slow-but-good'
+    )
   })
 
   it('rejects only once every source has failed', async () => {

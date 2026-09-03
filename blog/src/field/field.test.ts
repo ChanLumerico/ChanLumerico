@@ -22,8 +22,7 @@ import {
 const logDensity = (x: number, y: number) =>
   Math.log(
     MODES.reduce(
-      (acc, m) =>
-        acc + m.w * Math.exp(-((x - m.x) ** 2 + (y - m.y) ** 2) / (2 * S2)),
+      (acc, m) => acc + m.w * Math.exp(-((x - m.x) ** 2 + (y - m.y) ** 2) / (2 * S2)),
       0
     )
   )

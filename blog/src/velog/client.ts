@@ -119,6 +119,19 @@ export class VelogClient {
     return this.feedJob
   }
 
+  /**
+   * Refetch the feed from scratch.
+   *
+   * `ensureFeed` memoises its job so a hundred mounted blocks share one
+   * request — which also means a failed load can never recover on its own.
+   * This is what a "Try again" is allowed to call.
+   */
+  retryFeed = (): Promise<void> => {
+    this.feedJob = null
+    this.set({ feedState: 'loading' })
+    return this.ensureFeed()
+  }
+
   /** Latest posts for `.. velog:: n`, whitelist-filtered. */
   latest = (limit: number): VelogPost[] =>
     allowedByWhitelist(this.state.feed ?? []).slice(0, limit)
@@ -215,6 +228,15 @@ export class VelogClient {
     this.state.series[slug]?.record?.name ?? slug.replace(/-/g, ' ')
 
   fetchArticle = (url: string): Promise<ArticleBody> => fetchArticle(this.reader, url)
+
+  /** Drop every in-memory result and every memoised job. */
+  reset = (): void => {
+    this.feedJob = null
+    this.indexJob = null
+    this.seriesJobs.clear()
+    this.state = EMPTY
+    for (const l of this.listeners) l()
+  }
 }
 
 /** One client per document. */

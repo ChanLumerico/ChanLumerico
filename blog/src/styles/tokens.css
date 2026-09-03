@@ -59,8 +59,9 @@
   --shadow-play: 0 6px 24px rgba(0, 0, 0, 0.3);
 
   /* --- type ----------------------------------------------------------- */
-  --font-text: 'SF Pro Text', 'SF Pro Display', -apple-system, BlinkMacSystemFont,
-    'Helvetica Neue', sans-serif;
+  --font-text:
+    'SF Pro Text', 'SF Pro Display', -apple-system, BlinkMacSystemFont, 'Helvetica Neue',
+    sans-serif;
   --font-display: 'SF Pro Display', -apple-system, sans-serif;
   --font-mono: 'SF Mono', ui-monospace, SFMono-Regular, Menlo, monospace;
 

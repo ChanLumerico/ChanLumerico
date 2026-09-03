@@ -98,10 +98,12 @@ export class Pool {
       this.waiting.push({
         prio,
         run: () => {
-          task().then(resolve, reject).finally(() => {
-            this.running--
-            this.pump()
-          })
+          task()
+            .then(resolve, reject)
+            .finally(() => {
+              this.running--
+              this.pump()
+            })
         },
       })
       this.waiting.sort((a, b) => a.prio - b.prio)

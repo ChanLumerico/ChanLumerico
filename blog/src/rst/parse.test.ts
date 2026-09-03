@@ -55,7 +55,9 @@ describe('parseRst — sections', () => {
   })
 
   it('reads a title, its `=====` rule, and its options', () => {
-    const [sec] = parseRst(['About', '=====', ':id: about', ':layout: stack', '', 'Hello.'].join('\n'))
+    const [sec] = parseRst(
+      ['About', '=====', ':id: about', ':layout: stack', '', 'Hello.'].join('\n')
+    )
     expect(sec?.title).toBe('About')
     expect(sec?.id).toBe('about')
     expect(sec?.layout).toBe('stack')
@@ -144,9 +146,11 @@ describe('parseRst — directives', () => {
 
   it('keeps the directive argument as the title, even when it is a URL or a count', () => {
     expect(
-      (parseRst('.. embed:: https://www.youtube.com/watch?v=PDKhUknuQDg')[0]?.blocks[0] as {
-        title: string
-      }).title
+      (
+        parseRst('.. embed:: https://www.youtube.com/watch?v=PDKhUknuQDg')[0]?.blocks[0] as {
+          title: string
+        }
+      ).title
     ).toBe('https://www.youtube.com/watch?v=PDKhUknuQDg')
     expect((parseRst('.. velog:: 4')[0]?.blocks[0] as { title: string }).title).toBe('4')
   })
@@ -232,7 +236,10 @@ describe('parseRst — the shipped content', () => {
   })
 
   it('main.rst keeps the Lucid card’s two links and the LoRA card’s two tags', () => {
-    const cards = only(parseRst(mainRst).flatMap(s => s.blocks), 'card')
+    const cards = only(
+      parseRst(mainRst).flatMap(s => s.blocks),
+      'card'
+    )
     const lucid = cards.find(c => c.title.startsWith('Lucid'))
     expect(lucid?.links.map(l => l.href)).toEqual([
       'https://github.com/ChanLumerico/lucid',
@@ -244,7 +251,10 @@ describe('parseRst — the shipped content', () => {
   })
 
   it('main.rst has three experience entries, each with a date and an org', () => {
-    const entries = only(parseRst(mainRst).flatMap(s => s.blocks), 'entry')
+    const entries = only(
+      parseRst(mainRst).flatMap(s => s.blocks),
+      'entry'
+    )
     expect(entries).toHaveLength(3)
     for (const e of entries) {
       expect(e.date).toBeTruthy()
@@ -253,7 +263,10 @@ describe('parseRst — the shipped content', () => {
   })
 
   it('main.rst asks for four velog posts', () => {
-    const velog = only(parseRst(mainRst).flatMap(s => s.blocks), 'velog')
+    const velog = only(
+      parseRst(mainRst).flatMap(s => s.blocks),
+      'velog'
+    )
     expect(velog).toHaveLength(1)
     expect(velog[0]?.title).toBe('4')
   })
@@ -292,21 +305,28 @@ describe('parseRst — the shipped content', () => {
   })
 
   it('research.rst keeps the diagram’s citation link intact', () => {
-    const diagram = only(parseRst(researchRst).flatMap(s => s.blocks), 'diagram')[0]
+    const diagram = only(
+      parseRst(researchRst).flatMap(s => s.blocks),
+      'diagram'
+    )[0]
     expect(diagram?.cite).toContain('https://arxiv.org/abs/2209.03003')
     expect(diagram?.title).toContain('Same endpoints, different trajectories.')
   })
 
   it('research.rst keeps the embed URL and its caption', () => {
-    const embed = only(parseRst(researchRst).flatMap(s => s.blocks), 'embed')[0]
+    const embed = only(
+      parseRst(researchRst).flatMap(s => s.blocks),
+      'embed'
+    )[0]
     expect(embed?.title).toBe('https://www.youtube.com/watch?v=PDKhUknuQDg')
     expect(embed?.caption).toContain('Genie 3')
   })
 
   it('research.rst’s “why” card carries four bullets and a trailing body', () => {
-    const card = only(parseRst(researchRst).flatMap(s => s.blocks), 'card').find(
-      c => c.title === 'The same model, four ways to ask it a question'
-    )
+    const card = only(
+      parseRst(researchRst).flatMap(s => s.blocks),
+      'card'
+    ).find(c => c.title === 'The same model, four ways to ask it a question')
     expect(card?.bullets).toHaveLength(4)
     expect(card?.meta).toBe('Parameterisation')
     expect(card?.body).toMatch(/^Reading the field this way/)

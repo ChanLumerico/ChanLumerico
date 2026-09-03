@@ -1,0 +1,160 @@
+/* Route-level pieces the RST blocks do not cover: the series index page and
+   the post reader. */
+
+.seriesTitle {
+  font-family: var(--font-display);
+  font-size: var(--fs-h1-series);
+  line-height: var(--lh-h1-series);
+  font-weight: 600;
+  letter-spacing: var(--ls-h1-series);
+  margin: 0 0 12px;
+}
+
+.seriesNote {
+  font-size: var(--fs-17);
+  line-height: var(--lh-17);
+  letter-spacing: var(--ls-17);
+  color: var(--ink-3);
+  margin: 0 0 36px;
+}
+
+.seriesList {
+  display: flex;
+  flex-direction: column;
+}
+
+.seriesRow {
+  display: flex;
+  gap: 22px;
+  align-items: flex-start;
+  padding: 26px 0;
+  border-top: 1px solid var(--hairline);
+  color: var(--ink);
+  text-decoration: none;
+}
+
+.seriesRow:hover {
+  text-decoration: none;
+}
+
+.seriesRowLast {
+  border-bottom: 1px solid var(--hairline);
+}
+
+.seriesIndex {
+  flex: 0 0 auto;
+  font-family: var(--font-display);
+  font-size: 22px;
+  line-height: 28px;
+  font-weight: 600;
+  color: var(--ink-5);
+  font-variant-numeric: tabular-nums;
+}
+
+.seriesMid {
+  flex: 1;
+  min-width: 0;
+  display: block;
+}
+
+.seriesRowTitle {
+  display: block;
+  font-family: var(--font-display);
+  font-size: 21px;
+  line-height: 27px;
+  font-weight: 600;
+  letter-spacing: var(--ls-h2);
+  margin-bottom: 7px;
+}
+
+.seriesRowSummary {
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  font-size: var(--fs-15);
+  line-height: var(--lh-15);
+  letter-spacing: var(--ls-15);
+  color: var(--ink-3);
+}
+
+.seriesRowDate {
+  display: block;
+  font-size: var(--fs-12);
+  letter-spacing: var(--ls-12);
+  color: var(--ink-4);
+  margin-top: 10px;
+}
+
+.seriesRowArrow {
+  flex: 0 0 auto;
+  font-size: var(--fs-17);
+  color: var(--ac2);
+  padding-top: 4px;
+}
+
+.seriesMore {
+  margin-top: 28px;
+}
+
+/* --- post reader ------------------------------------------------------- */
+.postMeta {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-bottom: 14px;
+}
+
+.postMetaText {
+  font-size: var(--fs-12);
+  letter-spacing: var(--ls-12);
+  color: var(--ink-3);
+}
+
+.postTitle {
+  font-family: var(--font-display);
+  font-size: var(--fs-h1-post);
+  line-height: var(--lh-h1-post);
+  font-weight: 600;
+  letter-spacing: var(--ls-h1-post);
+  margin: 0 0 28px;
+  max-width: 22ch;
+  text-wrap: pretty;
+}
+
+.articleWrap {
+  max-width: 70ch;
+  min-width: 0;
+  overflow-x: hidden;
+}
+
+.postFoot {
+  margin-top: 40px;
+  padding-top: 24px;
+  border-top: 1px solid var(--hairline);
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.notice {
+  font-size: var(--fs-17);
+  line-height: var(--lh-17);
+  color: var(--ink-3);
+  margin: 0;
+}
+
+.errorBox {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  align-items: flex-start;
+}
+
+.errorActions {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}

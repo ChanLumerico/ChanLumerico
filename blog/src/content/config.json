@@ -1,0 +1,53 @@
+{
+  "$schema": "./config.schema.json",
+  "accent": "blue",
+  "side": "left",
+  "profile": {
+    "name": "Chan Lee",
+    "photo": "portrait.jpg",
+    "photoAlt": "Chan Lee",
+    "affiliation": ["Research Intern, Vision & AI Lab", "Korea University"],
+    "meta": "Junior in Computer Science and Engineering · Seoul, South Korea",
+    "email": "greensox284@korea.ac.kr",
+    "github": "https://github.com/ChanLumerico",
+    "instagram": "https://instagram.com/lxx__chan"
+  },
+  "focus": [
+    "Interactive world models",
+    "Diffusion & flow",
+    "Computer vision",
+    "Autodiff systems"
+  ],
+  "skills": [
+    { "label": "Languages", "items": ["Python (primary), C/C++"] },
+    { "label": "ML / DL", "items": ["PyTorch, NumPy, MLX, Matplotlib"] },
+    {
+      "label": "Coursework",
+      "scroll": true,
+      "items": [
+        "Machine Learning",
+        "Reinforcement Learning",
+        "Artificial Intelligence",
+        "Natural Language Processing",
+        "Data Science",
+        "Probability & Random Processes",
+        "Data Structure",
+        "Algorithms",
+        "Operating Systems",
+        "Computer Architecture",
+        "Computer Network",
+        "Theory of Computation",
+        "Discrete Mathematics",
+        "Mathematics for Computer Science I & II",
+        "Computer Programming I & II"
+      ]
+    }
+  ],
+  "blockOrder": ["profile", "focus", "skills"],
+  "sectionOrder": ["about", "research", "experience", "projects", "writing", "awards"],
+  "hidden": {},
+  "footer": {
+    "left": "© 2026 Chan Lee",
+    "right": "Built with Vite + React · Deployed on GitHub Pages"
+  }
+}

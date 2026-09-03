@@ -204,7 +204,8 @@ export const mdToHtml = (src: string): string => {
  */
 export const goodArticle = (md: string): boolean => {
   const body = String(md ?? '')
-  if (!/^(?:\s*|Title:.*|URL Source:.*|Markdown Content:\s*|Warning:.*)$/m.test(body)) return true
+  if (!/^(?:\s*|Title:.*|URL Source:.*|Markdown Content:\s*|Warning:.*)$/m.test(body))
+    return true
   const head = body
     .replace(/^Title:.*$/m, '')
     .replace(/^URL Source:.*$/m, '')

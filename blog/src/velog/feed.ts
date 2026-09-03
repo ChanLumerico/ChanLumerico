@@ -35,7 +35,8 @@ export const blurb = (html: string): string => {
   let text = ''
   try {
     const doc = new DOMParser().parseFromString(`<body>${src}</body>`, 'text/html')
-    const clean = (n: Element | HTMLElement) => (n.textContent ?? '').replace(/\s+/g, ' ').trim()
+    const clean = (n: Element | HTMLElement) =>
+      (n.textContent ?? '').replace(/\s+/g, ' ').trim()
     const paras = Array.from(doc.querySelectorAll('p'))
       .map(clean)
       .filter(t => t.length > 24)
