@@ -8,7 +8,6 @@ import { TopBar } from './components/TopBar'
 import { PAGE_LABELS } from './config/types'
 import { useAccent } from './hooks/useAccent'
 import { useDocumentTitle } from './hooks/useDocumentTitle'
-import { useReveal } from './hooks/useReveal'
 import type { SiteConfig, PageKey } from './config/types'
 import layout from './components/layout.module.css'
 import './styles/global.css'
@@ -58,7 +57,6 @@ function Shell({
 
   useAccent(config.accent)
   useDocumentTitle(titleFor(pathname))
-  useReveal([pathname, config, pages])
 
   useEffect(() => {
     window.scrollTo(0, 0)

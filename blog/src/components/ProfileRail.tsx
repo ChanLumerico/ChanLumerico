@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import { useScrollFade } from '../hooks/useScrollFade'
+import { Reveal } from './Reveal'
 import type { RailBlockKey, SiteConfig, SkillGroup } from '../config/types'
 import { GitHubMark, InstagramMark } from './icons'
 import s from './layout.module.css'
@@ -157,14 +158,9 @@ export function ProfileRail({ config }: { config: SiteConfig }) {
         <SkillsBlock groups={config.skills} />
       )
     return (
-      <div
-        key={key}
-        className="reveal"
-        data-reveal="1"
-        style={{ '--reveal-delay': DELAY[key] } as React.CSSProperties}
-      >
+      <Reveal key={key} delay={DELAY[key]}>
         {body}
-      </div>
+      </Reveal>
     )
   }
 

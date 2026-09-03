@@ -1,5 +1,6 @@
 import { useMemo } from 'react'
 import { parseRst } from '../rst/parse'
+import { Reveal } from '../components/Reveal'
 import { RstSectionView } from '../rst/RstSection'
 import type { SiteConfig } from '../config/types'
 
@@ -38,9 +39,9 @@ export function RstPage({
       {sections
         .filter(sec => !config.hidden[sec.id])
         .map(sec => (
-          <div key={sec.id} className="reveal" data-reveal="1">
+          <Reveal key={sec.id}>
             <RstSectionView section={sec} />
-          </div>
+          </Reveal>
         ))}
     </>
   )
