@@ -13,17 +13,6 @@
   <img src="https://raw.githubusercontent.com/ChanLumerico/ChanLumerico/refs/heads/output/github-contribution-grid-snake-dark.svg">
 </div>
 
-<br>
-
-<!--대표 링크: 개인 홈페이지-->
-<div align="center">
-  <a href="https://chanlumerico.github.io/ChanLumerico/">
-    <img
-      src="https://img.shields.io/badge/Personal%20Site-chanlumerico.github.io-0071E3?style=for-the-badge&labelColor=1D1D1F&logo=githubpages&logoColor=white"
-      alt="Personal site — chanlumerico.github.io" />
-  </a>
-</div>
-
 ---
 
 <!--내용 부분-->
