@@ -21,7 +21,7 @@ const START: View = { scale: 1, x: 0, y: 0 }
  * The prototype's `<image-slot>` wrote the crop into a sidecar JSON file next
  * to the HTML. There is no such runtime here and the repo is the content of
  * record, so committing the result means writing a file: "Use it" previews
- * the crop in the rail (held in the draft buffer) and "Download portrait.jpg"
+ * the crop in the rail (held in the draft buffer) and "Download profile.jpeg"
  * gives you the file to drop into `public/`.
  */
 export function PhotoCropModal({
@@ -137,7 +137,7 @@ export function PhotoCropModal({
     setBusy(true)
     const blob = await renderCrop()
     setBusy(false)
-    if (blob) downloadBlob('portrait.jpg', blob)
+    if (blob) downloadBlob('profile.jpeg', blob)
   }
 
   if (!open) return null
@@ -224,7 +224,7 @@ export function PhotoCropModal({
                 onClick={() => void download()}
                 disabled={busy}
               >
-                Download portrait.jpg
+                Download profile.jpeg
               </button>
               <button
                 type="button"

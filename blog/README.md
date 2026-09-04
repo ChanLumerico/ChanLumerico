@@ -127,14 +127,17 @@ prototype's `RST_LEGEND`.
 
 ### The profile photo
 
-`config.json` points `profile.photo` at `portrait.jpg`, resolved against the
-Vite base. Drop a square image at `public/portrait.jpg`. Until one exists the
-rail shows the initials on a fog circle — the frame reserves its own space
-either way, so the photo can never shift the layout as it loads.
+`config.json` points `profile.photo` at `profile.jpeg`, resolved against the
+Vite base, and the file lives at `public/profile.jpeg` — `public/` is the only
+directory Vite copies into the build verbatim, so an image anywhere else will
+404. A square source is ideal: the frame is 1:1 and crops with
+`object-fit: cover`. With no file the rail falls back to the initials on a fog
+circle, and the frame reserves its own space either way, so the photo can
+never shift the layout as it loads.
 
 The admin panel's photo cropper will produce that file for you: pick an
 image, pan and zoom it under the 1:1 circular guide, then **Download
-portrait.jpg**.
+profile.jpeg**.
 
 ### The admin UI
 
@@ -242,7 +245,7 @@ blog/
 ├── DESIGN.md                 the port spec: tokens, blocks, routes, maths, velog
 ├── claude-design/            the DC prototype, kept as the reference to diff against
 ├── index.html
-├── public/                   .nojekyll, and portrait.jpg once you add one
+├── public/                   .nojekyll and profile.jpeg, copied verbatim
 └── src/
     ├── App.tsx               the shell: topbar, frame, routes, footer
     ├── content/              THE CONTENT OF RECORD — *.rst and config.json
