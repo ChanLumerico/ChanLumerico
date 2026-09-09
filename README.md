@@ -148,26 +148,26 @@
 <div align="center">
 
 <!--START_SECTION:waka-->
-![AI Code Time](http://img.shields.io/badge/AI%20Code%20Time-674%20hrs%201%20min-blue?style=flat)
+![AI Code Time](http://img.shields.io/badge/AI%20Code%20Time-679%20hrs%206%20mins-blue?style=flat)
 
 **I'm a Night 🦉** 
 
 ```text
-🌞 Morning                191 commits         █░░░░░░░░░░░░░░░░░░░░░░░░   05.02 % 
-🌆 Daytime                914 commits         ██████░░░░░░░░░░░░░░░░░░░   24.00 % 
-🌃 Evening                1661 commits        ███████████░░░░░░░░░░░░░░   43.62 % 
-🌙 Night                  1042 commits        ███████░░░░░░░░░░░░░░░░░░   27.36 % 
+🌞 Morning                191 commits         █░░░░░░░░░░░░░░░░░░░░░░░░   04.99 % 
+🌆 Daytime                923 commits         ██████░░░░░░░░░░░░░░░░░░░   24.12 % 
+🌃 Evening                1669 commits        ███████████░░░░░░░░░░░░░░   43.61 % 
+🌙 Night                  1044 commits        ███████░░░░░░░░░░░░░░░░░░   27.28 % 
 ```
 📅 **I'm Most Productive on Sunday** 
 
 ```text
-Monday                   480 commits         ███░░░░░░░░░░░░░░░░░░░░░░   12.61 % 
-Tuesday                  484 commits         ███░░░░░░░░░░░░░░░░░░░░░░   12.71 % 
-Wednesday                576 commits         ████░░░░░░░░░░░░░░░░░░░░░   15.13 % 
-Thursday                 354 commits         ██░░░░░░░░░░░░░░░░░░░░░░░   09.30 % 
-Friday                   647 commits         ████░░░░░░░░░░░░░░░░░░░░░   16.99 % 
-Saturday                 601 commits         ████░░░░░░░░░░░░░░░░░░░░░   15.78 % 
-Sunday                   666 commits         ████░░░░░░░░░░░░░░░░░░░░░   17.49 % 
+Monday                   480 commits         ███░░░░░░░░░░░░░░░░░░░░░░   12.54 % 
+Tuesday                  484 commits         ███░░░░░░░░░░░░░░░░░░░░░░   12.65 % 
+Wednesday                593 commits         ████░░░░░░░░░░░░░░░░░░░░░   15.50 % 
+Thursday                 356 commits         ██░░░░░░░░░░░░░░░░░░░░░░░   09.30 % 
+Friday                   647 commits         ████░░░░░░░░░░░░░░░░░░░░░   16.91 % 
+Saturday                 601 commits         ████░░░░░░░░░░░░░░░░░░░░░   15.70 % 
+Sunday                   666 commits         ████░░░░░░░░░░░░░░░░░░░░░   17.40 % 
 ```
 
 
@@ -177,53 +177,53 @@ Sunday                   666 commits         ████░░░░░░░�
 🕑︎ Time Zone: Asia/Seoul
 
 💬 Programming Languages: 
-Other                    17 hrs 13 mins      ███████████░░░░░░░░░░░░░░   43.23 % 
-Python                   13 hrs 10 mins      ████████░░░░░░░░░░░░░░░░░   33.06 % 
-Markdown                 5 hrs 16 mins       ███░░░░░░░░░░░░░░░░░░░░░░   13.24 % 
-Objective-C++            2 hrs 37 mins       ██░░░░░░░░░░░░░░░░░░░░░░░   06.59 % 
-C++                      1 hr 1 min          █░░░░░░░░░░░░░░░░░░░░░░░░   02.58 % 
+Other                    15 hrs 33 mins      ██████████░░░░░░░░░░░░░░░   40.04 % 
+Python                   13 hrs 40 mins      █████████░░░░░░░░░░░░░░░░   35.21 % 
+Markdown                 4 hrs 41 mins       ███░░░░░░░░░░░░░░░░░░░░░░   12.09 % 
+Objective-C++            3 hrs 8 mins        ██░░░░░░░░░░░░░░░░░░░░░░░   08.09 % 
+C++                      1 hr 8 mins         █░░░░░░░░░░░░░░░░░░░░░░░░   02.94 % 
 
 🔥 Editors: 
-Claude Code              31 hrs 21 mins      ████████████████████░░░░░   78.69 % 
-Notion                   7 hrs 50 mins       █████░░░░░░░░░░░░░░░░░░░░   19.70 % 
-VS Code                  38 mins             ░░░░░░░░░░░░░░░░░░░░░░░░░   01.61 % 
+Claude Code              30 hrs 59 mins      ████████████████████░░░░░   79.74 % 
+Notion                   7 hrs 19 mins       █████░░░░░░░░░░░░░░░░░░░░   18.83 % 
+VS Code                  33 mins             ░░░░░░░░░░░░░░░░░░░░░░░░░   01.43 % 
 
 🐱‍💻 Projects: 
-lucid                    33 hrs 51 mins      █████████████████████░░░░   84.98 % 
-adaworld                 2 hrs 32 mins       ██░░░░░░░░░░░░░░░░░░░░░░░   06.40 % 
-diamond-lucid            1 hr 36 mins        █░░░░░░░░░░░░░░░░░░░░░░░░   04.04 % 
-ChanLumerico             1 hr 21 mins        █░░░░░░░░░░░░░░░░░░░░░░░░   03.42 % 
-paper review             22 mins             ░░░░░░░░░░░░░░░░░░░░░░░░░   00.95 % 
+lucid                    31 hrs 21 mins      ████████████████████░░░░░   80.67 % 
+olafworld-lucid          2 hrs 57 mins       ██░░░░░░░░░░░░░░░░░░░░░░░   07.63 % 
+adaworld                 2 hrs 32 mins       ██░░░░░░░░░░░░░░░░░░░░░░░   06.56 % 
+ChanLumerico             1 hr 24 mins        █░░░░░░░░░░░░░░░░░░░░░░░░   03.64 % 
+paper review             28 mins             ░░░░░░░░░░░░░░░░░░░░░░░░░   01.21 % 
 
 💻 Operating System: 
-Mac                      39 hrs 50 mins      █████████████████████████   100.00 % 
+Mac                      38 hrs 51 mins      █████████████████████████   100.00 % 
 ```
 
 🤖 **AI Coding This Week** 
 
 ```text
-⏱ AI Coding Time: 35 hrs 38 mins (89.43%)
+⏱ AI Coding Time: 35 hrs 4 mins (90.26%)
 
-✍️ 9,776 lines written by AI, 277 lines written by hand (97.24% AI-written)
+✍️ 16,602 lines written by AI, 241 lines written by hand (98.57% AI-written)
 
-🔤 21,370,155 Input Tokens, 3,292,581 Output Tokens
+🔤 29,369,242 Input Tokens, 3,494,832 Output Tokens
 
-💵 $1098.29 Estimated AI Cost This Week
+💵 $1147.43 Estimated AI Cost This Week
 
-🧠 21 AI Sessions, 226 AI Prompts
+🧠 21 AI Sessions, 211 AI Prompts
 
-Opus                     9,851 lines         █████████████████████████   100.00 % 
-Claude-Code              0 lines             ░░░░░░░░░░░░░░░░░░░░░░░░░   00.00 % 
+Opus                     10,927 lines        ████████████████░░░░░░░░░   65.39 % 
+Fable                    5,784 lines         █████████░░░░░░░░░░░░░░░░   34.61 % 
 
 🔎 AI Coding Insights:
-🤖 AI-Driven — 97.24% of written lines came from AI
-📄 Detailed Prompter — average 1,175 characters per prompt
-🔁 Iterative Prompter — average 11 prompts per session
-🚀 High AI Trust — 3.51% of changed lines were hand-edited
+🤖 AI-Driven — 98.57% of written lines came from AI
+📄 Detailed Prompter — average 1,094 characters per prompt
+🔁 Iterative Prompter — average 10 prompts per session
+🚀 High AI Trust — 1.43% of changed lines were hand-edited
 ```
 
 
- Last Updated on 08/09/2026 16:46:51 UTC
+ Last Updated on 09/09/2026 16:45:24 UTC
 <!--END_SECTION:waka-->
 
 </div>
