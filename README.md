@@ -148,7 +148,7 @@
 <div align="center">
 
 <!--START_SECTION:waka-->
-![AI Code Time](http://img.shields.io/badge/AI%20Code%20Time-713%20hrs%2045%20mins-blue?style=flat)
+![AI Code Time](http://img.shields.io/badge/AI%20Code%20Time-714%20hrs%2059%20mins-blue?style=flat)
 
 **I'm a Night 🦉** 
 
@@ -177,52 +177,51 @@ Sunday                   687 commits         ████░░░░░░░�
 🕑︎ Time Zone: Asia/Seoul
 
 💬 Programming Languages: 
-Other                    14 hrs 39 mins      ██████████░░░░░░░░░░░░░░░   39.74 % 
-Python                   10 hrs 30 mins      ███████░░░░░░░░░░░░░░░░░░   28.50 % 
-Markdown                 5 hrs 41 mins       ████░░░░░░░░░░░░░░░░░░░░░   15.44 % 
-Text                     1 hr 37 mins        █░░░░░░░░░░░░░░░░░░░░░░░░   04.40 % 
-C++                      1 hr 15 mins        █░░░░░░░░░░░░░░░░░░░░░░░░   03.41 % 
+Other                    11 hrs 40 mins      ████████░░░░░░░░░░░░░░░░░   32.72 % 
+Python                   10 hrs 38 mins      ███████░░░░░░░░░░░░░░░░░░   29.83 % 
+Markdown                 7 hrs 10 mins       █████░░░░░░░░░░░░░░░░░░░░   20.09 % 
+Text                     1 hr 43 mins        █░░░░░░░░░░░░░░░░░░░░░░░░   04.85 % 
+C++                      1 hr 19 mins        █░░░░░░░░░░░░░░░░░░░░░░░░   03.72 % 
 
 🔥 Editors: 
-Claude Code              24 hrs 10 mins      ████████████████░░░░░░░░░   65.52 % 
-Notion                   12 hrs 27 mins      ████████░░░░░░░░░░░░░░░░░   33.76 % 
-VS Code                  16 mins             ░░░░░░░░░░░░░░░░░░░░░░░░░   00.73 % 
+Claude Code              23 hrs 48 mins      █████████████████░░░░░░░░   66.69 % 
+Notion                   11 hrs 23 mins      ████████░░░░░░░░░░░░░░░░░   31.91 % 
+VS Code                  29 mins             ░░░░░░░░░░░░░░░░░░░░░░░░░   01.40 % 
 
 🐱‍💻 Projects: 
-lucid                    34 hrs 9 mins       ███████████████████████░░   91.99 % 
-olafworld-trace          2 hrs 58 mins       ██░░░░░░░░░░░░░░░░░░░░░░░   08.00 % 
+lucid                    32 hrs 43 mins      ███████████████████████░░   91.67 % 
+olafworld-trace          2 hrs 58 mins       ██░░░░░░░░░░░░░░░░░░░░░░░   08.32 % 
 repo                     0 secs              ░░░░░░░░░░░░░░░░░░░░░░░░░   00.01 % 
 
 💻 Operating System: 
-Mac                      36 hrs 53 mins      █████████████████████████   100.00 % 
+Mac                      35 hrs 41 mins      █████████████████████████   100.00 % 
 ```
 
 🤖 **AI Coding This Week** 
 
 ```text
-⏱ AI Coding Time: 28 hrs 10 mins (76.36%)
+⏱ AI Coding Time: 27 hrs 56 mins (78.28%)
 
-✍️ 18,765 lines written by AI, 0 lines written by hand (100.0% AI-written)
+✍️ 18,871 lines written by AI, 0 lines written by hand (100.0% AI-written)
 
-🔤 21,839,135 Input Tokens, 6,025,845 Output Tokens
+🔤 22,307,759 Input Tokens, 5,980,049 Output Tokens
 
-💵 $871.97 Estimated AI Cost This Week
+💵 $688.62 Estimated AI Cost This Week
 
-🧠 19 AI Sessions, 155 AI Prompts
+🧠 19 AI Sessions, 154 AI Prompts
 
-Opus                     19,197 lines        █████████████████████████   100.00 % 
-Fable                    0 lines             ░░░░░░░░░░░░░░░░░░░░░░░░░   00.00 % 
+Opus                     19,303 lines        █████████████████████████   100.00 % 
 Claude-Code              0 lines             ░░░░░░░░░░░░░░░░░░░░░░░░░   00.00 % 
 
 🔎 AI Coding Insights:
 🤖 AI-Driven — 100.0% of written lines came from AI
-📄 Detailed Prompter — average 1,404 characters per prompt
+📄 Detailed Prompter — average 1,415 characters per prompt
 🔁 Iterative Prompter — average 8 prompts per session
 🚀 High AI Trust — 0.0% of changed lines were hand-edited
 ```
 
 
- Last Updated on 17/09/2026 17:07:43 UTC
+ Last Updated on 18/09/2026 16:31:39 UTC
 <!--END_SECTION:waka-->
 
 </div>
