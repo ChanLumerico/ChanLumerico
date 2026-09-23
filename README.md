@@ -148,26 +148,26 @@
 <div align="center">
 
 <!--START_SECTION:waka-->
-![AI Code Time](http://img.shields.io/badge/AI%20Code%20Time-740%20hrs%2049%20mins-blue?style=flat)
+![AI Code Time](http://img.shields.io/badge/AI%20Code%20Time-746%20hrs%2054%20mins-blue?style=flat)
 
 **I'm a Night 🦉** 
 
 ```text
-🌞 Morning                106 commits         █░░░░░░░░░░░░░░░░░░░░░░░░   04.47 % 
-🌆 Daytime                567 commits         ██████░░░░░░░░░░░░░░░░░░░   23.88 % 
-🌃 Evening                981 commits         ██████████░░░░░░░░░░░░░░░   41.32 % 
-🌙 Night                  720 commits         ████████░░░░░░░░░░░░░░░░░   30.33 % 
+🌞 Morning                195 commits         █░░░░░░░░░░░░░░░░░░░░░░░░   04.93 % 
+🌆 Daytime                960 commits         ██████░░░░░░░░░░░░░░░░░░░   24.26 % 
+🌃 Evening                1694 commits        ███████████░░░░░░░░░░░░░░   42.81 % 
+🌙 Night                  1108 commits        ███████░░░░░░░░░░░░░░░░░░   28.00 % 
 ```
 📅 **I'm Most Productive on Sunday** 
 
 ```text
-Monday                   297 commits         ███░░░░░░░░░░░░░░░░░░░░░░   12.51 % 
-Tuesday                  315 commits         ███░░░░░░░░░░░░░░░░░░░░░░   13.27 % 
-Wednesday                360 commits         ████░░░░░░░░░░░░░░░░░░░░░   15.16 % 
-Thursday                 209 commits         ██░░░░░░░░░░░░░░░░░░░░░░░   08.80 % 
-Friday                   401 commits         ████░░░░░░░░░░░░░░░░░░░░░   16.89 % 
-Saturday                 388 commits         ████░░░░░░░░░░░░░░░░░░░░░   16.34 % 
-Sunday                   404 commits         ████░░░░░░░░░░░░░░░░░░░░░   17.02 % 
+Monday                   513 commits         ███░░░░░░░░░░░░░░░░░░░░░░   12.96 % 
+Tuesday                  509 commits         ███░░░░░░░░░░░░░░░░░░░░░░   12.86 % 
+Wednesday                605 commits         ████░░░░░░░░░░░░░░░░░░░░░   15.29 % 
+Thursday                 368 commits         ██░░░░░░░░░░░░░░░░░░░░░░░   09.30 % 
+Friday                   658 commits         ████░░░░░░░░░░░░░░░░░░░░░   16.63 % 
+Saturday                 617 commits         ████░░░░░░░░░░░░░░░░░░░░░   15.59 % 
+Sunday                   687 commits         ████░░░░░░░░░░░░░░░░░░░░░   17.36 % 
 ```
 
 
@@ -177,56 +177,55 @@ Sunday                   404 commits         ████░░░░░░░�
 🕑︎ Time Zone: Asia/Seoul
 
 💬 Programming Languages: 
-Python                   21 hrs 21 mins      ████████████░░░░░░░░░░░░░   49.20 % 
-Other                    11 hrs 6 mins       ██████░░░░░░░░░░░░░░░░░░░   25.59 % 
-Markdown                 6 hrs 32 mins       ████░░░░░░░░░░░░░░░░░░░░░   15.09 % 
-Text                     2 hrs 29 mins       █░░░░░░░░░░░░░░░░░░░░░░░░   05.73 % 
-Git Config               38 mins             ░░░░░░░░░░░░░░░░░░░░░░░░░   01.48 % 
+Python                   20 hrs 48 mins      █████████████░░░░░░░░░░░░   50.83 % 
+Other                    11 hrs 48 mins      ███████░░░░░░░░░░░░░░░░░░   28.83 % 
+Markdown                 5 hrs 56 mins       ████░░░░░░░░░░░░░░░░░░░░░   14.53 % 
+Text                     1 hr 17 mins        █░░░░░░░░░░░░░░░░░░░░░░░░   03.15 % 
+Git Config               38 mins             ░░░░░░░░░░░░░░░░░░░░░░░░░   01.56 % 
 
 🔥 Editors: 
-Claude Code              18 hrs 2 mins       ██████████░░░░░░░░░░░░░░░   41.56 % 
-Notion                   15 hrs 44 mins      █████████░░░░░░░░░░░░░░░░   36.26 % 
-Codex CLI                8 hrs 37 mins       █████░░░░░░░░░░░░░░░░░░░░   19.88 % 
-VS Code                  37 mins             ░░░░░░░░░░░░░░░░░░░░░░░░░   01.45 % 
-Notes                    21 mins             ░░░░░░░░░░░░░░░░░░░░░░░░░   00.84 % 
+Claude Code              17 hrs 17 mins      ███████████░░░░░░░░░░░░░░   42.24 % 
+Notion                   13 hrs 57 mins      █████████░░░░░░░░░░░░░░░░   34.08 % 
+Codex CLI                8 hrs 37 mins       █████░░░░░░░░░░░░░░░░░░░░   21.07 % 
+VS Code                  42 mins             ░░░░░░░░░░░░░░░░░░░░░░░░░   01.72 % 
+Notes                    21 mins             ░░░░░░░░░░░░░░░░░░░░░░░░░   00.90 % 
 
 🐱‍💻 Projects: 
-lucid                    40 hrs 47 mins      ████████████████████████░   94.01 % 
-olafworld-trace          2 hrs 33 mins       █░░░░░░░░░░░░░░░░░░░░░░░░   05.89 % 
+lucid                    40 hrs 54 mins      █████████████████████████   99.89 % 
 ijepa_src                2 mins              ░░░░░░░░░░░░░░░░░░░░░░░░░   00.08 % 
 T                        0 secs              ░░░░░░░░░░░░░░░░░░░░░░░░░   00.02 % 
 
 💻 Operating System: 
-Mac                      43 hrs 23 mins      █████████████████████████   100.00 % 
+Mac                      40 hrs 56 mins      █████████████████████████   100.00 % 
 ```
 
 🤖 **AI Coding This Week** 
 
 ```text
-⏱ AI Coding Time: 33 hrs 50 mins (78.0%)
+⏱ AI Coding Time: 33 hrs 57 mins (82.93%)
 
-✍️ 22,548 lines written by AI, 3 lines written by hand (99.99% AI-written)
+✍️ 16,327 lines written by AI, 3 lines written by hand (99.98% AI-written)
 
-🔤 16,445,259 Input Tokens, 3,776,026 Output Tokens
+🔤 14,050,626 Input Tokens, 2,186,700 Output Tokens
 
-💵 $684.75 Estimated AI Cost This Week
+💵 $637.71 Estimated AI Cost This Week
 
-🧠 13 AI Sessions, 125 AI Prompts
+🧠 12 AI Sessions, 128 AI Prompts
 
-Opus                     16,475 lines        ██████████████████░░░░░░░   70.61 % 
-GPT                      6,744 lines         ███████░░░░░░░░░░░░░░░░░░   28.90 % 
-Codex-Cli                113 lines           ░░░░░░░░░░░░░░░░░░░░░░░░░   00.48 % 
+Opus                     10,137 lines        ███████████████░░░░░░░░░░   59.65 % 
+GPT                      6,744 lines         ██████████░░░░░░░░░░░░░░░   39.68 % 
+Codex-Cli                113 lines           ░░░░░░░░░░░░░░░░░░░░░░░░░   00.66 % 
 Claude-Code              0 lines             ░░░░░░░░░░░░░░░░░░░░░░░░░   00.00 % 
 
 🔎 AI Coding Insights:
-🤖 AI-Driven — 99.99% of written lines came from AI
-📄 Detailed Prompter — average 701 characters per prompt
-🔁 Iterative Prompter — average 10 prompts per session
-🚀 High AI Trust — 0.59% of changed lines were hand-edited
+🤖 AI-Driven — 99.98% of written lines came from AI
+📄 Detailed Prompter — average 567 characters per prompt
+🔁 Iterative Prompter — average 11 prompts per session
+🚀 High AI Trust — 0.82% of changed lines were hand-edited
 ```
 
 
- Last Updated on 22/09/2026 17:03:50 UTC
+ Last Updated on 23/09/2026 17:09:39 UTC
 <!--END_SECTION:waka-->
 
 </div>
