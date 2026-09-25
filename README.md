@@ -135,9 +135,6 @@
 
 <h3 align="center">📊 Other Stats 📊</h3>
 <div style="display:flex; justify-content:center; align-items:center; gap:8px;" align="center">
-  <a href="https://solved.ac/en/profile/lumerico284">
-    <img src="http://mazassumnida.wtf/api/v2/generate_badge?boj=lumerico284" style="height:120px; width:auto;" />&nbsp
-  </a>
   <img src="https://github-readme-streak-stats.herokuapp.com/?user=ChanLumerico&theme=dark" style="height:120px; width:auto;" />&nbsp
 </div>
 
