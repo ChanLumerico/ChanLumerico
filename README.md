@@ -1,9 +1,4 @@
 <!--타이틀 부분-->
-<div align="center">
-  <img src="https://velog.velcdn.com/images/lumerico284/post/815f8b36-b161-44f7-a16a-61cac875d0c5/image.png" width="30%">
-</div>
-
-<br>
 
 <div align="center">
   <a href="https://git.io/typing-svg">
