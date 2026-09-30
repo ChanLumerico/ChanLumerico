@@ -140,7 +140,7 @@
 <div align="center">
 
 <!--START_SECTION:waka-->
-![AI Code Time](http://img.shields.io/badge/AI%20Code%20Time-805%20hrs%2036%20mins-blue?style=flat)
+![AI Code Time](http://img.shields.io/badge/AI%20Code%20Time-813%20hrs%2058%20mins-blue?style=flat)
 
 **I'm a Night 🦉** 
 
@@ -169,57 +169,57 @@ Sunday                   770 commits         ████░░░░░░░�
 🕑︎ Time Zone: Asia/Seoul
 
 💬 Programming Languages: 
-Python                   28 hrs 23 mins      ██████████░░░░░░░░░░░░░░░   40.01 % 
-Other                    19 hrs              ███████░░░░░░░░░░░░░░░░░░   26.77 % 
-Markdown                 16 hrs 43 mins      ██████░░░░░░░░░░░░░░░░░░░   23.56 % 
-C++                      1 hr 46 mins        █░░░░░░░░░░░░░░░░░░░░░░░░   02.50 % 
-Objective-C++            1 hr 35 mins        █░░░░░░░░░░░░░░░░░░░░░░░░   02.25 % 
+Python                   27 hrs 23 mins      █████████░░░░░░░░░░░░░░░░   37.53 % 
+Other                    18 hrs 49 mins      ██████░░░░░░░░░░░░░░░░░░░   25.79 % 
+Markdown                 18 hrs 49 mins      ██████░░░░░░░░░░░░░░░░░░░   25.78 % 
+C++                      2 hrs 6 mins        █░░░░░░░░░░░░░░░░░░░░░░░░   02.89 % 
+Objective-C++            1 hr 35 mins        █░░░░░░░░░░░░░░░░░░░░░░░░   02.19 % 
 
 🔥 Editors: 
-Claude Code              58 hrs 31 mins      █████████████████████░░░░   82.45 % 
-Notion                   11 hrs 25 mins      ████░░░░░░░░░░░░░░░░░░░░░   16.11 % 
-VS Code                  57 mins             ░░░░░░░░░░░░░░░░░░░░░░░░░   01.35 % 
+Claude Code              62 hrs 13 mins      █████████████████████░░░░   85.24 % 
+Notion                   9 hrs 32 mins       ███░░░░░░░░░░░░░░░░░░░░░░   13.06 % 
+VS Code                  1 hr 10 mins        ░░░░░░░░░░░░░░░░░░░░░░░░░   01.62 % 
 Codex CLI                3 mins              ░░░░░░░░░░░░░░░░░░░░░░░░░   00.08 % 
 
 🐱‍💻 Projects: 
-lucid                    46 hrs 20 mins      ████████████████░░░░░░░░░   65.29 % 
-ku-yu-ai-hackathon       18 hrs 7 mins       ██████░░░░░░░░░░░░░░░░░░░   25.55 % 
-aiku-page                2 hrs 18 mins       █░░░░░░░░░░░░░░░░░░░░░░░░   03.24 % 
-scratchpad               1 hr 40 mins        █░░░░░░░░░░░░░░░░░░░░░░░░   02.37 % 
-assignment_1             49 mins             ░░░░░░░░░░░░░░░░░░░░░░░░░   01.17 % 
+lucid                    39 hrs 36 mins      ██████████████░░░░░░░░░░░   54.26 % 
+ku-yu-ai-hackathon       25 hrs 5 mins       █████████░░░░░░░░░░░░░░░░   34.37 % 
+aiku-page                2 hrs 18 mins       █░░░░░░░░░░░░░░░░░░░░░░░░   03.15 % 
+scratchpad               1 hr 40 mins        █░░░░░░░░░░░░░░░░░░░░░░░░   02.30 % 
+assignment_1             49 mins             ░░░░░░░░░░░░░░░░░░░░░░░░░   01.13 % 
 
 💻 Operating System: 
-Mac                      70 hrs 58 mins      █████████████████████████   100.00 % 
+Mac                      73 hrs              █████████████████████████   100.00 % 
 ```
 
 🤖 **AI Coding This Week** 
 
 ```text
-⏱ AI Coding Time: 64 hrs 51 mins (91.37%)
+⏱ AI Coding Time: 67 hrs 8 mins (91.97%)
 
-✍️ 33,217 lines written by AI, 1 lines written by hand (100.0% AI-written)
+✍️ 36,950 lines written by AI, 1 lines written by hand (100.0% AI-written)
 
-🔤 28,575,480 Input Tokens, 5,310,736 Output Tokens
+🔤 40,950,295 Input Tokens, 5,848,062 Output Tokens
 
-💵 $1763.09 Estimated AI Cost This Week
+💵 $1826.47 Estimated AI Cost This Week
 
-🧠 30 AI Sessions, 437 AI Prompts
+🧠 32 AI Sessions, 528 AI Prompts
 
-Opus                     34,158 lines        █████████████████████████   99.92 % 
-GPT                      27 lines            ░░░░░░░░░░░░░░░░░░░░░░░░░   00.08 % 
+Opus                     38,594 lines        █████████████████████████   99.93 % 
+GPT                      27 lines            ░░░░░░░░░░░░░░░░░░░░░░░░░   00.07 % 
 Claude-Code              0 lines             ░░░░░░░░░░░░░░░░░░░░░░░░░   00.00 % 
 Sonnet                   0 lines             ░░░░░░░░░░░░░░░░░░░░░░░░░   00.00 % 
 Haiku                    0 lines             ░░░░░░░░░░░░░░░░░░░░░░░░░   00.00 % 
 
 🔎 AI Coding Insights:
 🤖 AI-Driven — 100.0% of written lines came from AI
-📚 Verbose Prompter — average 1,711 characters per prompt
-🔁 Iterative Prompter — average 15 prompts per session
+📚 Verbose Prompter — average 1,593 characters per prompt
+🔁 Iterative Prompter — average 16 prompts per session
 🚀 High AI Trust — 0.01% of changed lines were hand-edited
 ```
 
 
- Last Updated on 29/09/2026 18:10:33 UTC
+ Last Updated on 30/09/2026 18:05:05 UTC
 <!--END_SECTION:waka-->
 
 </div>
