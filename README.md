@@ -169,56 +169,55 @@ Sunday                   498 commits         █████░░░░░░�
 🕑︎ Time Zone: Asia/Seoul
 
 💬 Programming Languages: 
-Other                    23 hrs 21 mins      ██████████░░░░░░░░░░░░░░░   41.09 % 
-Markdown                 16 hrs 33 mins      ███████░░░░░░░░░░░░░░░░░░   29.13 % 
-Python                   11 hrs 51 mins      █████░░░░░░░░░░░░░░░░░░░░   20.87 % 
-C++                      3 hrs 33 mins       ██░░░░░░░░░░░░░░░░░░░░░░░   06.27 % 
-Text                     53 mins             ░░░░░░░░░░░░░░░░░░░░░░░░░   01.56 % 
+Other                    25 hrs 15 mins      ██████████████░░░░░░░░░░░   55.67 % 
+Python                   11 hrs 23 mins      ██████░░░░░░░░░░░░░░░░░░░   25.11 % 
+Markdown                 4 hrs 37 mins       ███░░░░░░░░░░░░░░░░░░░░░░   10.20 % 
+C++                      2 hrs 35 mins       █░░░░░░░░░░░░░░░░░░░░░░░░   05.70 % 
+Text                     53 mins             ░░░░░░░░░░░░░░░░░░░░░░░░░   01.95 % 
 
 🔥 Editors: 
-Claude Code              37 hrs 7 mins       ████████████████░░░░░░░░░   65.32 % 
-Notion                   19 hrs 9 mins       ████████░░░░░░░░░░░░░░░░░   33.72 % 
-VS Code                  31 mins             ░░░░░░░░░░░░░░░░░░░░░░░░░   00.91 % 
-Codex Vscode             1 min               ░░░░░░░░░░░░░░░░░░░░░░░░░   00.05 % 
+Notion                   23 hrs 51 mins      █████████████░░░░░░░░░░░░   52.59 % 
+Claude Code              21 hrs 7 mins       ████████████░░░░░░░░░░░░░   46.58 % 
+VS Code                  21 mins             ░░░░░░░░░░░░░░░░░░░░░░░░░   00.78 % 
+Codex Vscode             1 min               ░░░░░░░░░░░░░░░░░░░░░░░░░   00.06 % 
 
 🐱‍💻 Projects: 
-lucid                    36 hrs 49 mins      ████████████████░░░░░░░░░   64.79 % 
-ku-yu-ai-hackathon       13 hrs 47 mins      ██████░░░░░░░░░░░░░░░░░░░   24.27 % 
-aiku_final_agent         2 hrs 16 mins       █░░░░░░░░░░░░░░░░░░░░░░░░   03.99 % 
-build                    1 hr 5 mins         ░░░░░░░░░░░░░░░░░░░░░░░░░   01.92 % 
-scratchpad               1 hr                ░░░░░░░░░░░░░░░░░░░░░░░░░   01.77 % 
+lucid                    42 hrs 22 mins      ███████████████████████░░   93.39 % 
+aiku_final_agent         2 hrs 16 mins       █░░░░░░░░░░░░░░░░░░░░░░░░   05.00 % 
+ku-yu-ai-hackathon       27 mins             ░░░░░░░░░░░░░░░░░░░░░░░░░   01.03 % 
+zipchk                   10 mins             ░░░░░░░░░░░░░░░░░░░░░░░░░   00.38 % 
+Unknown Project          2 mins              ░░░░░░░░░░░░░░░░░░░░░░░░░   00.09 % 
 
 💻 Operating System: 
-Mac                      56 hrs 50 mins      █████████████████████████   100.00 % 
+Mac                      45 hrs 22 mins      █████████████████████████   100.00 % 
 ```
 
 🤖 **AI Coding This Week** 
 
 ```text
-⏱ AI Coding Time: 40 hrs 17 mins (70.89%)
+⏱ AI Coding Time: 23 hrs 56 mins (52.76%)
 
-✍️ 56,622 lines written by AI, 0 lines written by hand (100.0% AI-written)
+✍️ 55,526 lines written by AI, 0 lines written by hand (100.0% AI-written)
 
-🔤 52,394,551 Input Tokens, 3,970,886 Output Tokens
+🔤 41,642,851 Input Tokens, 2,809,858 Output Tokens
 
-💵 $1052.23 Estimated AI Cost This Week
+💵 $837.73 Estimated AI Cost This Week
 
-🧠 16 AI Sessions, 387 AI Prompts
+🧠 13 AI Sessions, 181 AI Prompts
 
-Opus                     60,875 lines        █████████████████████████   100.00 % 
-Claude-Code              0 lines             ░░░░░░░░░░░░░░░░░░░░░░░░░   00.00 % 
+Opus                     59,779 lines        █████████████████████████   100.00 % 
 GPT                      0 lines             ░░░░░░░░░░░░░░░░░░░░░░░░░   00.00 % 
 Haiku                    0 lines             ░░░░░░░░░░░░░░░░░░░░░░░░░   00.00 % 
 
 🔎 AI Coding Insights:
 🤖 AI-Driven — 100.0% of written lines came from AI
-📚 Verbose Prompter — average 3,635 characters per prompt
-🔁 Iterative Prompter — average 24 prompts per session
+📚 Verbose Prompter — average 5,252 characters per prompt
+🔁 Iterative Prompter — average 14 prompts per session
 🚀 High AI Trust — 0.0% of changed lines were hand-edited
 ```
 
 
- Last Updated on 07/10/2026 19:02:16 UTC
+ Last Updated on 08/10/2026 18:56:23 UTC
 <!--END_SECTION:waka-->
 
 </div>
