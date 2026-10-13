@@ -140,7 +140,7 @@
 <div align="center">
 
 <!--START_SECTION:waka-->
-![AI Code Time](http://img.shields.io/badge/AI%20Code%20Time-882%20hrs%209%20mins-blue?style=flat)
+![AI Code Time](http://img.shields.io/badge/AI%20Code%20Time-883%20hrs%2025%20mins-blue?style=flat)
 
 **I'm a Night 🦉** 
 
@@ -169,32 +169,33 @@ Sunday                   784 commits         ██████░░░░░�
 🕑︎ Time Zone: Asia/Seoul
 
 💬 Programming Languages: 
-Other                    30 hrs 13 mins      ████████████████░░░░░░░░░   64.32 % 
-Python                   10 hrs 14 mins      █████░░░░░░░░░░░░░░░░░░░░   21.80 % 
-Markdown                 2 hrs 39 mins       █░░░░░░░░░░░░░░░░░░░░░░░░   05.66 % 
-C++                      1 hr 28 mins        █░░░░░░░░░░░░░░░░░░░░░░░░   03.14 % 
-Text                     1 hr 13 mins        █░░░░░░░░░░░░░░░░░░░░░░░░   02.61 % 
+Other                    29 hrs 38 mins      ████████████████░░░░░░░░░   63.88 % 
+Python                   10 hrs 14 mins      ██████░░░░░░░░░░░░░░░░░░░   22.07 % 
+Markdown                 2 hrs 39 mins       █░░░░░░░░░░░░░░░░░░░░░░░░   05.73 % 
+C++                      1 hr 28 mins        █░░░░░░░░░░░░░░░░░░░░░░░░   03.18 % 
+Text                     1 hr 13 mins        █░░░░░░░░░░░░░░░░░░░░░░░░   02.64 % 
 
 🔥 Editors: 
-Notion                   30 hrs 18 mins      ████████████████░░░░░░░░░   64.49 % 
-Claude Code              16 hrs 37 mins      █████████░░░░░░░░░░░░░░░░   35.40 % 
+Notion                   29 hrs 43 mins      ████████████████░░░░░░░░░   64.03 % 
+Claude Code              16 hrs 37 mins      █████████░░░░░░░░░░░░░░░░   35.84 % 
 VS Code                  3 mins              ░░░░░░░░░░░░░░░░░░░░░░░░░   00.11 % 
+Notes                    0 secs              ░░░░░░░░░░░░░░░░░░░░░░░░░   00.02 % 
 
 🐱‍💻 Projects: 
-lucid                    42 hrs 24 mins      ███████████████████████░░   90.25 % 
-code                     3 hrs 49 mins       ██░░░░░░░░░░░░░░░░░░░░░░░   08.15 % 
-scratchpad               15 mins             ░░░░░░░░░░░░░░░░░░░░░░░░░   00.55 % 
+lucid                    37 hrs 1 min        ████████████████████░░░░░   79.76 % 
+code                     8 hrs 38 mins       █████░░░░░░░░░░░░░░░░░░░░   18.62 % 
+scratchpad               15 mins             ░░░░░░░░░░░░░░░░░░░░░░░░░   00.56 % 
 Examples                 14 mins             ░░░░░░░░░░░░░░░░░░░░░░░░░   00.53 % 
-report                   10 mins             ░░░░░░░░░░░░░░░░░░░░░░░░░   00.36 % 
+report                   10 mins             ░░░░░░░░░░░░░░░░░░░░░░░░░   00.37 % 
 
 💻 Operating System: 
-Mac                      46 hrs 59 mins      █████████████████████████   100.00 % 
+Mac                      46 hrs 24 mins      █████████████████████████   100.00 % 
 ```
 
 🤖 **AI Coding This Week** 
 
 ```text
-⏱ AI Coding Time: 17 hrs 10 mins (36.55%)
+⏱ AI Coding Time: 17 hrs 10 mins (37.01%)
 
 ✍️ 61,000 lines written by AI, 0 lines written by hand (100.0% AI-written)
 
@@ -214,7 +215,7 @@ Opus                     62,013 lines        ███████████�
 ```
 
 
- Last Updated on 12/10/2026 21:21:23 UTC
+ Last Updated on 13/10/2026 19:23:09 UTC
 <!--END_SECTION:waka-->
 
 </div>
