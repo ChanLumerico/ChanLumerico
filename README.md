@@ -25,9 +25,9 @@
 
 <h3 align="center">📚 Studying 📚</h3>
 <div align="center">
-  <img src="https://img.shields.io/badge/computer%20vision-D166FF.svg?style=for-the-badge" />&nbsp
-  <img src="https://img.shields.io/badge/diffusion-FF6694?style=for-the-badge&" />&nbsp
-  <img src="https://img.shields.io/badge/language%20models-94FF66?style=for-the-badge&" />&nbsp
+  <img src="https://img.shields.io/badge/generative%20models-D166FF.svg?style=for-the-badge" />&nbsp
+  <img src="https://img.shields.io/badge/world%20models-FF6694?style=for-the-badge&" />&nbsp
+  <img src="https://img.shields.io/badge/video%20generation-94FF66?style=for-the-badge&" />&nbsp
 </div>
 
 <br>
